@@ -44,7 +44,13 @@ group :development, :test do
   gem 'capistrano-rails', require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano-rvm'
+
+  gem 'rspec-rails'
+  gem "factory_girl_rails"
+  gem "faker"
 end
+
+gem 'database_cleaner', group: :test
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.

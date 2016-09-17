@@ -10,10 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160910132823) do
+ActiveRecord::Schema.define(version: 20160913071207) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "item_reservations", force: :cascade do |t|
+    t.integer  "room_type_id"
+    t.integer  "reservation_id"
+    t.float    "price"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["reservation_id"], name: "index_item_reservations_on_reservation_id", using: :btree
+    t.index ["room_type_id"], name: "index_item_reservations_on_room_type_id", using: :btree
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.integer  "user_id"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.float    "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_reservations_on_user_id", using: :btree
+  end
+
+  create_table "room_promotions", force: :cascade do |t|
+    t.integer  "room_type_id"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "percentage"
+    t.integer  "amount"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["room_type_id"], name: "index_room_promotions_on_room_type_id", using: :btree
+  end
 
   create_table "room_types", force: :cascade do |t|
     t.integer  "name"
@@ -47,5 +78,9 @@ ActiveRecord::Schema.define(version: 20160910132823) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "item_reservations", "reservations"
+  add_foreign_key "item_reservations", "room_types"
+  add_foreign_key "reservations", "users"
+  add_foreign_key "room_promotions", "room_types"
   add_foreign_key "rooms", "room_types"
 end
