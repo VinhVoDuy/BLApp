@@ -36,6 +36,9 @@ gem 'devise'
 gem 'figaro'
 gem 'haml'
 gem 'font-awesome-rails'
+gem 'owlcarousel-rails'
+gem 'jquery-ui-rails'
+gem 'rest-client', '~> 2.0.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
