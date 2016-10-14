@@ -10,21 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160922145313) do
+ActiveRecord::Schema.define(version: 20161012065831) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "item_reservations", force: :cascade do |t|
-    t.integer  "room_type_id"
     t.integer  "reservation_id"
     t.float    "price"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.integer  "quantity",       default: 1
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "quantity",        default: 1
     t.integer  "amount"
+    t.string   "reservable_type"
+    t.integer  "reservable_id"
+    t.index ["reservable_type", "reservable_id"], name: "index_item_reservations_on_reservable_type_and_reservable_id", using: :btree
     t.index ["reservation_id"], name: "index_item_reservations_on_reservation_id", using: :btree
-    t.index ["room_type_id"], name: "index_item_reservations_on_room_type_id", using: :btree
+  end
+
+  create_table "paypal_transactions", force: :cascade do |t|
+    t.string   "token"
+    t.string   "payer_id"
+    t.string   "transaction_id"
+    t.integer  "reservation_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["reservation_id"], name: "index_paypal_transactions_on_reservation_id", using: :btree
   end
 
   create_table "reservations", force: :cascade do |t|
@@ -83,7 +94,7 @@ ActiveRecord::Schema.define(version: 20160922145313) do
   end
 
   add_foreign_key "item_reservations", "reservations"
-  add_foreign_key "item_reservations", "room_types"
+  add_foreign_key "paypal_transactions", "reservations"
   add_foreign_key "reservations", "users"
   add_foreign_key "room_promotions", "room_types"
   add_foreign_key "rooms", "room_types"

@@ -4,10 +4,18 @@ class ItemWrapper
   end
 
   def name
-    @item.name
+    @item.reservable.name
   end
 
   def description
-    @item.description
+    'test description'
+  end
+
+  def amount
+    @item.amount
+  end
+
+  def quantity
+    @item.quantity
   end
 end

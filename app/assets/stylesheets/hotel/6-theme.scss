@@ -847,9 +847,6 @@ header #logo {
 	font-size: 11px;
 }
 /* Horizontal */
-.form-inline .form-control{
-	width: 100%;
-}
 #reservation-form .reservation-horizontal .col-sm-1, #reservation-form .reservation-horizontal .col-sm-2, #reservation-form .reservation-horizontal .col-sm-3 {
 	padding-left: 10px;
 	padding-right: 10px;
@@ -876,10 +873,10 @@ header #logo {
 #reservation-form .form-inline .fa.infield {
 	position: absolute;
 	float: right;
-	right: 18.84px;
+	right: 20px;
 	font-size: 14px;
 	top: 0;
-	width: 15px;
+	width: 14px;
 }
 /* Button */
 #reservation-form .col-sm-2 button {
@@ -928,9 +925,6 @@ header #logo {
 /* Error Message */
 .error_message {
 	color: #F00;
-}
-#error{
-	display: none;
 }
 /* Rooms
 -------------------------------------------------- */
@@ -1098,8 +1092,8 @@ header #logo {
 }
 /* Icon */
 .box-icon i {
-	width: 20px;
-	height: 10px;
+	width: 26px;
+	height: 24px;
 	text-align: center;
 	vertical-align: middle;
 	-webkit-transition: all 0.6s ease-in-out;
@@ -1231,9 +1225,6 @@ article .video-format iframe{
 	color: #ddd;
 	content: '|';
 	font-weight: normal;
-}
-.comment-text .text {
-	min-height: 35px;
 }
 .comment .reply-button {
 	position: relative;
@@ -1542,9 +1533,6 @@ aside .widget .news-content span a {
 table i {
 	padding-right: 5px;
 }
-.table-striped > tbody > tr:nth-child(odd) {
-	background: none;
-}
 /* Panel */
 .panel-default {
 	border: 1px solid #ebebeb;
@@ -1555,7 +1543,7 @@ table i {
 /* Pagination */
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
 	z-index: 2;
-	color: #ffffff !important;
+	color: #ffffff;
 	cursor: default;
 	border-color: #ccc;
 }

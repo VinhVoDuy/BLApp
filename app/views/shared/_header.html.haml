@@ -1,0 +1,89 @@
+%header
+  / Navigation
+  #sticky.navbar.yamm.navbar-default
+    .container
+      .navbar-header
+        %button.navbar-toggle{"data-target" => "#navbar-collapse-grid", "data-toggle" => "collapse", :type => "button"}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{:href => "index.html"}
+          / Logo
+          #logo
+            %img#default-logo{:alt => "Starhotel", :src => asset_url("logo.png"), :style => "height:44px;"}/
+            %img#retina-logo{:alt => "Starhotel", :src => asset_url("logo-retina.png"), :style => "height:44px;"}/
+      #navbar-collapse-grid.navbar-collapse.collapse
+        %ul.nav.navbar-nav
+          %li.dropdown.active
+            %a{:href => "index.html"} Home
+          %li.dropdown
+            %a.dropdown-toggle.js-activated{"data-toggle" => "dropdown", :href => "#"}
+              Rooms
+              %b.caret
+            %ul.dropdown-menu
+              %li
+                %a{:href => "room-list.html"} Room List View
+              %li
+                %a{:href => "room-detail.html"} Room Detail
+          %li.dropdown
+            %a.dropdown-toggle.js-activated{"data-toggle" => "dropdown", :href => "#"}
+              Features
+              %b.caret
+            .dropdown-menu
+              .yamm-content
+                .row
+                  %ul.col-sm-3.list-unstyled.mt20
+                    %li
+                      %p
+                        %strong Elements
+                    %li
+                      %a{:href => "elements.html"} Elements
+                    %li
+                      %a{:href => "icons.html"} Icons
+                    %li
+                      %a{:href => "404.html"} 404 Page
+                  %ul.col-sm-3.list-unstyled.mt20
+                    %li
+                      %p
+                        %strong Layout
+                    %li
+                      %a{:href => "boxed-pattern.html"}
+                        %i.fa.fa-square-o
+                        Boxed
+                    %li
+                      %a{:href => "index.html"}
+                        %i.fa.fa-arrows-h
+                        Wide
+                    %li
+                      %a{:href => "boxed-background.html"}
+                        %i.fa.fa-picture-o
+                        Image
+                  %ul.col-sm-6.list-unstyled.mt20
+                    %li
+                      %p
+                        %strong Yamm! Megamenu
+                      %ul.list-unstyled
+                        %li.row
+                          %ul.col-sm-12.list-unstyled
+                            %li
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere justo posuere, commodo nibh sit amet, malesuada nisi. Nam vitae mauris vel ante laoreet placerat. Praesent pellentesque consectetur lobortis. Pellentesque lacinia nibh leo, sed pharetra tortor sagittis id. Cras a scelerisque eros. Nunc ornare diam turpis, id vulputate massa sagittis sed.
+          %li.dropdown
+            %a.dropdown-toggle.js-activated{"data-toggle" => "dropdown", :href => "#"}
+              Blog
+              %b.caret
+            %ul.dropdown-menu
+              %li
+                %a{:href => "blog.html"} Blog grid
+              %li
+                %a{:href => "blog-post.html"} Blog post
+          %li
+            %a{:href => "gallery.html"} Gallery
+          %li.dropdown
+            %a.dropdown-toggle.js-activated{"data-toggle" => "dropdown", :href => "#"}
+              Contact
+              %b.caret
+            %ul.dropdown-menu
+              %li
+                %a{:href => "contact-01.html"} Contact 1
+              %li
+                %a{:href => "contact-02.html"} Contact 2

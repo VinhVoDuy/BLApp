@@ -1,9 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "jquery-ui/datepicker";
+@import 'hotel/*';
 @import "login-form";
 @import 'font-awesome';
-@import 'hotel/*';
-@import 'owl.carousel';
-@import 'owl.theme';
+@import 'prettyphoto-rails';
 @import 'homes';

@@ -1,3 +1,4 @@
+// StarHotel Javascripts
 jQuery(document).ready(function () {
     "use strict";
 

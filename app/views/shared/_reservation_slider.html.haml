@@ -1,0 +1,56 @@
+%section.revolution-slider
+  .bannercontainer
+    .banner
+      %ul
+        / Slide 1
+        %li{"data-masterspeed" => "1500", "data-slotamount" => "7", "data-transition" => "fade"}
+          / Main Image
+          %img{:alt => "slidebg1", "data-bgfit" => "cover", "data-bgposition" => "left bottom", "data-bgrepeat" => "no-repeat", :src => asset_url("1700x449.gif"), :style => "opacity:0;"}/
+          / Layers
+          / Layer 1
+          .caption.sft.revolution-starhotel.bigtext{"data-easing" => "easeOutBack", "data-speed" => "700", "data-start" => "1700", "data-x" => "505", "data-y" => "30"}
+            %span
+              %i.fa.fa-star-o
+              %i.fa.fa-star-o
+              %i.fa.fa-star-o
+              %i.fa.fa-star-o
+              %i.fa.fa-star-o
+            A Five Star Hotel
+            %span
+              %i.fa.fa-star-o
+              %i.fa.fa-star-o
+              %i.fa.fa-star-o
+              %i.fa.fa-star-o
+              %i.fa.fa-star-o
+          / Layer 2
+          .caption.sft.revolution-starhotel.smalltext{"data-easing" => "easeOutBack", "data-speed" => "800", "data-start" => "1700", "data-x" => "605", "data-y" => "105"}
+            %span And we like to keep it that way!
+          / Layer 3
+          .caption.sft{"data-easing" => "easeOutBack", "data-speed" => "1000", "data-start" => "1900", "data-x" => "775", "data-y" => "175"}
+            %a.button.btn.btn-purple.btn-lg{:href => "room-list.html"} See rooms
+        / Slide 2
+        %li{"data-masterspeed" => "1000", "data-slotamount" => "7", "data-transition" => "boxfade"}
+          / Main Image
+          %img{:alt => "darkblurbg", "data-bgfit" => "cover", "data-bgposition" => "left top", "data-bgrepeat" => "no-repeat", :src => asset_url("1700x449.gif")}/
+          / Layers
+          / Layer 1
+          .caption.sft.revolution-starhotel.bigtext{"data-easing" => "easeOutBack", "data-speed" => "700", "data-start" => "1700", "data-x" => "585", "data-y" => "30"}
+            %span
+              %i.fa.fa-star-o
+              %i.fa.fa-star-o
+              %i.fa.fa-star-o
+              %i.fa.fa-star-o
+              %i.fa.fa-star-o
+            Double room
+            %span
+              %i.fa.fa-star-o
+              %i.fa.fa-star-o
+              %i.fa.fa-star-o
+              %i.fa.fa-star-o
+              %i.fa.fa-star-o
+          / Layer 2
+          .caption.sft.revolution-starhotel.smalltext{"data-easing" => "easeOutBack", "data-speed" => "800", "data-start" => "1700", "data-x" => "682", "data-y" => "105"}
+            %span € 99,- a night this summer
+          / Layer 3
+          .caption.sft{"data-easing" => "easeOutBack", "data-speed" => "1000", "data-start" => "1900", "data-x" => "785", "data-y" => "175"}
+            %a.button.btn.btn-purple.btn-lg{:href => "room-detail.html"} Book this room

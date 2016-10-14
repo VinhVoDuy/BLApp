@@ -15,5 +15,6 @@
 //= require jquery-ui
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require owl.carousel
+//= require_tree ./hotel
+//= require prettyphoto-rails
 //= require_tree .

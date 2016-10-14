@@ -8,7 +8,7 @@ RSpec.describe CreateReservation do
   }
   describe 'create only one room' do
     it 'works' do
-      @params = @default_params.merge({ item_reservations_attributes: [{ room_type_id: @small_room_type.id }] })
+      @params = @default_params.merge({ item_reservations_attributes: [{ reservable_id: @small_room_type.id, reservable_type: 'RoomType' }] })
       service = CreateReservation.new(@user, @params)
       expect(service.run).to eq true
       expect(service.reservation.price).to eq @small_room_type.price
@@ -17,7 +17,7 @@ RSpec.describe CreateReservation do
 
   describe 'create more than one room' do
     it 'works' do
-      @params = @default_params.merge({ item_reservations_attributes: [{ room_type_id: @small_room_type.id }, {room_type_id: @medium_room_type.id}] })
+      @params = @default_params.merge({ item_reservations_attributes: [{ reservable_id: @small_room_type.id, reservable_type: 'RoomType' }, {reservable_id: @medium_room_type.id, reservable_type: 'RoomType'}] })
       service = CreateReservation.new(@user, @params)
       expect(service.run).to eq true
       expect(service.reservation.price).to eq(@small_room_type.price + @medium_room_type.price)
@@ -27,7 +27,7 @@ RSpec.describe CreateReservation do
   describe 'create with room promotion' do
     it 'works' do
       @promotion = create(:room_promotion, room_type: @small_room_type)
-      @params = @default_params.merge({ item_reservations_attributes: [{ room_type_id: @small_room_type.id }] })
+      @params = @default_params.merge({ item_reservations_attributes: [{ reservable_id: @small_room_type.id, reservable_type: 'RoomType' }] })
       service = CreateReservation.new(@user, @params)
       expect(service.run).to eq true
       expect(service.reservation.price).to eq(@small_room_type.price * (1 - 10/100.0))
@@ -37,7 +37,7 @@ RSpec.describe CreateReservation do
   describe 'create with inactive room promotion' do
     it 'do not discount' do
       @promotion = create(:room_promotion, :inactive, room_type: @small_room_type)
-      @params = @default_params.merge({ item_reservations_attributes: [{ room_type_id: @small_room_type.id }] })
+      @params = @default_params.merge({ item_reservations_attributes: [{ reservable_id: @small_room_type.id, reservable_type: 'RoomType' }] })
       service = CreateReservation.new(@user, @params)
       expect(service.run).to eq true
       expect(service.reservation.price).to eq(@small_room_type.price)
@@ -47,7 +47,7 @@ RSpec.describe CreateReservation do
   describe 'create with amount only room promotion' do
     it 'works' do
       @promotion = create(:room_promotion, :amount_present_only, room_type: @small_room_type)
-      @params = @default_params.merge({ item_reservations_attributes: [{ room_type_id: @small_room_type.id }] })
+      @params = @default_params.merge({ item_reservations_attributes: [{ reservable_id: @small_room_type.id, reservable_type: 'RoomType'}] })
       service = CreateReservation.new(@user, @params)
       expect(service.run).to eq true
       expect(service.reservation.price).to eq(@small_room_type.price - 30)

@@ -8,3 +8,17 @@
 .img-review{
   max-width: 100px;
 }
+
+select.form-control.total {
+  -moz-appearance: none;
+   -webkit-appearance: none;
+   appearance: none;
+}
+
+@media (min-width: 768px) {
+  .form-inline .form-control {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+  }
+}
