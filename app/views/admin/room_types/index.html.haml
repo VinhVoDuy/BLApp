@@ -1,0 +1,32 @@
+%h1.text-center Admin Room Types
+.container-fluid
+  = render 'shared/flash'
+  .row
+    %h3.col-md-3.text-center
+      Name
+    %h3.col-md-2.text-center
+      Price
+    %h3.col-md-2.text-center
+      Total Room
+    %h3.col-md-2.text-center
+      Remaining Room
+      .small (today)
+    %h3.col-md-3.text-center
+      Actions
+  - RoomType.find_each do |room_type|
+    .row
+      .col-md-3.text-center
+        = room_type.name
+      .col-md-2.text-center
+        = "$ #{room_type.price}"
+      .col-md-2.text-center.bg-success
+        = room_type.total_room
+      .col-md-2.text-center.bg-primary
+        = room_type.remaining_room
+      .col-md-3.text-center
+        = link_to 'Delete', admin_room_type_path(room_type), method: :delete, data: {confirm: 'Are you sure ?'}
+        = link_to 'Edit', edit_admin_room_type_path(room_type)
+  .text-center
+    %br
+    = link_to 'Add New Room Type', new_admin_room_type_path, class: 'btn btn-success'
+:javascript

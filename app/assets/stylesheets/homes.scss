@@ -22,3 +22,49 @@ select.form-control.total {
     vertical-align: middle;
   }
 }
+
+.logo {
+  padding-top: 30px;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    padding-top: 5px;
+  }
+}
+
+.navbar-nav > li > a > .social {
+  padding: 0px 10px;
+}
+
+
+.navbar-nav > li > a > .fa-facebook:hover {
+  color: lightseagreen;
+}
+
+li.fb-login-btn > a > .btn {
+  background-color: #3b5998
+}
+
+li.tw-login-btn > a > .btn {
+  background-color: #0084b4
+}
+
+li.gg-login-btn > a > .btn {
+  background-color: #D34836
+}
+
+strong.social-login {
+  margin: 10px
+}
+
+.social-login-btn {
+  width: 100%
+}
+
+@media (max-width: 768px) {
+  .nav.navbar-nav.logout{
+    float: left;
+  }
+}

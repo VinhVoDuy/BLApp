@@ -25,6 +25,8 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 gem 'prettyphoto-rails'
+gem 'paperclip'
+gem 'cocoon'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -40,6 +42,7 @@ gem 'font-awesome-rails'
 gem 'owlcarousel-rails'
 gem 'jquery-ui-rails'
 gem 'rest-client', '~> 2.0.0'
+gem 'omniauth-facebook'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

@@ -5,19 +5,8 @@
         %h2.lined-heading
           %span Gallery
   #owl-gallery.owl-carousel
-    .item
-      %a{"data-rel" => "prettyPhoto[gallery1]", :href => asset_url("800x504.gif")}
-        %img{:alt => "Image 1", :src => asset_url("800x504.gif")}/
-        %i.fa.fa-search
-    .item
-      %a{"data-rel" => "prettyPhoto[gallery1]", :href => asset_url("800x504.gif")}
-        %img{:alt => "Image 2", :src => asset_url("800x504.gif")}/
-        %i.fa.fa-search
-    .item
-      %a{"data-rel" => "prettyPhoto[gallery1]", :href => asset_url("800x504.gif")}
-        %img{:alt => "Image 3", :src => asset_url("800x504.gif")}/
-        %i.fa.fa-search
-    .item
-      %a{"data-rel" => "prettyPhoto[gallery1]", :href => asset_url("800x504.gif")}
-        %img{:alt => "Image 4", :src => asset_url("800x504.gif")}/
-        %i.fa.fa-search
+    = RoomImage.find_each do |room_image|
+      .item
+        %a{href: room_image.image.url(:medium), 'data-rel' => 'prettyPhoto[gallery1]'}
+          = image_tag room_image.image.url(:medium), alt: room_image.room_type.name || 'Image'
+          %i.fa.fa-search

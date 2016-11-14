@@ -1,0 +1,31 @@
+%h1.text-center
+  Admin Landing Images
+  .small (should be 1700x449)
+.container-fluid
+  .row
+    %h3.col-md-2.text-center
+      Image
+    %h3.col-md-3.text-center
+      Heading
+    %h3.col-md-3.text-center
+      Description
+    %h3.col-md-3.text-center
+      URL
+    %h3.col-md-1.text-center
+      Actions
+  - LandingImage.find_each do |landing_image|
+    .row.landing_image
+      .col-md-2.text-center
+        = link_to image_tag(landing_image.image.url(:thumb)), landing_image.image.url(:original)
+      .col-md-3.text-center
+        = landing_image.heading
+      .col-md-3.text-center
+        = landing_image.description
+      .col-md-3.text-center
+        = landing_image.url
+      .col-md-1.text-center
+        = link_to 'Delete', admin_landing_image_path(landing_image), method: :delete, data: {confirm: 'Are you sure ?'}
+        = link_to 'Edit', edit_admin_landing_image_path(landing_image)
+  .text-center
+    %br
+    = link_to 'Add New Image', new_admin_landing_image_path, class: 'btn btn-success'

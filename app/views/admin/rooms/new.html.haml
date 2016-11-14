@@ -1,0 +1,15 @@
+.container
+  %h1.text-center New Room
+  = render 'shared/flash'
+  = form_for([:admin, @room], html: {class: 'form-horizontal center'}) do |f|
+    .form-group
+      = f.label :room_type, 'Room Type', class: "col-md-2 control-label"
+      .col-md-10
+        = f.select :room_type_id, RoomType.all.map{ |room_type| [ "#{room_type.name} - $#{room_type.price.to_i}", room_type.id ] }, class: 'form-control'
+    .form-group
+      = f.label :number, 'Room Number', class: "col-md-2 control-label"
+      .col-md-10
+        = f.text_field :number, class: 'form-control'
+    %br
+    .actions.col-md-2.col-md-offset-2
+      = f.submit "Create", class: 'btn btn-success'

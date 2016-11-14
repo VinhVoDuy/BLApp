@@ -221,7 +221,7 @@ label {
 	color: #5e5e5e;
 }
 .form-control {
-	color: #bfbfbf;
+	color: #5a5a5a;
 }
 .form-control option {
 	color: #5e5e5e;
@@ -634,7 +634,9 @@ header #logo {
 /* Dropdown */
 .navbar-nav > li > a {
 	padding: 32px 20px;
+  font-size: 15px
 }
+
 .navbar-nav > li:first-child {
 	padding-left: 40px;
 }

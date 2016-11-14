@@ -2,13 +2,16 @@
 %img#background-image{:alt => "background image", :src => asset_url("1200x800.gif")}/
 .boxed
   / Top header
-  = render 'shared/top_header'
+  -# = render 'shared/top_header'
   / Header
   = render 'shared/header'
   / Revolution Slider
   = render 'shared/reservation_slider'
   / Reservation form
-  = render 'shared/reservation_form'
+  - if current_user
+    = render 'shared/reservation_form'
+  - else
+    = render 'shared/guest_reservation_form'
   / Rooms
   = render 'shared/rooms'
   / USP's

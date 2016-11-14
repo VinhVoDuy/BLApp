@@ -14,7 +14,6 @@ describe SetExpressCheckout do
       expect(@items_params['L_PAYMENTREQUEST_0_NAME1']).to be_present
       expect(@items_params['L_PAYMENTREQUEST_0_DESC1']).to be_present
       expect(@items_params['L_PAYMENTREQUEST_0_AMT1']).to be_present
-      byebug
       expect(@items_params['L_PAYMENTREQUEST_0_QTY1']).to be_present
 
     end

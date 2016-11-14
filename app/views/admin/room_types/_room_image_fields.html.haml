@@ -1,0 +1,6 @@
+.row.room-image-form
+  .field.col-sm-8
+    = image_tag f.object.image.url(:medium) if f.object.image?
+    = f.file_field :image
+  .col-sm-4
+    = link_to_remove_association 'X', f, class: 'btn btn-danger'

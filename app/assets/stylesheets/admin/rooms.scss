@@ -1,0 +1,25 @@
+.room{
+  border: 1px solid #a29b9b;
+  min-height: 150px;
+}
+
+.room.available{
+  background-color: lightblue;
+}
+
+.room.booked{
+  background-color: lightyellow;
+}
+
+.add-room .fa{
+  color: darkcyan;
+}
+
+.add-room {
+  @extend .room;
+  padding: 30px;
+}
+
+.room-image-form {
+  padding: 10px 0;
+}

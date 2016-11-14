@@ -5,119 +5,26 @@
         %h2.lined-heading
           %span Guests Favorite Rooms
       / Room
-      .col-sm-4
-        .room-thumb
-          %img.img-responsive{:alt => "room 1", :src => asset_url("356x228.gif")}/
-          .mask
-            .main
-              %h5 Double bedroom
-              .price
-                $ 99
-                %span a night
-            .content
-              %p
-                %span A modern hotel room in Star Hotel
-                Nunc tempor erat in magna pulvinar fermentum. Pellentesque scelerisque at leo nec vestibulum.
-                malesuada metus.
-              .row
-                .col-xs-6
-                  %ul.list-unstyled
-                    %li
-                      %i.fa.fa-check-circle
-                      Incl. breakfast
-                    %li
-                      %i.fa.fa-check-circle
-                      Private balcony
-                    %li
-                      %i.fa.fa-check-circle
-                      Sea view
-                .col-xs-6
-                  %ul.list-unstyled
-                    %li
-                      %i.fa.fa-check-circle
-                      Free Wi-Fi
-                    %li
-                      %i.fa.fa-check-circle
-                      Incl. breakfast
-                    %li
-                      %i.fa.fa-check-circle
-                      Bathroom
-              %a.btn.btn-primary.btn-block{:href => "room-detail.html"} Read More
-      / Room
-      .col-sm-4
-        .room-thumb
-          %img.img-responsive{:alt => "room 2", :src => asset_url("356x228.gif")}/
-          .mask
-            .main
-              %h5 King Size Bedroom
-              .price
-                € 149
-                %span a night
-            .content
-              %p
-                %span A modern hotel room in Star Hotel
-                Nunc tempor erat in magna pulvinar fermentum. Pellentesque scelerisque at leo nec vestibulum.
-                malesuada metus.
-              .row
-                .col-xs-6
-                  %ul.list-unstyled
-                    %li
-                      %i.fa.fa-check-circle
-                      Incl. breakfast
-                    %li
-                      %i.fa.fa-check-circle
-                      Private balcony
-                    %li
-                      %i.fa.fa-check-circle
-                      Sea view
-                .col-xs-6
-                  %ul.list-unstyled
-                    %li
-                      %i.fa.fa-check-circle
-                      Free Wi-Fi
-                    %li
-                      %i.fa.fa-check-circle
-                      Incl. breakfast
-                    %li
-                      %i.fa.fa-check-circle
-                      Bathroom
-              %a.btn.btn-primary.btn-block{:href => "room-detail.html"} Read More
-      / Room
-      .col-sm-4
-        .room-thumb
-          %img.img-responsive{:alt => "room 3", :src => asset_url("356x228.gif")}/
-          .mask
-            .main
-              %h5 Single room
-              .price
-                € 120
-                %span a night
-            .content
-              %p
-                %span A modern hotel room in Star Hotel
-                Nunc tempor erat in magna pulvinar fermentum. Pellentesque scelerisque at leo nec vestibulum.
-                malesuada metus.
-              .row
-                .col-xs-6
-                  %ul.list-unstyled
-                    %li
-                      %i.fa.fa-check-circle
-                      Incl. breakfast
-                    %li
-                      %i.fa.fa-check-circle
-                      Private balcony
-                    %li
-                      %i.fa.fa-check-circle
-                      Sea view
-                .col-xs-6
-                  %ul.list-unstyled
-                    %li
-                      %i.fa.fa-check-circle
-                      Free Wi-Fi
-                    %li
-                      %i.fa.fa-check-circle
-                      Incl. breakfast
-                    %li
-                      %i.fa.fa-check-circle
-                      Bathroom
-              %a.btn.btn-primary.btn-block{:href => "room-detail.html"} Read More
+      = RoomType.find_each do |room_type|
+        .col-sm-4
+          .room-thumb
+            = image_tag room_type.room_images.first.image.url(:medium), class: 'img-responsive'
+            .mask
+              .main
+                %h5 #{room_type.name}
+                .price
+                  $ #{room_type.price.to_s.remove(/\.0|0+$/)}
+                  %span 1 night
+              .content
+                %p
+                  %span #{room_type.title}
+                  = room_type.description
+                .row
+                  - room_type.features.each_slice(3).each do |arr_feature|
+                    .col-xs-6
+                      %ul.list-unstyled
+                        - arr_feature.each do |feature|
+                          %li
+                            %i.fa.fa-check-circle
+                            = feature
+                %a.btn.btn-primary.btn-block{:href => "room-detail.html"} Read More

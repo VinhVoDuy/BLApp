@@ -8,26 +8,21 @@
           .row
             .col-sm-3
               .form-group
-                %label{:accesskey => "E", :for => "email"} E-mail
-                %input#email.form-control{:name => "email", :placeholder => "Please enter your E-mail", :type => "text", :value => ""}/
-            .col-sm-2
-              .form-group
                 %label{:for => "room"} Room Type
                 .popover-icon{"data-container" => "body", "data-content" => "Vivamus sagittis lacus vel augue laoreet rutrum faucibus.", "data-placement" => "right", "data-toggle" => "popover", "data-trigger" => "hover"}
                   %i.fa.fa-info-circle.fa-lg
                 %select#room.form-control{:name => "room"}
                   %option{:disabled => "disabled", :selected => "selected"} Select a room
-                  %option{:value => "Single"} Single room
-                  %option{:value => "Double"} Double Room
-                  %option{:value => "Deluxe"} Deluxe room
-            .col-sm-2
+                  = RoomType.find_each do |room_type|
+                    %option{:value => room_type.id} #{ room_type.name }
+            .col-sm-3
               .form-group
                 %label{:for => "checkin"} Check-in
                 .popover-icon{"data-container" => "body", "data-content" => "Check-In is from 11:00", "data-placement" => "right", "data-toggle" => "popover", "data-trigger" => "hover"}
                   %i.fa.fa-info-circle.fa-lg
                 %i.fa.fa-calendar.infield
                 %input#checkin.form-control{:name => "checkin", :placeholder => "Check-in", :type => "text", :value => ""}/
-            .col-sm-2
+            .col-sm-3
               .form-group
                 %label{:for => "checkout"} Check-out
                 .popover-icon{"data-container" => "body", "data-content" => "Check-out is from 12:00", "data-placement" => "right", "data-toggle" => "popover", "data-trigger" => "hover"}

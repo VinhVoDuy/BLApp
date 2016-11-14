@@ -1,0 +1,49 @@
+%section#reservation-form
+  .container
+    .row
+      .col-md-12
+        %form#reservationform.form-inline.reservation-horizontal.clearfix{:action => "php/reservation.php", :method => "post", :name => "reservationform", :role => "form"}
+          #message
+          / Error message display
+          .row
+            .col-sm-3
+              .form-group
+                %label{:for => "email"} Email
+                %input#email.form-control{placeholder: 'Type your email here', type: 'text', value: ''}
+            .col-sm-2
+              .form-group
+                %label{:for => "room"} Room Type
+                .popover-icon{"data-container" => "body", "data-content" => "Vivamus sagittis lacus vel augue laoreet rutrum faucibus.", "data-placement" => "right", "data-toggle" => "popover", "data-trigger" => "hover"}
+                  %i.fa.fa-info-circle.fa-lg
+                %select#room.form-control{:name => "room"}
+                  %option{:disabled => "disabled", :selected => "selected"} Select a room
+                  %option{:value => "Single"} Single room
+                  %option{:value => "Double"} Double Room
+                  %option{:value => "Deluxe"} Deluxe room
+            .col-sm-2
+              .form-group
+                %label{:for => "checkin"} Check-in
+                .popover-icon{"data-container" => "body", "data-content" => "Check-In is from 11:00", "data-placement" => "right", "data-toggle" => "popover", "data-trigger" => "hover"}
+                  %i.fa.fa-info-circle.fa-lg
+                %i.fa.fa-calendar.infield
+                %input#checkin.form-control{:name => "checkin", :placeholder => "Check-in", :type => "text", :value => ""}/
+            .col-sm-2
+              .form-group
+                %label{:for => "checkout"} Check-out
+                .popover-icon{"data-container" => "body", "data-content" => "Check-out is from 12:00", "data-placement" => "right", "data-toggle" => "popover", "data-trigger" => "hover"}
+                  %i.fa.fa-info-circle.fa-lg
+                %i.fa.fa-calendar.infield
+                %input#checkout.form-control{:name => "checkout", :placeholder => "Check-out", :type => "text", :value => ""}/
+            .col-sm-1
+              .form-group
+                %label Guests
+                %i.fa.fa-user.infield
+                %select.total.form-control
+                  %option 1
+                  %option 2
+                  %option 3
+                  %option 4
+            .col-sm-2
+              %button.btn.btn-primary.btn-block{:type => "submit"}
+                %i.fa.fa-plane
+                Book
