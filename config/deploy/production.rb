@@ -64,4 +64,3 @@ set :ssh_options, {
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
-set :console_user, :deploy
