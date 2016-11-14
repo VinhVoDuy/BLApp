@@ -51,6 +51,7 @@ group :development, :test do
   gem 'capistrano-rails', require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano-rvm'
+  gem 'capistrano-rails-console', require: false
 
   gem 'rspec-rails'
   gem "factory_girl_rails"
