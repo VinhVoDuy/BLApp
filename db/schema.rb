@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170402074607) do
+ActiveRecord::Schema.define(version: 20170402112252) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,18 @@ ActiveRecord::Schema.define(version: 20170402074607) do
     t.index ["reservation_id"], name: "index_paypal_transactions_on_reservation_id", using: :btree
   end
 
+  create_table "promotions", force: :cascade do |t|
+    t.integer  "percentage_off"
+    t.integer  "amount_off"
+    t.string   "code"
+    t.text     "description"
+    t.boolean  "active"
+    t.string   "name"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["code"], name: "index_promotions_on_code", unique: true, using: :btree
+  end
+
   create_table "remainings", force: :cascade do |t|
     t.integer  "quantity_left",             null: false
     t.integer  "room_type_id",              null: false
@@ -107,8 +119,9 @@ ActiveRecord::Schema.define(version: 20170402074607) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.boolean  "primary",            default: false
     t.index ["room_type_id"], name: "index_room_images_on_room_type_id", using: :btree
   end
 

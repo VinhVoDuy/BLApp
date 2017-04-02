@@ -2,5 +2,8 @@
   .field.col-sm-8
     = image_tag f.object.image.url(:medium) if f.object.image?
     = f.file_field :image
-  .col-sm-4
+  .col-sm-2
+    = f.check_box :primary
+    = f.label :primary
+  .col-sm-2
     = link_to_remove_association 'X', f, class: 'btn btn-danger'
