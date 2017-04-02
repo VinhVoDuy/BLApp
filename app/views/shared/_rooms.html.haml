@@ -3,28 +3,7 @@
     .row
       .col-sm-12
         %h2.lined-heading
-          %span Guests Favorite Rooms
+          %span #{title}
       / Room
-      = RoomType.find_each do |room_type|
-        .col-sm-4
-          .room-thumb
-            = image_tag room_type.room_images.first.image.url(:medium), class: 'img-responsive'
-            .mask
-              .main
-                %h5 #{room_type.name}
-                .price
-                  $ #{room_type.price.to_s.remove(/\.0|0+$/)}
-                  %span 1 night
-              .content
-                %p
-                  %span #{room_type.title}
-                  = room_type.description
-                .row
-                  - room_type.features.each_slice(3).each do |arr_feature|
-                    .col-xs-6
-                      %ul.list-unstyled
-                        - arr_feature.each do |feature|
-                          %li
-                            %i.fa.fa-check-circle
-                            = feature
-                %a.btn.btn-primary.btn-block{:href => "room-detail.html"} Read More
+      = rooms.find_each do |room_type|
+        = render 'rooms/room', room_type: room_type, night: 1, quantity: 1

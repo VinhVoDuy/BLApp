@@ -2,48 +2,44 @@
   .container
     .row
       .col-md-12
-        %form#reservationform.form-inline.reservation-horizontal.clearfix{:action => "php/reservation.php", :method => "post", :name => "reservationform", :role => "form"}
+        = form_for :available, url: availables_path, html: { class: 'form-inline reservation-horizontal clearfix', id: :reservationform }do |f|
           #message
           / Error message display
           .row
             .col-sm-3
               .form-group
                 %label{:for => "email"} Email
-                %input#email.form-control{placeholder: 'Type your email here', type: 'text', value: ''}
+                .popover-icon{"data-container" => "body", "data-content" => "Vivamus sagittis lacus vel augue laoreet rutrum faucibus.", "data-placement" => "right", "data-toggle" => "popover", "data-trigger" => "hover"}
+                  %i.fa.fa-info-circle.fa-lg
+                = f.text_field :email, class: 'form-control', placeholder: 'Type your email here', id: :email
             .col-sm-2
               .form-group
                 %label{:for => "room"} Room Type
                 .popover-icon{"data-container" => "body", "data-content" => "Vivamus sagittis lacus vel augue laoreet rutrum faucibus.", "data-placement" => "right", "data-toggle" => "popover", "data-trigger" => "hover"}
                   %i.fa.fa-info-circle.fa-lg
-                %select#room.form-control{:name => "room"}
-                  %option{:disabled => "disabled", :selected => "selected"} Select a room
-                  %option{:value => "Single"} Single room
-                  %option{:value => "Double"} Double Room
-                  %option{:value => "Deluxe"} Deluxe room
+                = f.select :room_type_id, RoomType.pluck(:name, :id),{ selected: params[:room_type]}, class: 'form-control', id: :room, name: :room_type_id
             .col-sm-2
               .form-group
                 %label{:for => "checkin"} Check-in
                 .popover-icon{"data-container" => "body", "data-content" => "Check-In is from 11:00", "data-placement" => "right", "data-toggle" => "popover", "data-trigger" => "hover"}
                   %i.fa.fa-info-circle.fa-lg
                 %i.fa.fa-calendar.infield
-                %input#checkin.form-control{:name => "checkin", :placeholder => "Check-in", :type => "text", :value => ""}/
+                %input#checkin.form-control{:name => "start_date", :placeholder => "Check-in", :type => "text", :value => "", 'data-provide' => 'datepicker', 'data-date-format' => 'yyyy-M-dd', value: params[:start_date]}/
             .col-sm-2
               .form-group
                 %label{:for => "checkout"} Check-out
                 .popover-icon{"data-container" => "body", "data-content" => "Check-out is from 12:00", "data-placement" => "right", "data-toggle" => "popover", "data-trigger" => "hover"}
                   %i.fa.fa-info-circle.fa-lg
                 %i.fa.fa-calendar.infield
-                %input#checkout.form-control{:name => "checkout", :placeholder => "Check-out", :type => "text", :value => ""}/
+                %input#checkout.form-control{:name => "end_date", :placeholder => "Check-out", :type => "text", :value => "", 'data-provide' => 'datepicker', 'data-date-format' => 'yyyy-M-dd', value: params[:start_date]}/
             .col-sm-1
               .form-group
                 %label Guests
                 %i.fa.fa-user.infield
-                %select.total.form-control
-                  %option 1
-                  %option 2
-                  %option 3
-                  %option 4
+                = f.select :quantity, [1, 2, 3, 4], { selected: params[:quantity] }, class: 'total form-control', name: :quantity
             .col-sm-2
               %button.btn.btn-primary.btn-block{:type => "submit"}
                 %i.fa.fa-plane
                 Book
+            .col-sm-12.text-center.text-danger
+              %strong= params[:error]

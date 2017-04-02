@@ -4,6 +4,6 @@ FactoryGirl.define do
     quantity 1
     price 10
     amount 10
-    reservable { create(:room_type) }
+    reservable { RoomType.first || create(:room_type) }
   end
 end

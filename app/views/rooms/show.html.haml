@@ -1,0 +1,61 @@
+.boxed
+  = render 'shared/header'
+.container
+  .row.overlay
+    .color-overlay
+      / Page title
+      .container
+        .row
+          .col-sm-12
+            %ol.breadcrumb
+              %li
+                = link_to 'Home', root_path
+              %li
+                = link_to 'Rooms', rooms_path
+              %li.active= @room.name
+            %h1.white-color= @room.name
+  %br
+  %br
+  .row
+    / Slider
+    %section.standard-slider.room-slider
+      .col-sm-12.col-md-8
+        #owl-standard.owl-carousel
+          - @room.room_images.map do |room_image|
+            .item
+              %a{"data-rel" => "prettyPhoto[gallery1]", :href => room_image.image.url(:medium)}
+                %img.img-responsive{:alt => @room.name || 'Image', :src => room_image.image.url(:medium)}/
+    / Reservation form
+    %section#reservation-form.mt50.clearfix
+      .col-sm-12.col-md-4
+        %form#reservationform.reservation-vertical.clearfix{:action => "php/reservation.php", :method => "post", :name => "reservationform", :role => "form"}
+          %h2.lined-heading
+            %span Reservation
+          .price
+            %h4 Double Room
+            \$ #{price_formatter(@room.price)} -
+            %span a night
+          %button.btn.btn-primary.btn-block{:type => "submit"} Book Now
+    / Room Content
+    %section
+      .container
+        .row
+          .col-sm-7.mt50
+            %h2.lined-heading
+              %span Enjoy Your Room
+            %p.mt50= @room.description.html_safe
+          .col-sm-5.mt50
+            %h2.lined-heading
+              %span Room Facilities
+            %table.table.table-striped.mt30
+              %tbody
+                - @room.features.each_slice(3).each do |arr_feature|
+                  %tr
+                    -arr_feature.each do |feature|
+                      %td
+                        %i.fa.fa-check-circle
+                        = feature
+/ Other Rooms
+= render 'shared/rooms', rooms: RoomType.where.not(id: @room.id), title: 'Other Rooms'
+
+= render 'shared/footer'

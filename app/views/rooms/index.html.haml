@@ -1,0 +1,22 @@
+.boxed
+  = render 'shared/header'
+  .row
+    .container
+      .row.overlay
+        .color-overlay
+          / Page title
+          .container
+            .row
+              .col-sm-12
+                %ol.breadcrumb
+                  %li
+                    = link_to 'Home', root_path
+                  %li.active Rooms
+                %h1.white-color All Rooms
+  %section.rooms.mt50
+    .container
+      = RoomType.all.each_slice(3).each do |room_type_list|
+        .row.rooms-row
+          - room_type_list.each do |room_type|
+            = render 'rooms/room', room_type: room_type, night: 1, quantity: 1
+= render 'shared/footer'

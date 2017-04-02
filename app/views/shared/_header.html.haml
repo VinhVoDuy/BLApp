@@ -20,86 +20,11 @@
               Rooms
               %b.caret
             %ul.dropdown-menu
-              %li
-                %a{:href => "room-list.html"} Room List View
-              %li
-                %a{:href => "room-detail.html"} Room Detail
+              - RoomType.find_each do |room|
+                %li
+                  = link_to room.name, room_path(room)
           %li.dropdown
             %a.dropdown-toggle.js-activated{"data-toggle" => "dropdown", :href => "#"}
-              Features
+              Promotions
               %b.caret
             .dropdown-menu
-              .yamm-content
-                .row
-                  %ul.col-sm-3.list-unstyled.mt20
-                    %li
-                      %p
-                        %strong Elements
-                    %li
-                      %a{:href => "elements.html"} Elements
-                    %li
-                      %a{:href => "icons.html"} Icons
-                    %li
-                      %a{:href => "404.html"} 404 Page
-                  %ul.col-sm-3.list-unstyled.mt20
-                    %li
-                      %p
-                        %strong Layout
-                    %li
-                      %a{:href => "boxed-pattern.html"}
-                        %i.fa.fa-square-o
-                        Boxed
-                    %li
-                      %a{:href => "index.html"}
-                        %i.fa.fa-arrows-h
-                        Wide
-                    %li
-                      %a{:href => "boxed-background.html"}
-                        %i.fa.fa-picture-o
-                        Image
-                  %ul.col-sm-6.list-unstyled.mt20
-                    %li
-                      %p
-                        %strong Yamm! Megamenu
-                      %ul.list-unstyled
-                        %li.row
-                          %ul.col-sm-12.list-unstyled
-                            %li
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere justo posuere, commodo nibh sit amet, malesuada nisi. Nam vitae mauris vel ante laoreet placerat. Praesent pellentesque consectetur lobortis. Pellentesque lacinia nibh leo, sed pharetra tortor sagittis id. Cras a scelerisque eros. Nunc ornare diam turpis, id vulputate massa sagittis sed.
-          %li.dropdown
-            %a.dropdown-toggle.js-activated{"data-toggle" => "dropdown", :href => "#"}
-              Blog
-              %b.caret
-            %ul.dropdown-menu
-              %li
-                %a{:href => "blog.html"} Blog grid
-              %li
-                %a{:href => "blog-post.html"} Blog post
-            %li.dropdown
-              %a.dropdown-toggle.js-activated{"data-toggle" => "dropdown", :href => "#"}
-                - if current_user
-                  .fa.fa-user
-                    = current_user.try(:name) || current_user.try(:email)
-                - else
-                  LogIn / LogOut
-                %b.caret
-              %ul.dropdown-menu
-                - if current_user
-                  %li
-                    = link_to 'Log Out', destroy_user_session_path, method: :delete
-                - else
-                  %li.fb-login-btn
-                    %a{:href => user_facebook_omniauth_authorize_path}
-                      .btn.btn-primary.social-login-btn
-                        %span.fa.fa-facebook
-                          %strong.social-login Login with Facebook
-                  %li.tw-login-btn
-                    %a{:href => "contact-01.html"}
-                      .btn.btn-primary.social-login-btn
-                        %span.fa.fa-twitter
-                          %strong.social-login Login with Twitter
-                  %li.gg-login-btn
-                    %a{:href => "contact-01.html"}
-                      .btn.btn-primary.social-login-btn
-                        %span.fa.fa-google
-                          %strong.social-login Login with Google

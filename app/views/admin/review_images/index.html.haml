@@ -1,0 +1,43 @@
+%h1.text-center Admin Reviews
+.container-fluid
+  = render 'shared/flash'
+  .row
+    %h3.col-md-1.text-center
+      Id
+    %h3.col-md-3.text-center
+      Image
+    %h3.col-md-3.text-center
+      Name
+    %h3.col-md-3.text-center
+      Content
+    %h3.col-md-1.text-center
+      Actions
+  - ReviewImage.find_each do |review_image|
+    .row
+      .col-md-1.text-center
+        = review_image.id
+      .col-md-3.text-center
+        = image_tag review_image.image.url(:thumb)
+      .col-md-3.text-center
+        = review_image.name
+      .col-md-3.text-center
+        = review_image.content
+      .col-md-2.text-center
+        = link_to 'Delete', admin_review_image_path(review_image), method: :delete, data: {confirm: 'Are you sure ?'}
+        = link_to 'Edit', edit_admin_review_image_path(review_image)
+  %br
+  = form_for [:admin, ReviewImage.new] do |f|
+    .col-sm-2
+      = f.label :name
+    .col-sm-10
+      = f.text_field :name, class: 'form-control'
+    .col-sm-2
+      = f.label :content
+    .col-sm-10
+      = f.text_field :content, class: 'form-control'
+    .col-sm-2
+      = f.label :image
+    .col-sm-10
+      = f.file_field :image
+    .row
+    = f.submit 'Add New', class: 'btn btn-success'

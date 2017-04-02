@@ -18,3 +18,4 @@
 //= require_tree ./hotel
 //= require prettyphoto-rails
 //= require_tree .
+//= require bootstrap-datepicker

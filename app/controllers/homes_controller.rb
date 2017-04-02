@@ -5,6 +5,10 @@ class HomesController < ApplicationController
     @merchant_id = ENV['paypal_merchant_id']
   end
 
+  def test
+
+  end
+
   def show2
   end
 end

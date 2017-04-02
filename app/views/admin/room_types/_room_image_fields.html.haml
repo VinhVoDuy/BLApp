@@ -1,4 +1,4 @@
-.row.room-image-form
+.row.room-image-form.nested-fields
   .field.col-sm-8
     = image_tag f.object.image.url(:medium) if f.object.image?
     = f.file_field :image

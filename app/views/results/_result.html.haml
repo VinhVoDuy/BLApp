@@ -1,0 +1,31 @@
+.row.search-shadow-box.vertical-center
+  .col-sm-4.search-item
+    = image_tag RoomType.first.room_images.first.image, class: 'img-responsive'
+  .col-sm-4.search-item
+    .h3.room-title= RoomType.first.name
+    %p= RoomType.first.description
+    .row
+      - RoomType.first.features.each_slice(3).each do |arr_feature|
+        .col-sm-6
+          %ul.list-unstyled.feature-search-result
+            - arr_feature.each do |feature|
+              %li
+                %i.fa.fa-check-circle.color-blue
+                = feature
+    .last-book
+      Last Booked: 8 hours ago
+    .today-book.bold
+      Today's Books: 17
+  .col-sm-4.search-item
+    .h3.deal-title
+      Deals for you
+      %del.old-price ($1400)
+    .row.vertical-center.pricing
+      .col-xs-6.bold
+        No Refundable:
+      .col-xs-6
+        .price
+          .btn.btn-primary
+            %span $1000
+          .saving
+            = "- 40%"

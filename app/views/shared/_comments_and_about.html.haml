@@ -6,36 +6,16 @@
         %h2.lined-heading.fadeIn.appear{"data-start" => "0"}
           %span What Other Visitors Experienced
         #owl-reviews.owl-carousel
-          .item
-            .row
-              .col-lg-3.col-md-4.col-sm-2.col-xs-12
-                %img.img-circle{:alt => "Review 1", :src => asset_url("100x100.gif")}/
-              .col-lg-9.col-md-8.col-sm-10.col-xs-12
-                .text-balloon
-                  Searched the internet and i found, booked and visited this hotel that i like to call utopia...
-                  %span Kim Jones, Single Room
-            .row
-              .col-lg-3.col-md-4.col-sm-2.col-xs-12
-                %img.img-circle{:alt => "Review 2", :src => asset_url("100x100.gif")}/
-              .col-lg-9.col-md-8.col-sm-10.col-xs-12
-                .text-balloon
-                  I give it a 5 out of 5! Great hotel, friendly staff, clean, relaxing... Yep i'm coming back! ;-)
-                  %span Sandra Donnathan, Double Room
-          .item
-            .row
-              .col-lg-3.col-md-4.col-sm-2.col-xs-12
-                %img.img-circle{:alt => "Review 3", :src => asset_url("100x100.gif")}/
-              .col-lg-9.col-md-8.col-sm-10.col-xs-12
-                .text-balloon
-                  Such a nice place... Next time i will book a 3 weeks stay at this place.
-                  %span Rosanne O'Donald, Single Room
-            .row
-              .col-lg-3.col-md-4.col-sm-2.col-xs-12
-                %img.img-circle{:alt => "Review 4", :src => asset_url("100x100.gif")}/
-              .col-lg-9.col-md-8.col-sm-10.col-xs-12
-                .text-balloon
-                  By far the best hotel in the city! Location is nice and the service is great!
-                  %span Carl Adams, Single Room
+          - ReviewImage.all.each_slice(2) do |review_arr|
+            .item
+              - review_arr.each do |review|
+                .row
+                  .col-lg-3.col-md-4.col-sm-2.col-xs-12
+                    %img.img-circle{:alt => "Review 1", :src =>review.image.url(:thumb), width: 100, height: 100}
+                  .col-lg-9.col-md-8.col-sm-10.col-xs-12
+                    .text-balloon
+                      = review.content
+                      %span= review.name
     / About
     %section.about.mt100
       .col-md-6
@@ -44,20 +24,16 @@
         / Nav tabs
         %ul.nav.nav-tabs
           %li.active
+            %a{"data-toggle" => "tab", :href => "#location"} Location
+          %li
             %a{"data-toggle" => "tab", :href => "#hotel"} Our hotels
-          %li
-            %a{"data-toggle" => "tab", :href => "#events"} Events
-          %li
-            %a{"data-toggle" => "tab", :href => "#kids"} Kids
-          %li
-            %a{"data-toggle" => "tab", :href => "#business"} Business
         / Tab panes
         .tab-content
-          #hotel.tab-pane.fade.in.active
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum eleifend augue, quis rhoncus purus fermentum. In hendrerit risus arcu, in eleifend metus dapibus varius. Nulla dolor sapien, laoreet vel tincidunt non, egestas non justo. Phasellus et mattis lectus, et gravida urna.
+          #location.tab-pane.in.active
+            %p Our hotel is right in the heart of the city (district 1, Ho Chi Minh city). See the map for detail:
+            %iframe{:allowfullscreen => "", :frameborder => "0", :height => "300", :src => "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ61QqLxYvdTERmEfvQWFyVag&key=AIzaSyAVcC1ajCDJk_TeJwpWkSnDJG8nvaeIbJo", :style => "border:0", :width => "100%"}
+          #hotel.tab-pane.fade
+            %p Settled down in the center of Ho Chi Minh City, the Blue River Hotel is far more than just a place to sleep. It inspires loyal guests to create treasured memories, to celebrate each moment and to rekindle their spirit. It is a state of mind where the ambiance and amenities are merely the gateway to a more majestic experience.
             %p
-              %img.pull-right{:alt => "food", :src => asset_url("197x147.gif")}/
-              Donec pretium sem non tincidunt iaculis. Nunc at pharetra eros, a varius leo. Mauris id hendrerit justo. Mauris egestas magna vitae nisi ultricies semper. Nam vitae suscipit magna. Nam et felis nulla. Ut nec magna tortor. Nulla dolor sapien, laoreet vel tincidunt non, egestas non justo.
-          #events.tab-pane.fade Phasellus sodales justo felis, a vestibulum risus mattis vitae. Aliquam vitae varius elit, non facilisis massa. Vestibulum luctus diam mollis gravida bibendum. Aliquam mattis velit dolor, sit amet semper erat auctor vel. Integer auctor in dui ac vehicula. Integer fermentum nunc ut arcu feugiat, nec placerat nunc tincidunt. Pellentesque in massa eu augue placerat cursus sed quis magna.
-          #kids.tab-pane.fade Aa vestibulum risus mattis vitae. Aliquam vitae varius elit, non facilisis massa. Vestibulum luctus diam mollis gravida bibendum. Aliquam mattis velit dolor, sit amet semper erat auctor vel. Integer auctor in dui ac vehicula. Integer fermentum nunc ut arcu feugiat, nec placerat nunc tincidunt. Pellentesque in massa eu augue placerat cursus sed quis magna.
-          #business.tab-pane.fade ...
+              Make yourself at home in our well-designed hotel rooms. Which showcase high quality mattress and pillows. Enjoy our complimentary coffee and tea while you're relaxing your body and mind in the most comfortable hotel
+

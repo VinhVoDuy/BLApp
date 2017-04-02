@@ -1,0 +1,17 @@
+%h1.text-center Update Review
+= form_for [:admin, @review] do |f|
+  .col-sm-2
+    = f.label :name
+  .col-sm-10
+    = f.text_field :name, class: 'form-control'
+  .col-sm-2
+    = f.label :content
+  .col-sm-10
+    = f.text_field :content, class: 'form-control'
+  .col-sm-2
+    = f.label :image
+  .col-sm-10
+    = image_tag @review.image.url
+    = f.file_field :image
+  .row
+  = f.submit 'Update', class: 'btn btn-success'

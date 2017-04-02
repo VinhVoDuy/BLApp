@@ -1,0 +1,19 @@
+- if f.object.expired?
+  .row.nested-fields.room-price-form
+    .field.col-sm-3
+      = f.text_field :price, placeholder: 'Price', class: 'form-control', readonly: true
+    .field.col-sm-3
+      = f.text_field :start_date, value: f.object.start_date.try(:strftime, '%Y-%b-%d'), class: 'form-control', readonly: true
+    .field.col-sm-3
+      = f.text_field :end_date, value: f.object.end_date.try(:strftime, '%Y-%b-%d'), class: 'form-control', readonly: true
+    .col-sm-3
+- else
+  .row.nested-fields.room-price-form
+    .field.col-sm-3
+      = f.text_field :price, placeholder: 'Price', class: 'form-control'
+    .field.col-sm-3
+      = f.text_field :start_date, placeholder: 'Start Date', class: 'form-control', 'data-provide' => :datepicker, 'data-date-format' => 'yyyy-M-dd', value: f.object.start_date.try(:strftime, '%Y-%b-%d')
+    .field.col-sm-3
+      = f.text_field :end_date, placeholder: 'End Date', class: 'form-control', 'data-provide' => :datepicker, 'data-date-format' => 'yyyy-M-dd', value: f.object.end_date.try(:strftime, '%Y-%b-%d')
+    .col-sm-3
+      = link_to_remove_association 'X', f, class: 'btn btn-danger'

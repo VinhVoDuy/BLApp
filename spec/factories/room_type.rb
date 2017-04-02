@@ -1,19 +1,29 @@
 FactoryGirl.define do
   factory :room_type do
     sequence(:name) {|n| "Room Type #{n}"}
-    price 50
-    total_room 3
-    remaining_room 3
+    after(:create) do |obj|
+      obj.room_prices.create(price: 50, start_date: Date.today, end_date: Duration::END_OF_DURATION)
+    end
+    quantity 2
     trait :small do
-      price 100
+      capacity 1
+      after(:create) do |obj|
+        obj.room_prices.create(price: 100, start_date: Date.today, end_date: Duration::END_OF_DURATION)
+      end
     end
 
     trait :medium do
-      price 150
+      capacity 2
+      after(:create) do |obj|
+        obj.room_prices.create(price: 150, start_date: Date.today, end_date: Duration::END_OF_DURATION)
+      end
     end
 
     trait :large do
-      price 200
+      capacity 4
+      after(:create) do |obj|
+        obj.room_prices.create(price: 200, start_date: Date.today, end_date: Duration::END_OF_DURATION)
+      end
     end
   end
 end

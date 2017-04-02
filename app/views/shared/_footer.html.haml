@@ -2,60 +2,35 @@
   .container
     .row
       .col-md-3.col-sm-3
-        %h4 About Starhotel
+        %h4 About Blue River Hotel
         %p
-          Suspendisse sed sollicitudin nisl, at dignissim libero. Sed porta tincidunt ipsum, vel volutpat.
+          Our hotel is right in the center of the district 1, Ho Chi Minh City, Vietnam.
           %br/
+          All of our rooms are well-designed for your comfortable and satisfaction.
           %br/
-          Nunc ut fringilla urna. Cras vel adipiscing ipsum. Integer dignissim nisl eu lacus interdum facilisis. Aliquam erat volutpat. Nulla semper vitae felis vitae dapibus.
+          Our staffs are always available 24/7 for serving all your needs.
+      .col-md-6.col-sm-6
+        %h4.text-center Location
+        %iframe{:allowfullscreen => "", :frameborder => "0", :height => "100%", :src => "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ61QqLxYvdTERmEfvQWFyVag&key=AIzaSyAVcC1ajCDJk_TeJwpWkSnDJG8nvaeIbJo", :style => "border:0", :width => "100%"}
       .col-md-3.col-sm-3
-        %h4 Recieve our newsletter
-        %p Suspendisse sed sollicitudin nisl, at dignissim libero. Sed porta tincidunt ipsum, vel volutpa!
-        %form{:role => "form"}
-          .form-group
-            %input#newsletter.form-control{:name => "newsletter", :placeholder => "Please enter your E-mailaddress", :type => "text", :value => ""}/
-          %button.btn.btn-lg.btn-black.btn-block{:type => "submit"} Submit
-      .col-md-3.col-sm-3
-        %h4 From our blog
-        %ul
-          %li
-            %a{:href => "#"}
-              Amazing post with all the goodies
-              %br/
-              January 23, 2014
-          %li
-            %a{:href => "#"}
-              Integer dignissim nisl eu lacus
-              %br/
-              January 21, 2014
-          %li
-            %a{:href => "#"}
-              Aliquam erat volutpat. Nulla semper
-              %br/
-              January 14, 2014
-      .col-md-3.col-sm-3
-        %h4 Address
+        %h4.text-center Address
         %address
-          %strong Twitter, Inc.
+          %strong The Blue River Hotel
           %br/
-          795 Folsom Ave, Suite 600
+          283/2C Phạm Ngu Lao
           %br/
-          San Francisco, CA 94107
+          District 1, Ho Chi Minh City, Vietnam
           %br/
-          %abbr{:title => "Phone"} P:
-          %a{:href => "#"} (123) 456-7890
+          %abbr{:title => "Phone"} Phone:
+          %a{:href => "tel:+84838376483"} (+84 8) 3837 6483
           %br/
-          %abbr{:title => "Email"} E:
-          %a{:href => "#"} mail@example.com
+          %abbr{:title => "Email"} Email:
+          %a{:href => "mailto:thiepmp@gmail.com"} thiepmp@gmail.com
           %br/
-          %abbr{:title => "Website"} W:
-          %a{:href => "#"} www.slashdown.nl
+          %abbr{:title => "Website"} Website:
+          %a{:href => "www.blriverhotel.com"} www.blriverhotel.com
           %br/
   .footer-bottom
     .container
       .row
-        .col-xs-6 © 2014 Starhotel All Rights Reserved
-        .col-xs-6.text-right
-          %ul
-            %li
-              %a{:href => "contact-01.html"} Contact
+        .col-xs-6 © #{Time.now.year} BlueRiverHotel All Rights Reserved

@@ -10,7 +10,7 @@ class Admin::SessionsController < ApplicationController
 
     if @user.valid_password?(user_params[:password]) && @user.is_admin
       sign_in @user
-      redirect_to admin_rooms_path
+      redirect_to admin_room_types_path
     else
       return return_not_found
     end

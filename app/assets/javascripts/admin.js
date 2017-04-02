@@ -15,4 +15,4 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require cocoon
-//= require jquery-ui/datepicker
+//= require bootstrap-datepicker

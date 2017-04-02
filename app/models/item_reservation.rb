@@ -8,4 +8,5 @@ class ItemReservation < ApplicationRecord
     self.amount = ReservablePricing.new(reservable).amount
     self.price = self.amount * (self.quantity || 1)
   end
+
 end

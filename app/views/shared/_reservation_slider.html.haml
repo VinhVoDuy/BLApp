@@ -28,4 +28,4 @@
               %span #{landing_image.description}
             / Layer 3
             .caption.sft{"data-easing" => "easeOutBack", "data-speed" => "1000", "data-start" => "1200", "data-x" => "775", "data-y" => "175"}
-              %a.button.btn.btn-purple.btn-lg{:href => "room-list.html"} See rooms
+              = link_to 'See Rooms', landing_image.url, class: 'button btn btn-purple btn-lg'

@@ -1,0 +1,22 @@
+.col-sm-4
+  .room-thumb
+    = image_tag room_type.room_images.first.image.url(:medium), class: 'img-responsive' if room_type.room_images.present?
+    .mask
+      .main
+        %h5 #{room_type.name} #{"x #{ quantity }" if quantity > 1}
+        .price
+          $ #{price_formatter(room_type.price * night * quantity)}
+          %span #{pluralize(night, 'night')}
+      .content
+        %p
+          %span #{room_type.title}
+          = room_type.description
+        .row
+          - room_type.features.each_slice(3).each do |arr_feature|
+            .col-xs-6
+              %ul.list-unstyled
+                - arr_feature.each do |feature|
+                  %li
+                    %i.fa.fa-check-circle
+                    = feature
+        %a.btn.btn-primary.btn-block{:href => room_path(room_type)} Read More

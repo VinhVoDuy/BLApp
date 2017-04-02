@@ -43,6 +43,10 @@ gem 'owlcarousel-rails'
 gem 'jquery-ui-rails'
 gem 'rest-client', '~> 2.0.0'
 gem 'omniauth-facebook'
+gem "omniauth-google-oauth2"
+gem 'omniauth-twitter'
+gem 'bootstrap-datepicker-rails'
+gem 'friendly_id'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

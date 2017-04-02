@@ -1,10 +1,10 @@
 class PaypalsController < ApplicationController
   def show
-    reservation = Reservation.find(params[:reservation_id])
-    transaction = PaypalTransaction.find_or_create_by!(reservation: reservation)
-    token = SetExpressCheckout.new(reservation).run
-    transaction.update_attributes!(token: token)
-    redirect_to "https://www.sandbox.paypal.com/checkoutnow?token=#{token}"
+    # reservation = Reservation.find(params[:reservation_id])
+    # transaction = PaypalTransaction.find_or_create_by!(reservation: reservation)
+    # token = SetExpressCheckout.new(reservation).run
+    # transaction.update_attributes!(token: token)
+    # redirect_to "https://www.sandbox.paypal.com/checkoutnow?token=#{token}"
   end
 
   def success

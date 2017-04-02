@@ -1,4 +1,5 @@
 class AdminController < ApplicationController
+  layout 'admin'
   before_action :authenticate_admin
   protected
     def authenticate_admin

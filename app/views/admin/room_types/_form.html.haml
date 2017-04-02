@@ -4,13 +4,9 @@
     .col-md-10
       = f.text_field :name, class: 'form-control'
   .form-group
-    = f.label :price, class: "col-md-2 control-label"
+    = f.label :total, 'Capacity', class: "col-md-2 control-label"
     .col-md-10
-      = f.text_field :price, class: 'form-control'
-  .form-group
-    = f.label :total, 'Total Rooms', class: "col-md-2 control-label"
-    .col-md-10
-      = f.text_field :total_room, class: 'form-control'
+      = f.text_field :capacity, class: 'form-control'
   .form-group
     = f.label :features, 'Features', class: "col-md-2 control-label"
     .col-md-10
@@ -23,6 +19,11 @@
     = f.label :description, class: "col-md-2 control-label"
     .col-md-10
       = f.text_area :description, class: 'form-control'
+  .form-group
+    = f.label 'Price', class: "col-md-2 control-label"
+    .col-md-10
+      = f.text_area :price, class: 'form-control'
+
   .form-group
     = f.label 'Images', class: "col-md-2 control-label"
     %h3.small (should be 356x228)

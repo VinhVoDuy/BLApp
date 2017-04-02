@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161114035545) do
+ActiveRecord::Schema.define(version: 20170402074607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope"
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
+    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
+  end
 
   create_table "identities", force: :cascade do |t|
     t.integer "user_id"
@@ -57,6 +69,17 @@ ActiveRecord::Schema.define(version: 20161114035545) do
     t.index ["reservation_id"], name: "index_paypal_transactions_on_reservation_id", using: :btree
   end
 
+  create_table "remainings", force: :cascade do |t|
+    t.integer  "quantity_left",             null: false
+    t.integer  "room_type_id",              null: false
+    t.date     "date"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.integer  "lock_version",  default: 0, null: false
+    t.index ["room_type_id", "date"], name: "index_remainings_on_room_type_id_and_date", unique: true, using: :btree
+    t.index ["room_type_id"], name: "index_remainings_on_room_type_id", using: :btree
+  end
+
   create_table "reservations", force: :cascade do |t|
     t.integer  "user_id"
     t.date     "start_date"
@@ -65,6 +88,17 @@ ActiveRecord::Schema.define(version: 20161114035545) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_reservations_on_user_id", using: :btree
+  end
+
+  create_table "review_images", force: :cascade do |t|
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "content"
+    t.string   "name"
   end
 
   create_table "room_images", force: :cascade do |t|
@@ -91,14 +125,16 @@ ActiveRecord::Schema.define(version: 20161114035545) do
 
   create_table "room_types", force: :cascade do |t|
     t.string   "name"
-    t.float    "price"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.integer  "total_room",     default: 0
-    t.integer  "remaining_room", default: 0
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.integer  "capacity",    default: 0
     t.string   "description"
-    t.text     "features",       default: [],              array: true
+    t.text     "features",    default: [],               array: true
     t.string   "title"
+    t.string   "slug"
+    t.integer  "quantity",    default: 10,  null: false
+    t.float    "price",       default: 0.0, null: false
+    t.index ["slug"], name: "index_room_types_on_slug", unique: true, using: :btree
   end
 
   create_table "rooms", force: :cascade do |t|
@@ -132,6 +168,7 @@ ActiveRecord::Schema.define(version: 20161114035545) do
   add_foreign_key "identities", "users"
   add_foreign_key "item_reservations", "reservations"
   add_foreign_key "paypal_transactions", "reservations"
+  add_foreign_key "remainings", "room_types"
   add_foreign_key "reservations", "users"
   add_foreign_key "room_images", "room_types"
   add_foreign_key "room_promotions", "room_types"
