@@ -1554,7 +1554,7 @@ border-style:none;
 .tp-loader.spinner0 {
   width: 40px;
   height: 40px;
-  background:url(../assets/loader.gif) no-repeat center center;
+  background:url(asset_path('loader.gif')) no-repeat center center;
   background-color: #fff;
   box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);  
