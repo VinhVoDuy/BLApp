@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :room_types
     resources :landing_images
     resources :review_images
+    resource :main
   end
   resource :home, only: :show do
     get :show2, on: :member
