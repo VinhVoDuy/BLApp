@@ -8,7 +8,9 @@ Rails.application.routes.draw do
     resources :sessions
     resources :rooms
     resources :room_types
-    resources :landing_images
+    resources :landing_images do
+      get :resize, on: :collection
+    end
     resources :review_images
     resource :main
   end

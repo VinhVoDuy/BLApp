@@ -41,6 +41,11 @@ class Admin::LandingImagesController < AdminController
     end
   end
 
+  def resize
+    LandingImage.find_each{|landing| landing.image.reprocess!}
+    redirect_to action: :index
+  end
+
   def landing_image_params
     params.require(:landing_image).permit(:image, :heading, :description, :url)
   end
