@@ -24,16 +24,16 @@
         / Nav tabs
         %ul.nav.nav-tabs
           %li.active
-            %a{"data-toggle" => "tab", :href => "#location"} Location
-          %li
             %a{"data-toggle" => "tab", :href => "#hotel"} Our hotels
+          %li
+            %a{"data-toggle" => "tab", :href => "#location"} Location
         / Tab panes
         .tab-content
-          #location.tab-pane.in.active
-            %p Our hotel is right in the heart of the city (district 1, Ho Chi Minh city). See the map for detail:
-            %iframe{:allowfullscreen => "", :frameborder => "0", :height => "300", :src => "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ61QqLxYvdTERmEfvQWFyVag&key=AIzaSyAVcC1ajCDJk_TeJwpWkSnDJG8nvaeIbJo", :style => "border:0", :width => "100%"}
-          #hotel.tab-pane.fade
+          #hotel.tab-pane.in.active
             %p Settled down in the center of Ho Chi Minh City, the Blue River Hotel is far more than just a place to sleep. It inspires loyal guests to create treasured memories, to celebrate each moment and to rekindle their spirit. It is a state of mind where the ambiance and amenities are merely the gateway to a more majestic experience.
             %p
               Make yourself at home in our well-designed hotel rooms. Which showcase high quality mattress and pillows. Enjoy our complimentary coffee and tea while you're relaxing your body and mind in the most comfortable hotel
 
+          #location.tab-pane.fade
+            %p Our hotel is right in the heart of the city (district 1, Ho Chi Minh city). See the map for detail:
+            %iframe{:allowfullscreen => "", :frameborder => "0", :height => "300", :src => "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ61QqLxYvdTERmEfvQWFyVag&key=AIzaSyAVcC1ajCDJk_TeJwpWkSnDJG8nvaeIbJo", :style => "border:0", :width => "100%"}

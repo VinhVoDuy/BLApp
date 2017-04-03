@@ -38,3 +38,118 @@
   / Go-top Button
   #go-top
     %i.fa.fa-angle-up.fa-2x
+:javascript
+  jQuery(document).ready(function () {
+    if (jQuery().revolution) {
+      jQuery('.banner').revolution({
+        delay: 9000,
+          startwidth: 1170,
+            startheight: 449,
+            autoHeight:"off",
+            fullScreenAlignForce:"off",
+
+        onHoverStop: "on",
+
+          thumbWidth: 100,
+            thumbHeight: 50,
+            thumbAmount: 3,
+
+            hideThumbsOnMobile: "on",
+            hideBulletsOnMobile: "on",
+            hideArrowsOnMobile: "on",
+            hideThumbsUnderResoluition: 0,
+
+      hideThumbs:0,
+      hideTimerBar:"on",
+
+      keyboardNavigation:"on",
+
+        navigationType: "none",
+          navigationArrows: "solo",
+            navigationStyle: "round",
+
+            navigationHAlign: "center",
+            navigationVAlign: "bottom",
+            navigationHOffset: 30,
+            navigationVOffset: 30,
+
+            soloArrowLeftHalign: "left",
+            soloArrowLeftValign: "center",
+            soloArrowLeftHOffset: 20,
+            soloArrowLeftVOffset: 0,
+
+            soloArrowRightHalign: "right",
+            soloArrowRightValign: "center",
+            soloArrowRightHOffset: 20,
+            soloArrowRightVOffset: 0,
+
+            touchenabled: "on",
+      swipe_velocity:"0.7",
+      swipe_max_touches:"1",
+      swipe_min_touches:"1",
+      drag_block_vertical:"false",
+
+        stopAtSlide: -1,
+          stopAfterLoops: -1,
+            hideCaptionAtLimit: 0,
+            hideAllCaptionAtLilmit: 0,
+            hideSliderAtLimit: 0,
+
+            dottedOverlay: "none",
+
+      fullWidth:"off",
+      forceFullWidth:"off",
+        fullScreen: "off",
+          fullScreenOffsetContainer: "#topheader-to-offset",
+
+            shadow: 0
+
+        });
+    }
+
+    if (jQuery().owlCarousel) {
+      jQuery("#owl-gallery").owlCarousel({
+        autoPlay: 3000,
+          //Set AutoPlay to 3 seconds
+            items: 3,
+            itemsDesktop: [1199, 3],
+            itemsDesktopSmall: [979, 3],
+            pagination: false
+        });
+
+        jQuery("#owl-reviews").owlCarousel({
+          navigation: true,
+            // Show next and prev buttons
+            slideSpeed: 800,
+            paginationSpeed: 400,
+            singleItem: true,
+            pagination: false,
+            navigationText: ['<i class="fa fa-angle-left fa-3x"></i>', '<i class="fa fa-angle-right fa-3x"></i>'],
+            // "singleItem:true" is a shortcut for:
+            // items : 1, 
+            // itemsDesktop : false,
+            // itemsDesktopSmall : false,
+            // itemsTablet: false,
+            // itemsMobile : false
+        });
+
+        jQuery("#owl-standard").owlCarousel({
+          navigation: true,
+            // Show next and prev buttons
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            singleItem: true,
+            pagination: false,
+            navigationText: ['<i class="fa fa-angle-left fa-3x"></i>', '<i class="fa fa-angle-right fa-3x"></i>'],
+            responsive: true,
+            responsiveRefreshRate: 200,
+            responsiveBaseWidth: window,
+            // "singleItem:true" is a shortcut for:
+            // items : 1, 
+            // itemsDesktop : false,
+            // itemsDesktopSmall : false,
+            // itemsTablet: false,
+            // itemsMobile : false
+        });
+    }
+  });
