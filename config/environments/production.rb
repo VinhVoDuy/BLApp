@@ -28,7 +28,7 @@ Rails.application.configure do
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  # config.action_controller.asset_host = 'http://assets.example.com'
+  # config.action_controller.asset_host = 'http://d1fp4vaqqvjdx8.cloudfront.net/'
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
@@ -83,7 +83,8 @@ Rails.application.configure do
 
   config.paperclip_defaults = {
   :storage => :s3,
-  :s3_host_name => 's3-ap-southeast-1.amazonaws.com',
+  :url => ':s3_alias_url',
+  :s3_host_alias => 'http://d1fp4vaqqvjdx8.cloudfront.net/',
   :s3_credentials => {
     :bucket => ENV['AWS_S3_BUCKET'],
     :access_key_id => ENV['AWS_S3_ACCESS_KEY_ID'],
