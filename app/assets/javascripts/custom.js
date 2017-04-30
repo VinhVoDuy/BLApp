@@ -1,5 +1,5 @@
 // StarHotel Javascripts
-jQuery(document).ready(function () {
+jQuery(document).on('turbolinks:load', function () {
     "use strict";
 
 	
