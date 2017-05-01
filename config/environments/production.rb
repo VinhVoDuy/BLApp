@@ -28,7 +28,13 @@ Rails.application.configure do
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = 'd2lhmq651ffnjt.cloudfront.net'
+  config.action_controller.asset_host = Proc.new { |source|
+    if source.match(/.*fontawesome.*/) || source.match(/.*lg\.*/)
+      "/"
+    else
+      "https://d2lhmq651ffnjt.cloudfront.net"
+    end
+  }
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
@@ -91,11 +97,6 @@ Rails.application.configure do
     :access_key_id => ENV['AWS_S3_ACCESS_KEY_ID'],
     :secret_access_key => ENV['AWS_S3_SECRET_ACCESS_KEY']
     }
-  }
-  config.public_file_server.headers = {
-    # 'Access-Control-Allow-Origin' => '*',  # only for debugging
-    'Access-Control-Allow-Origin' => 'https://d2lhmq651ffnjt.cloudfront.net',
-    'Access-Control-Request-Method' => %w{GET OPTIONS}.join(",")
   }
 
   # Do not dump schema after migrations.
