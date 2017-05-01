@@ -92,6 +92,11 @@ Rails.application.configure do
     :secret_access_key => ENV['AWS_S3_SECRET_ACCESS_KEY']
     }
   }
+  config.public_file_server.headers = {
+    # 'Access-Control-Allow-Origin' => '*',  # only for debugging
+    'Access-Control-Allow-Origin' => 'https://d2lhmq651ffnjt.cloudfront.net',
+    'Access-Control-Request-Method' => %w{GET OPTIONS}.join(",")
+  }
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
