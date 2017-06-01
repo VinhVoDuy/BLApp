@@ -1,0 +1,31 @@
+%h1.text-center Admin Tours
+.container-fluid
+  = render 'shared/flash'
+  .row
+    %h3.col-md-3.text-center
+      Name
+    %h3.col-md-2.text-center
+      Start
+    %h3.col-md-2.text-center
+      Return
+    %h3.col-md-2.text-center
+      Price
+    %h3.col-md-3.text-center
+      
+  - Tour.find_each do |tour|
+    .row
+      .col-md-3.text-center
+        = tour.name
+      .col-md-2.text-center
+        = tour.start_time
+      .col-md-2.text-center.bg-success
+        = tour.end_time
+      .col-md-2.text-center
+        = "$ #{tour.price}"
+      .col-md-3.text-center
+        = link_to 'Delete', admin_tour_path(tour), method: :delete, data: {confirm: 'Are you sure ?'}
+        = link_to 'Edit', edit_admin_tour_path(tour)
+  .text-center
+    %br
+    = link_to 'Add New Room Type', new_admin_tour_path, class: 'btn btn-success'
+:javascript

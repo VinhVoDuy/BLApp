@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :landing_images do
       get :resize, on: :collection
     end
+    resources :tours
     resources :review_images
     resource :main
   end
@@ -26,5 +27,6 @@ Rails.application.routes.draw do
   end
 
   resources :availables, only: :create
+  resources :tours, only: [:index, :show]
 
 end

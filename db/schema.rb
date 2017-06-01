@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170402112252) do
+ActiveRecord::Schema.define(version: 20170601095805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -158,6 +158,31 @@ ActiveRecord::Schema.define(version: 20170402112252) do
     t.index ["room_type_id"], name: "index_rooms_on_room_type_id", using: :btree
   end
 
+  create_table "tour_images", force: :cascade do |t|
+    t.integer  "tour_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.boolean  "primary",            default: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.text     "description"
+    t.index ["tour_id"], name: "index_tour_images_on_tour_id", using: :btree
+  end
+
+  create_table "tours", force: :cascade do |t|
+    t.string   "name"
+    t.string   "start_time"
+    t.string   "end_time"
+    t.float    "price"
+    t.text     "included"
+    t.text     "private_tour_pricing", default: [],              array: true
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.string   "short_description"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
@@ -186,4 +211,5 @@ ActiveRecord::Schema.define(version: 20170402112252) do
   add_foreign_key "room_images", "room_types"
   add_foreign_key "room_promotions", "room_types"
   add_foreign_key "rooms", "room_types"
+  add_foreign_key "tour_images", "tours"
 end

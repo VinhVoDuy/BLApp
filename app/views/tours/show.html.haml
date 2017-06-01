@@ -1,0 +1,75 @@
+.boxed
+  = render 'shared/header'
+.container
+  .row.overlay
+    .color-overlay
+      / Page title
+      .container
+        .row
+          .col-sm-12
+            %ol.breadcrumb
+              %li
+                = link_to 'Home', root_path
+              %li
+                = link_to 'Tours', tours_path
+              %li.active= @tour.name
+            %h1.white-color= @tour.name
+  %br
+  %br
+  .row
+    / Room Content
+    %section
+      .container
+        .h1.lead= @tour.name
+        .row
+          .col-sm-1
+            .tour-time-highlight Start:
+          .col-sm-2
+            .tour-time= @tour.start_time
+          .col-sm-1
+            .tour-time-highlight Return:
+          .col-sm-2
+            .tour-time= @tour.end_time
+          .col-sm-1
+            .tour-time-highlight Price:
+          .col-sm-2
+            %span.tour-time= number_to_currency @tour.price
+            %span / person
+        .row.mt20
+          .col-sm-12
+            - idx = 0
+            - @tour.tour_images.each do |tour_image|
+              - if tour_image.image?
+                - idx += 1
+                = image_tag tour_image.image.url, class: "#{idx % 2 == 0 ? 'tour-image pull-right' : 'tour-image pull-left'}"
+              %p= tour_image.description
+        .row
+          .col-sm-7.mt50
+            %h2.lined-heading
+              %span Private Tour Pricing
+            %table.table.table-striped.mt30
+              %tbody
+                %tr
+                  %th Group:
+                  - Tour::PRIVATE_GROUP.each_with_index do |private_group, idx|
+                    - if @tour.private_tour_pricing.at(idx).to_f > 0
+                      %td.text-center.bold= private_group
+                %tr
+                  %th Price:
+                  - Tour::PRIVATE_GROUP.size.times do |idx|
+                    - if @tour.private_tour_pricing.at(idx).to_f > 0
+                      %td.text-center= @tour.private_tour_pricing.at(idx)
+          .col-sm-5.mt50
+            %h2.lined-heading
+              %span Tour Included
+            %table.table.table-striped.mt30
+              %tbody
+                -@tour.included.split(',').each do |feature|
+                  %tr
+                    %td
+                      %i.fa.fa-check-circle
+                      = feature
+/ Other Rooms
+-# = render 'shared/rooms', rooms: RoomType.where.not(id: @room.id), title: 'Other Rooms'
+
+= render 'shared/footer'

@@ -1,0 +1,11 @@
+.row.room-image-form.nested-fields
+  .col-sm-10
+    = f.text_area :description, class: 'form-control', rows: 5
+  .field.col-sm-10
+    = image_tag f.object.image.url, height: 100 if f.object.image?
+    = f.file_field :image
+  .col-sm-1
+    = f.check_box :primary
+    = f.label :primary
+  .col-sm-1
+    = link_to_remove_association 'X', f, class: 'btn btn-danger'

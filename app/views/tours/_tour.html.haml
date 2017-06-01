@@ -1,0 +1,14 @@
+.col-sm-4
+  .room-thumb
+    = image_tag tour.tour_images.primary.image.url, class: 'img-responsive' if tour.tour_images.present?
+    .mask
+      .main
+        %h5= tour.name
+        .price
+          $ #{price_formatter(tour.price)}
+          %span per person
+      .content
+        %p
+          %span #{tour.name}
+          = tour.short_description
+        %a.btn.btn-primary.btn-block{:href => tour_path(tour)} Read More

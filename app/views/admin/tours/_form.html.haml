@@ -1,0 +1,46 @@
+= form_for([:admin, @tour], html: {class: 'form-horizontal center'}) do |f|
+  .form-group
+    = f.label :name, class: "col-md-2 control-label"
+    .col-md-10
+      = f.text_field :name, class: 'form-control'
+  .form-group
+    = f.label :start_time, 'Start', class: "col-md-2 control-label"
+    .col-md-10
+      = f.text_field :start_time, class: 'form-control'
+  .form-group
+    = f.label :end_time, 'Return', class: "col-md-2 control-label"
+    .col-md-10
+      = f.text_field :end_time, class: 'form-control'
+  .form-group
+    = f.label :short_description, class: "col-md-2 control-label"
+    .col-md-10
+      = f.text_area :short_description, class: 'form-control'
+  .form-group
+    = f.label 'Price', class: "col-md-2 control-label"
+    .col-md-10
+      = f.text_field :price, class: 'form-control'
+  .form-group
+    = f.label 'Include:', class: "col-md-2 control-label"
+    .col-md-10
+      = f.text_area :included, class: 'form-control'
+
+  .form-group
+    = f.label :private_tour_pricing, class: 'col-md-2 control-label'
+    .col-md-10
+      - Tour::PRIVATE_GROUP.each do |private_group|
+        .text-center.col-md-2= private_group
+    .col-md-10
+      - 5.times do |i|
+        .col-md-2
+          = f.text_field :private_tour_pricing, class: 'form-control', name: 'tour[private_tour_pricing][]', value: @tour.private_tour_pricing.at(i).to_f > 0 ? @tour.private_tour_pricing.at(i) : nil
+  .form-group
+    = f.label 'Images & Descriptions', class: "col-md-2 control-label"
+    %h3.small (should be 356x228)
+    .col-md-10.col-md-offset-2
+      = f.fields_for :tour_images do |image_form|
+        = render 'tour_image_fields', f: image_form
+      .links
+        = link_to_add_association '+', f, :tour_images, class: 'btn btn-info'
+  %br
+  .actions.col-md-2.col-md-offset-2
+    = f.submit class: 'btn btn-success'
