@@ -17,32 +17,34 @@
   %br
   %br
   .row
+    %section.standard-slider.room-slider
+      .col-sm-12.col-md-8
+        #owl-standard.owl-carousel
+          - @tour.tour_images.map do |tour_image|
+            - if tour_image.image?
+              .item
+                %a{"data-rel" => "prettyPhoto[gallery1]", :href => tour_image.image.url}
+                  %img.img-responsive{:alt => @tour.name || 'Image', :src => tour_image.image.url}/
+    %section#reservation-form.mt50.clearfix
+      .col-sm-12.col-md-4
+        #reservationform.reservation-vertical.clearfix
+          %h2.lined-heading
+            %span= @tour.name
+          .price
+            %h4 Start:
+            = @tour.start_time
+          .price
+            %h4 Return:
+            = @tour.end_time
+          .price
+            %h4 Price
+            \$ #{price_formatter(@tour.price)}
+            %span / person
+          %button.btn.btn-primary.btn-block#book-btn{:type => "submit", onClick: 'HotelRunnerWidget.show(null);'} Book Now
+  .row
     / Room Content
     %section
       .container
-        .h1.lead= @tour.name
-        .row
-          .col-sm-1
-            .tour-time-highlight Start:
-          .col-sm-2
-            .tour-time= @tour.start_time
-          .col-sm-1
-            .tour-time-highlight Return:
-          .col-sm-2
-            .tour-time= @tour.end_time
-          .col-sm-1
-            .tour-time-highlight Price:
-          .col-sm-2
-            %span.tour-time= number_to_currency @tour.price
-            %span / person
-        .row.mt20
-          .col-sm-12
-            - idx = 0
-            - @tour.tour_images.each do |tour_image|
-              - if tour_image.image?
-                - idx += 1
-                = image_tag tour_image.image.url, class: "#{idx % 2 == 0 ? 'tour-image pull-right' : 'tour-image pull-left'}"
-              %p= tour_image.description
         .row
           .col-sm-7.mt50
             %h2.lined-heading
@@ -69,6 +71,15 @@
                     %td
                       %i.fa.fa-check-circle
                       = feature
+        .row.mt20
+          .h1.lead= @tour.name
+          .col-sm-12
+            - idx = 0
+            - @tour.tour_images.each do |tour_image|
+              - if tour_image.image?
+                - idx += 1
+                = image_tag tour_image.image.url, class: "#{idx % 2 == 0 ? 'tour-image pull-right' : 'tour-image pull-left'}"
+              %p= tour_image.description
 / Other Rooms
 -# = render 'shared/rooms', rooms: RoomType.where.not(id: @room.id), title: 'Other Rooms'
 

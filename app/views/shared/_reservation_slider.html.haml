@@ -6,7 +6,7 @@
         = LandingImage.find_each do |landing_image|
           %li{"data-masterspeed" => "1500", "data-slotamount" => "1", "data-transition" => "fade", 'data-delay': 4500}
             / Main Image
-            = image_tag landing_image.image.url(:medium)
+            = image_tag landing_image.image.url
             / Layers
             / Layer 1
             .caption.sft.revolution-starhotel.bigtext{"data-easing" => "easeOutBack", "data-speed" => "700", "data-start" => "700", "data-x" => "505", "data-y" => "30"}

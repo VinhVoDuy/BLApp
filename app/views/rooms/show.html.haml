@@ -28,14 +28,23 @@
     / Reservation form
     %section#reservation-form.mt50.clearfix
       .col-sm-12.col-md-4
-        %form#reservationform.reservation-vertical.clearfix{:action => "php/reservation.php", :method => "post", :name => "reservationform", :role => "form"}
+        #reservationform.reservation-vertical.clearfix
           %h2.lined-heading
-            %span Reservation
+            %span Room Detail
           .price
-            %h4 Double Room
-            \$ #{price_formatter(@room.price)} -
-            %span a night
-          %button.btn.btn-primary.btn-block{:type => "submit"} Book Now
+            %h4 Area
+            %span  30 m²
+          .price
+            %h4 Bed Type
+            %span= @room.bed_type
+          .price
+            %h4 Room Capacity
+            %span= @room.capacity
+          .price
+            %h4= @room.name
+            \$ #{price_formatter(@room.price)}
+            %span per night
+          %button.btn.btn-primary.btn-block#book-btn{:type => "submit", onClick: 'HotelRunnerWidget.show(null);'} Book Now
     / Room Content
     %section
       .container

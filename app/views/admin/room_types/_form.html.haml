@@ -8,6 +8,10 @@
     .col-md-10
       = f.text_field :capacity, class: 'form-control'
   .form-group
+    = f.label :bed_type, class: "col-md-2 control-label"
+    .col-md-10
+      = f.text_field :bed_type, class: 'form-control'
+  .form-group
     = f.label :features, 'Features', class: "col-md-2 control-label"
     .col-md-10
       = f.text_field :fake_features, class: 'form-control', value: f.object.features.join(', ')
@@ -20,9 +24,13 @@
     .col-md-10
       = f.text_area :description, class: 'form-control'
   .form-group
+    = f.label 'Initial Price', class: "col-md-2 control-label"
+    .col-md-10
+      = f.text_field :init_price, class: 'form-control'
+  .form-group
     = f.label 'Price', class: "col-md-2 control-label"
     .col-md-10
-      = f.text_area :price, class: 'form-control'
+      = f.text_field :price, class: 'form-control'
 
   .form-group
     = f.label 'Images', class: "col-md-2 control-label"

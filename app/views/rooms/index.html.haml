@@ -18,5 +18,5 @@
       = RoomType.all.each_slice(3).each do |room_type_list|
         .row.rooms-row
           - room_type_list.each do |room_type|
-            = render 'rooms/room', room_type: room_type, night: 1, quantity: 1
+            = render 'rooms/room', room_type: room_type, quantity: 1
 = render 'shared/footer'

@@ -62,6 +62,7 @@ jQuery(document).on('turbolinks:load', function () {
         jQuery("#owl-standard").owlCarousel({
             navigation: true,
             // Show next and prev buttons
+            autoplay: 2000,
             slideSpeed: 300,
             paginationSpeed: 400,
             singleItem: true,

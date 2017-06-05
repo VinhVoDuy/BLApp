@@ -4,9 +4,15 @@
     .mask
       .main
         %h5 #{room_type.name} #{"x #{ quantity }" if quantity > 1}
+        - if room_type.init_price.to_f > 0
+          .label.label-danger{style: 'font-size: 12px'}
+            .glyphicon.glyphicon-arrow-down
+            %span #{(100 - (room_type.price / room_type.init_price.to_f) * 100).to_i} %
         .price
-          $ #{price_formatter(room_type.price * night * quantity)}
-          %span #{pluralize(night, 'night')}
+          $ #{price_formatter(room_type.price)}
+          - if room_type.init_price.to_f > 0 && room_type.init_price !=  room_type.price
+            %span{style: 'color: orangered; font-size: 12px'}
+              %s $ #{price_formatter(room_type.init_price)}
       .content
         %p
           %span #{room_type.title}
