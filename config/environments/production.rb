@@ -82,11 +82,11 @@ Rails.application.configure do
   end
 
   config.paperclip_defaults = {
-  :storage => :s3,
-  :url => ':s3_alias_url',
   :s3_host_alias => 'd1fp4vaqqvjdx8.cloudfront.net',
-  :s3_region => 'ap-southeast-1',
   :path => '/:class/:attachment/:id_partition/:style/:filename',
+  :storage => :s3,
+  :s3_host_name => 's3-ap-southeast-1.amazonaws.com',
+  :s3_region => 'ap-southeast-1',
   :s3_credentials => {
     :bucket => ENV['AWS_S3_BUCKET'],
     :access_key_id => ENV['AWS_S3_ACCESS_KEY_ID'],
