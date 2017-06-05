@@ -340,7 +340,7 @@ DEPENDENCIES
   omniauth-google-oauth2
   omniauth-twitter
   owlcarousel-rails
-  paperclip
+  paperclip (~> 5.1.0)
   pg (~> 0.18)
   prettyphoto-rails
   puma (~> 3.0)
