@@ -26,7 +26,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'prettyphoto-rails'
 gem 'paperclip', '~>5.1.0'
-gem 'aws-sdk', '~> 2.3.0'
+gem 'aws-sdk', '~> 2.9.18'
 gem 'cocoon'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
