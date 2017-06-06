@@ -12,6 +12,10 @@
     .col-md-10
       = f.text_field :bed_type, class: 'form-control'
   .form-group
+    = f.label :size, class: "col-md-2 control-label"
+    .col-md-10
+      = f.text_field :size, class: 'form-control'
+  .form-group
     = f.label :features, 'Features', class: "col-md-2 control-label"
     .col-md-10
       = f.text_field :fake_features, class: 'form-control', value: f.object.features.join(', ')
