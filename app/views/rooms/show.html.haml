@@ -41,9 +41,9 @@
             %h4 Room Capacity
             %span= @room.capacity
           .price
-            %h4= @room.name
+            %h4 Price
             \$ #{price_formatter(@room.price)}
-            %span per night
+            %span= @room.dormitory? ? 'per person' : 'per night'
           %button.btn.btn-primary.btn-block#book-btn{:type => "submit", onClick: 'HotelRunnerWidget.show(null);'} Book Now
     / Room Content
     %section

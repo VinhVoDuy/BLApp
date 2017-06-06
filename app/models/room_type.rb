@@ -19,4 +19,8 @@ class RoomType < ApplicationRecord
     end
   end
 
+  def dormitory?
+    name.downcase =~ /dorm/
+  end
+
 end
