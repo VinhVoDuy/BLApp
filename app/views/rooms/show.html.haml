@@ -58,7 +58,7 @@
               %span Room Facilities
             %table.table.table-striped.mt30
               %tbody
-                - @room.features.first(16).each_slice(3).each do |arr_feature|
+                - @room.features.first(15).each_slice(3).each do |arr_feature|
                   %tr
                     -arr_feature.each do |feature|
                       %td
