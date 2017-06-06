@@ -36,6 +36,6 @@ class Admin::RoomTypesController < AdminController
 
   private
   def room_type_params
-    params.require(:room_type).permit(:name, :title, :description, :fake_features, :price, :capacity, :init_price, :bed_type, room_images_attributes: [:id, :image, :_destroy, :primary])
+    params.require(:room_type).permit(:name, :title, :description, :short_description, :fake_features, :price, :capacity, :init_price, :bed_type, room_images_attributes: [:id, :image, :_destroy, :primary])
   end
 end

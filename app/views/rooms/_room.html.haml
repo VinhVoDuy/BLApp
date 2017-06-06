@@ -12,7 +12,7 @@
       .content
         %p
           %span #{room_type.title}
-          = room_type.description
+          = room_type.short_description
         .row
           - room_type.features.each_slice(3).each do |arr_feature|
             .col-xs-6
