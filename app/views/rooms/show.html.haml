@@ -68,27 +68,3 @@
 = render 'shared/rooms', rooms: RoomType.where.not(id: @room.id), title: 'Other Rooms'
 
 = render 'shared/footer'
-:javascript
-  jQuery(document).on('turbolinks:load', function () {
-    if (jQuery().owlCarousel) {
-      jQuery("#owl-standard").owlCarousel({
-          navigation: true,
-          // Show next and prev buttons
-          autoplay: 2000,
-          slideSpeed: 300,
-          paginationSpeed: 400,
-          singleItem: true,
-          pagination: false,
-          navigationText: ['<i class="fa fa-angle-left fa-3x"></i>', '<i class="fa fa-angle-right fa-3x"></i>'],
-          responsive: true,
-          responsiveRefreshRate: 200,
-          responsiveBaseWidth: window,
-          // "singleItem:true" is a shortcut for:
-          // items : 1, 
-          // itemsDesktop : false,
-          // itemsDesktopSmall : false,
-          // itemsTablet: false,
-          // itemsMobile : false
-      });
-      }
-  });
