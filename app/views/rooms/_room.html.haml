@@ -3,7 +3,7 @@
     = image_tag room_type.room_images.primary.image.url(:medium), class: 'img-responsive' if room_type.room_images.present?
     .mask
       .main
-        %h5 #{room_type.name} #{"x #{ quantity }" if quantity > 1}
+        %h5.col-sm-9 #{room_type.name} #{"x #{ quantity }" if quantity > 1}
         .price
           $ #{price_formatter(room_type.price)}
           - if room_type.init_price.to_f > 0 && room_type.init_price !=  room_type.price
