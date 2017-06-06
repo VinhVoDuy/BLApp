@@ -11,10 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery-ui
-//= require turbolinks
 //= require bootstrap-sprockets
 //= require prettyphoto-rails
 //= require_tree .
+//= require owl.carousel
 //= require bootstrap-datepicker

@@ -1,5 +1,5 @@
 // StarHotel Javascripts
-jQuery(document).on('turbolinks:load', function () {
+jQuery(document).on('ready', function () {
     "use strict";
 
 	
@@ -359,7 +359,7 @@ jQuery(document).on('turbolinks:load', function () {
 
 
     //Popover
-    jQuery('[data-toggle="popover"]').popover();
+    // jQuery('[data-toggle="popover"]').popover();
 
 
     // Guests
