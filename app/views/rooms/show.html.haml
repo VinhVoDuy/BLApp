@@ -24,7 +24,7 @@
           - @room.room_images.map do |room_image|
             .item
               %a{"data-rel" => "prettyPhoto[gallery1]", :href => room_image.image.url(:medium)}
-                %img.img-responsive{:alt => @room.name || 'Image', :src => room_image.image.url(:medium)}/
+                %img.img-responsive.center-image{:alt => @room.name || 'Image', :src => room_image.image.url(:medium)}/
     / Reservation form
     %section#reservation-form.mt50.clearfix
       .col-sm-12.col-md-4
