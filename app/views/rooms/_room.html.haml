@@ -14,7 +14,7 @@
           %span #{room_type.title}
           = room_type.short_description
         .row
-          - room_type.features.each_slice(3).each do |arr_feature|
+          - room_type.features.first(6).each_slice(3).each do |arr_feature|
             .col-xs-6
               %ul.list-unstyled
                 - arr_feature.each do |feature|
