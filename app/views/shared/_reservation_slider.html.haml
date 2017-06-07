@@ -9,23 +9,14 @@
             = image_tag landing_image.image.url
             / Layers
             / Layer 1
-            .caption.sft.revolution-starhotel.bigtext{"data-easing" => "easeOutBack", "data-speed" => "700", "data-start" => "700", "data-x" => "505", "data-y" => "30"}
-              %span
-                %i.fa.fa-star-o
-                %i.fa.fa-star-o
-                %i.fa.fa-star-o
-                %i.fa.fa-star-o
-                %i.fa.fa-star-o
-              = landing_image.heading
-              %span
-                %i.fa.fa-star-o
-                %i.fa.fa-star-o
-                %i.fa.fa-star-o
-                %i.fa.fa-star-o
-                %i.fa.fa-star-o
+            - if landing_image.heading
+              .caption.sft.revolution-starhotel.bigtext{"data-easing" => "easeOutBack", "data-speed" => "700", "data-start" => "700", "data-x" => "505", "data-y" => "30"}
+                = landing_image.heading
             / Layer 2
-            .caption.sft.revolution-starhotel.smalltext{"data-easing" => "easeOutBack", "data-speed" => "800", "data-start" => "1000", "data-x" => "605", "data-y" => "105"}
-              %span #{landing_image.description}
+            - if landing_image.description
+              .caption.sft.revolution-starhotel.smalltext{"data-easing" => "easeOutBack", "data-speed" => "800", "data-start" => "1000", "data-x" => "605", "data-y" => "105"}
+                %span #{landing_image.description}
             / Layer 3
-            .caption.sft{"data-easing" => "easeOutBack", "data-speed" => "1000", "data-start" => "1200", "data-x" => "775", "data-y" => "175"}
-              = link_to 'See Rooms', landing_image.url, class: 'button btn btn-purple btn-lg'
+            - if landing_image.url.present?
+              .caption.sft{"data-easing" => "easeOutBack", "data-speed" => "1000", "data-start" => "1200", "data-x" => "775", "data-y" => "175"}
+                = link_to 'See Rooms', landing_image.url, class: 'button btn btn-purple btn-lg'
