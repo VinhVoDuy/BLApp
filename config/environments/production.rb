@@ -82,7 +82,7 @@ Rails.application.configure do
   end
 
   config.paperclip_defaults = {
-  url: ":s3_host_alias",
+  url: ":s3_alias_url",
   s3_host_alias: 'd1fp4vaqqvjdx8.cloudfront.net',
   :path => '/:class/:attachment/:id_partition/:style/:filename',
   :storage => :s3,
