@@ -44,7 +44,7 @@
             %h4 Price
             \$ #{price_formatter(@room.price)}
             %span= @room.dormitory? ? 'per person' : 'per night'
-          %button.btn.btn-primary.btn-block#book-btn{:type => "submit", onClick: 'HotelRunnerWidget.show(null);'} Book Now
+          %button.btn.btn-primary.btn-block#book-btn{:type => "submit"} Book Now
     / Room Content
     %section
       .container
