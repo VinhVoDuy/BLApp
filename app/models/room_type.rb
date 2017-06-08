@@ -11,6 +11,7 @@ class RoomType < ApplicationRecord
   has_one :active_room_promotion,  ->{ where('start_date <= :today AND end_date >= :today', today: Date.today) }, class_name: 'RoomPromotion'
 
   accepts_nested_attributes_for :room_images, allow_destroy: true, reject_if: :all_blank
+  scope :favourite, -> { where(favourite: true) }
   before_save :set_features, if: :fake_features
   def set_features
     self.features = []

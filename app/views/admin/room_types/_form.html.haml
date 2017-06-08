@@ -39,7 +39,10 @@
     = f.label 'Price', class: "col-md-2 control-label"
     .col-md-10
       = f.text_field :price, class: 'form-control'
-
+  .form-group
+    = f.label 'Favourite', class: "col-md-2 control-label"
+    .col-md-10
+      = f.check_box :favourite
   .form-group
     = f.label 'Images', class: "col-md-2 control-label"
     %h3.small (should be 356x228)

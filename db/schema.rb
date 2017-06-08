@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170606080218) do
+ActiveRecord::Schema.define(version: 20170608103542) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -138,19 +138,20 @@ ActiveRecord::Schema.define(version: 20170606080218) do
 
   create_table "room_types", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.integer  "capacity",          default: 0
     t.string   "description"
-    t.text     "features",          default: [],               array: true
+    t.text     "features",          default: [],                 array: true
     t.string   "title"
     t.string   "slug"
-    t.integer  "quantity",          default: 10,  null: false
-    t.float    "price",             default: 0.0, null: false
+    t.integer  "quantity",          default: 10,    null: false
+    t.float    "price",             default: 0.0,   null: false
     t.string   "bed_type"
     t.float    "init_price"
     t.text     "short_description"
     t.integer  "size"
+    t.boolean  "favourite",         default: false
     t.index ["slug"], name: "index_room_types_on_slug", unique: true, using: :btree
   end
 
