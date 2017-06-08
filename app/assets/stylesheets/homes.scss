@@ -155,7 +155,7 @@ strong.social-login {
 }
 
 .hotel-name {
-  font-size: 50px;
+  font-size: 75px;
   font-weight: bold;
   padding: 36px 0;
   font-family: 'Kaushan Script', cursive;
@@ -163,13 +163,13 @@ strong.social-login {
 
 .hotel-tel {
   font-family: 'Poiret One', cursive;
-  padding: 60px 0;
+  padding: 80px 0;
   font-size: 15px;
   font-weight: bold;
 }
 
 .hotel-reservation-btn{
-  margin: 50px 0;
+  margin: 80px 0;
   font-size: 14px;
   border: solid 1px;
   padding: 10px;
@@ -183,5 +183,13 @@ strong.social-login {
 }
 .col-xs-12.text-center.visible-xs.visible-sm a{
   text-decoration: none;
+  color: white;
+}
+
+footer {
+  color: white;
+}
+
+footer h4{
   color: white;
 }

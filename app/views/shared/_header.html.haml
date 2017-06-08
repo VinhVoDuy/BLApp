@@ -4,6 +4,9 @@
     .col-md-2.hotel-tel.hidden-sm.hidden-xs
       .fa.fa-phone
       +84 8 38376483
+      %br
+      .fa.fa-envelope
+      blriverhotel@gmail.com
     .col-xs-12.col-md-8.hotel-name.text-center
       Blue River Hotel
     .col-md-2.text-right.hidden-sm.hidden-xs
@@ -14,6 +17,8 @@
       .mobile-button.fa.fa-bars
       %a{:href => "tel:+84838376483"}
         .mobile-button.fa.fa-phone
+      %a{:href => "mailto:blriverhotel@gmail.com"}
+        .mobile-button.fa.fa-envelope
       .mobile-button.fa.fa-calendar
   #sticky.navbar.yamm.navbar-default
     .container
@@ -22,17 +27,11 @@
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
-        %a.navbar-brand
-          / Logo
-          .logo
-            BLUE RIVER HOTEL
-            -# %img#default-logo{:alt => "Starhotel", :src => asset_url("logo.png"), :style => "height:44px;"}/
-            -# %img#retina-logo{:alt => "Starhotel", :src => asset_url("logo-retina.png"), :style => "height:44px;"}/
       #navbar-collapse-grid.navbar-collapse.collapse
         %ul.nav.navbar-nav
           %li.dropdown
             %a.dropdown-toggle.js-activated{"data-toggle" => "dropdown", :href => "#"}
-              Rooms
+              Accomodations
               %b.caret
             %ul.dropdown-menu
               - RoomType.find_each do |room|
@@ -41,5 +40,10 @@
           %li.dropdown
             %a.dropdown-toggle.js-activated{"data-toggle" => "dropdown", :href => "#"}
               Promotions
+              %b.caret
+            .dropdown-menu
+          %li.dropdown
+            %a.dropdown-toggle.js-activated{"data-toggle" => "dropdown", :href => "#"}
+              Tours
               %b.caret
             .dropdown-menu
