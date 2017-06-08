@@ -1,0 +1,15 @@
+.container.visible-xs.visible-sm
+  .row
+    %section.testimonials.mt100
+      %h2.lined-heading
+        %span Reviews from our Guests
+
+  .row{style: 'margin-bottom: 20px'}
+    .c100.p80.big.green.center
+      %span 80%
+      .slice
+        .bar
+        .fill
+  - arr = [['Staff', 87], ['Cleanliness', 80],['Comfort', 75], ['Location', 86], ['Facilities', 74], ['Value for money', 80], ['Free Wifi', 81]]
+  - arr.sort{|a, b| b.last <=> a.last}.each do |review|
+    = render 'shared/review', name: review.first, percentage: review.last
