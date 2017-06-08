@@ -141,3 +141,47 @@ strong.social-login {
 .progress.review {
   background: #A2ECFB;
 }
+
+.grad {
+  background: #918787; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #918787 , #000); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #918787, #000); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #918787, #000); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #918787 , #000); /* Standard syntax */
+}
+
+.hotel-banner{
+  color: white;
+}
+
+.hotel-name {
+  font-size: 50px;
+  font-weight: bold;
+  padding: 36px 0;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.hotel-tel {
+  font-family: 'Poiret One', cursive;
+  padding: 60px 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.hotel-reservation-btn{
+  margin: 50px 0;
+  font-size: 14px;
+  border: solid 1px;
+  padding: 10px;
+}
+
+.mobile-button{
+  font-size: 20px;
+  border: solid 1px;
+  padding: 10px 25px;
+  margin: 10px;
+}
+.col-xs-12.text-center.visible-xs.visible-sm a{
+  text-decoration: none;
+  color: white;
+}
