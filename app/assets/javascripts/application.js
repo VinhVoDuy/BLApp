@@ -19,3 +19,4 @@
 //= require_tree .
 //= require owl.carousel
 //= require bootstrap-datepicker
+//= require swipebox

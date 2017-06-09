@@ -1,0 +1,12 @@
+%section.gallery-slider.mt100
+  .container
+    .row
+      .col-md-12
+        %h2.lined-heading
+          %span Gallery
+  #owl-gallery.owl-carousel
+    - RoomImage.find_each do |room_image|
+      .item
+        %a{href: room_image.image.url(:medium), class: :swipebox, rel: 'main-gallery'}
+          = image_tag room_image.image.url(:medium), alt: room_image.room_type.name || 'Image'
+          %i.fa.fa-search
