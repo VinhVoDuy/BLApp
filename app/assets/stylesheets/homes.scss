@@ -129,17 +129,17 @@ strong.social-login {
 }
 
 .review-name{
-  color: lightseagreen;
+  color: #5e5e5e;
   font-weight: bold;
   font-size: 15px;
 }
 
 .progress-bar.review{
-  background: lightseagreen;
+  background: #5e5e5e;
 }
 
 .progress.review {
-  background: #A2ECFB;
+  background: #cccccc;
 }
 
 .grad {
@@ -148,6 +148,14 @@ strong.social-login {
   background: -o-linear-gradient(right, #918787, #000); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(right, #918787, #000); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right, #918787 , #000); /* Standard syntax */
+}
+
+.grad-grey {
+  background: #918787; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(right, #adabab , #423c3c); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, #adabab, #423c3c); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, #adabab, #423c3c); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to left, #adabab , #423c3c); /* Standard syntax */
 }
 
 .hotel-banner{
@@ -192,4 +200,38 @@ footer {
 
 footer h4{
   color: white;
+}
+
+.grad-grey .nav li a {
+  color: white;
+}
+.grad-grey .nav li.dropdown.open a.dropdown-toggle.js-activated{
+  background: transparent;
+}
+
+.btn-primary {
+  border: white;
+}
+
+@media (max-width: 767px) {
+  .mobile-button{
+    font-size: 14px;
+    border: solid 1px;
+    padding: 10px 25px;
+    margin: 10px;
+  }
+
+  .grad-grey .nav li a {
+    color: #777;
+  }
+  .grad-grey{
+    background: white;
+  }
+  .hotel-name{
+    font-size: 50px;
+    padding: 10px 0;
+  }
+  .grad-grey .nav li.dropdown.open a{
+    background: white;
+  }
 }

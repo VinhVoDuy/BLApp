@@ -865,6 +865,22 @@
 .c100.green.dark:hover > span {
   color: #5fd400;
 }
+.c100.black .bar, .c100.black .fill {
+  border-color: #5e5e5e !important;
+}
+.c100.black:hover > span {
+  color: #5e5e5e;
+}
+
+.c100.black > span {
+  color: #5e5e5e;
+}
+.c100.black.dark .bar, .c100.black.dark .fill {
+  border-color: #5e5e5e !important;
+}
+.c100.black.dark:hover > span {
+  color: #5e5e5e;
+}
 .c100.orange .bar, .c100.orange .fill {
   border-color: #dd9d22 !important;
 }
