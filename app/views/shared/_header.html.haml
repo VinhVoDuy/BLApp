@@ -8,12 +8,14 @@
       .fa.fa-envelope
       %a.white{:href => "mailto:blriverhotel@gmail.com"}
         blriverhotel@gmail.com
-    .col-xs-12.col-md-8.hotel-name.text-center
-      Blue River Hotel
+    %a.white{href: root_path}
+      .col-xs-12.col-md-8.hotel-name.text-center
+        Blue River Hotel
     .col-md-2.text-right.hidden-sm.hidden-xs
-      .hotel-reservation-btn.text-center
-        .fa.fa-calendar
-        RESERVATIONS
+      %a.white{href: 'https://blue-river-hotel-3.hotelrunner.com/bv2/search'}
+        .hotel-reservation-btn.text-center
+          .fa.fa-calendar
+          RESERVATIONS
     .col-xs-12.text-center.visible-xs.visible-sm
       %a{:href => "tel:+84838376483"}
         .mobile-button.fa.fa-phone

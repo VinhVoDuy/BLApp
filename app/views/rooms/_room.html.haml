@@ -5,10 +5,10 @@
       .main
         %h5.col-sm-9 #{room_type.name} #{"x #{ quantity }" if quantity > 1}
         .price
-          $ #{price_formatter(room_type.price)}
           - if room_type.init_price.to_f > 0 && room_type.init_price !=  room_type.price
             %span{style: 'color: orangered; font-size: 15px'}
               %s $ #{price_formatter(room_type.init_price)}
+          $ #{price_formatter(room_type.price)}
       .content
         %p
           %span #{room_type.title}
