@@ -253,6 +253,7 @@ body {
 .room-thumb, .room-thumb .mask {
 	width: 100%;
 	height: auto;
+  transition: none;
 }
 .room-thumb .mask {
 	position: relative;
