@@ -222,6 +222,14 @@ a.white:hover{
   color: white;
 }
 
+.text-balloon span{
+  font-weight: bold;
+}
+
+.border-btm {
+  border-bottom: 1px solid white;
+}
+
 @media (max-width: 767px) {
   .mobile-button{
     font-size: 14px;
