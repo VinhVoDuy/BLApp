@@ -213,6 +213,15 @@ footer h4{
   border: white;
 }
 
+a.white {
+  color: white;
+  text-decoration: none;
+}
+
+a.white:hover{
+  color: white;
+}
+
 @media (max-width: 767px) {
   .mobile-button{
     font-size: 14px;
