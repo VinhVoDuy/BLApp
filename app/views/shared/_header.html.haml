@@ -28,6 +28,11 @@
       .navbar-header
         .h1
           Blue River Hotel
+        .visible-sm.visible-xs-inline-block.pull-right.contact-mobile
+          %a.white-color{:href => "tel:+84838376483"}
+            .mobile-button.fa.fa-phone
+          %a.white-color{:href => "mailto:blriverhotel@gmail.com"}
+            .mobile-button.fa.fa-envelope
       #navbar-collapse-grid.navbar-collapse.collapse
         %ul.nav.navbar-nav
           %li.dropdown
@@ -48,9 +53,15 @@
               Tours
               %b.caret
             .dropdown-menu
-  .pull-right
-    .fa.fa-phone
-    +84 8 38376483
-    .fa.fa-envelope
-    %a.white{:href => "mailto:blriverhotel@gmail.com"}
-      blriverhotel@gmail.com
+        .pull-right.white-color.contact-number
+          .fa.fa-phone
+          %a.white.hotel-tel{href: "tel:+84838376483"}
+            +84 8 38376483
+          %br
+          .fa.fa-phone
+          %a.white.hotel-tel{href: "tel:+84901604950"}
+            +84 9 01604950
+          %br
+          .fa.fa-envelope
+          %a.white.hotel-email{:href => "mailto:blriverhotel@gmail.com"}
+            blriverhotel@gmail.com

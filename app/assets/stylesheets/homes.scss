@@ -89,6 +89,10 @@ strong.social-login {
 .white-color{
   color: white;
 }
+
+.yamm a.white-color{
+  color: white;
+}
 .tour-image {
   margin: 0 10px;
   max-height: 200px;
@@ -168,10 +172,8 @@ strong.social-login {
   font-family: 'Kaushan Script', cursive;
 }
 
-.hotel-tel {
+.hotel-tel, .hotel-email {
   font-family: 'Poiret One', cursive;
-  padding: 80px 0;
-  font-size: 15px;
   font-weight: bold;
 }
 
@@ -250,12 +252,18 @@ a.white:hover{
   background: linear-gradient(to right, #383535 , #000); /* Standard syntax */
 }
 
+.contact-number{
+  padding: 20px;
+}
+.contact-mobile{
+  padding-top: 5px;
+}
 @media (max-width: 767px) {
   .mobile-button{
-    font-size: 20px;
+    font-size: 18px;
     border: solid 1px;
-    padding: 5px 15px;
-    margin: 10px;
+    padding: 4px 9px;
+    margin: 3px;
   }
 
   .grad-grey .nav li a {
@@ -270,5 +278,12 @@ a.white:hover{
   }
   .grad-grey .nav li.dropdown.open a{
     background: white;
+  }
+  .navbar-header .h1{
+    display: inline;
+  }
+
+  .yamm .container {
+    padding: 12px;
   }
 }
