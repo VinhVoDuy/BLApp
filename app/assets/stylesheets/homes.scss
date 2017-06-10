@@ -276,8 +276,24 @@ ol li.carousel-dot{
   background-color: grey;
 }
 
+.borderless > tbody > tr > th{
+    border: none;
+}
+
+.borderless > tbody > tr > td:first-child{
+    border: none;
+}
+
+.borderless > tbody > tr:last-child > td:last-child{
+    border-bottom: 1px solid #ebebeb;
+}
+
 #room-carousel li.active{
   background-color: black;
+}
+
+.text-desc {
+  font-size: 18px;
 }
 
 @media (max-width: 767px) {

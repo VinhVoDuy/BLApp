@@ -1,0 +1,26 @@
+.boxed
+  = render 'shared/header'
+.container
+  .row.overlay.grad
+    .color-overlay
+      / Page title
+      .container
+        .row
+          .col-sm-12.grad
+            %ol.breadcrumb
+              %li
+                = link_to 'Home', root_path
+              %li.active Amenities
+  %section.mt50
+    .col-sm-12
+      %h2.lined-heading
+        %span Amenities
+    - @amenities.each_slice(4).each do |arr|
+      .row
+        - arr.each do |amenity|
+          = render 'amenity', amenity: amenity
+  %br
+  .row
+    / Slider
+
+= render 'shared/footer'

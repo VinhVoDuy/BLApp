@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :tours
     resources :review_images
     resource :main
+    resource :amenities
   end
   resource :home, only: :show do
     get :show2, on: :member
@@ -26,6 +27,7 @@ Rails.application.routes.draw do
     get :failed, on: :member
   end
 
+  resources :amenities, only: :index
   resources :availables, only: :create
   resources :tours, only: [:index, :show]
 

@@ -1,0 +1,14 @@
+.col-sm-3
+  %table.table.borderless
+    %tbody
+      %tr
+        %th
+          .h3
+            .div{class: "fa fa-#{amenity[:icon]}"}
+        %th.text-left
+          .h3= amenity[:name]
+      -amenity[:description].each do |desc|
+        %tr
+          %td
+          %td.text-left
+            .text-desc= desc
