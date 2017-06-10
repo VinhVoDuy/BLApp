@@ -150,12 +150,11 @@ strong.social-login {
   background: linear-gradient(to right, #918787 , #000); /* Standard syntax */
 }
 
-.grad-grey {
-  background: #918787; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(right, #adabab , #423c3c); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(left, #adabab, #423c3c); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(left, #adabab, #423c3c); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to left, #adabab , #423c3c); /* Standard syntax */
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+.black {
+  background: black
 }
 
 .hotel-banner{
@@ -236,6 +235,19 @@ a.white:hover{
   padding: 5px 10px;
   margin: 0 5px;
   font-size: 30px;
+}
+
+.navbar-header .h1{
+  color: white;
+  font-family: 'Kaushan Script', cursive;
+}
+
+#footer-bottom-grad{
+  background: #383535; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #383535 , #000); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #383535, #000); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #383535, #000); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #383535 , #000); /* Standard syntax */
 }
 
 @media (max-width: 767px) {
