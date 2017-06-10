@@ -263,6 +263,12 @@ a.white:hover{
   margin: 3px;
 }
 
+.button {
+  padding: 4px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
 @media (max-width: 767px) {
 
   .grad-grey .nav li a {
