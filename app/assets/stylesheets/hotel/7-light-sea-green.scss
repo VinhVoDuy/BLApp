@@ -14,7 +14,7 @@ a {
 }
 /* Secondary text color */
 #reservation-form .price, label span, .room-thumb .main .price, .room-thumb .content p span, .blog-author span, #owl-reviews .text-balloon span, .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight, .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, aside .widget ul a:hover, .yamm a:hover {
-  color: #000 !important;
+  color: white !important;
 }
 /* Icon color */
 #reservation-form .fa.infield, #reservation-form .form-inline .fa.infield, .room-thumb .content i, .box-icon i, table i, #go-top i, .testimonials .owl-theme .owl-controls .owl-buttons div i, .standard-slider .owl-theme .owl-controls .owl-buttons div i, .testimonials .owl-theme .owl-controls .owl-buttons div, .standard-slider .owl-theme .owl-controls .owl-buttons div, #go-top {
@@ -44,7 +44,7 @@ header, .navbar-nav .dropdown-menu, .blog-author img, .comment .avatar img, asid
 /* Navigation Mobile colors */
  @media (max-width: 767px) {
 .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-  color: #000;
+  color: whitesmoke;
   background-color: transparent;
 }
 }

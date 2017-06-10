@@ -262,6 +262,7 @@ a.white:hover{
   padding: 4px 9px;
   margin: 3px;
 }
+
 @media (max-width: 767px) {
 
   .grad-grey .nav li a {
@@ -290,6 +291,11 @@ a.white:hover{
     display: none;
   }
   .navbar-nav{
+    display: none;
+  }
+}
+@media (min-width: 990px){
+  .contact-btn{
     display: none;
   }
 }
