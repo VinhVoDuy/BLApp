@@ -184,12 +184,6 @@ strong.social-login {
   padding: 10px;
 }
 
-.mobile-button{
-  font-size: 20px;
-  border: solid 1px;
-  padding: 10px 25px;
-  margin: 10px;
-}
 .col-xs-12.text-center.visible-xs.visible-sm a{
   text-decoration: none;
   color: white;
@@ -255,16 +249,20 @@ a.white:hover{
 .contact-number{
   padding: 20px;
 }
+
+.contact-btn{
+  padding: 18px;
+}
 .contact-mobile{
   padding-top: 5px;
 }
+.mobile-button{
+  font-size: 18px;
+  border: solid 1px;
+  padding: 4px 9px;
+  margin: 3px;
+}
 @media (max-width: 767px) {
-  .mobile-button{
-    font-size: 18px;
-    border: solid 1px;
-    padding: 4px 9px;
-    margin: 3px;
-  }
 
   .grad-grey .nav li a {
     color: #777;
@@ -285,5 +283,13 @@ a.white:hover{
 
   .yamm .container {
     padding: 12px;
+  }
+}
+@media (min-width: 767px) and (max-width: 990px) {
+  .contact-number{
+    display: none;
+  }
+  .navbar-nav{
+    display: none;
   }
 }
