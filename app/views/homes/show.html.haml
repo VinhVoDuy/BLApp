@@ -8,7 +8,7 @@
   / Revolution Slider
   = render 'shared/reservation_slider'
   = render 'shared/ups'
-  = render 'shared/rooms', rooms: [RoomType.all, RoomType.all, RoomType.all].flatten, title: 'Guests Favourite Rooms'
+  = render 'shared/rooms', rooms: RoomType.all, title: 'Guests Favourite Rooms'
   / Gallery
   -# = render 'shared/gallery'
   -# = render 'shared/slidebox'
