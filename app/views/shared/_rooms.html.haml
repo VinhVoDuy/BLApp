@@ -5,5 +5,13 @@
         %h2.lined-heading
           %span #{title}
       / Room
-      = rooms.find_each do |room_type|
-        = render 'rooms/room', room_type: room_type, night: 1, quantity: 1
+      #room-carousel.carousel.slide{'data-ride' => :carousel}
+        %ol.carousel-indicators
+          %li.carousel-dot{'data-target' => 'room-carousel', 'data-slide-to' => 0, class: :active, onClick: '$("#room-carousel").carousel(0);'}
+          %li.carousel-dot{'data-target' => 'room-carousel', 'data-slide-to' => 1, onClick: '$("#room-carousel").carousel(1);'}
+          %li.carousel-dot{'data-target' => 'room-carousel', 'data-slide-to' => 2, onClick: '$("#room-carousel").carousel(2);'}
+        .carousel-inner
+          = rooms.each_slice(3).each_with_index do |array_room, index|
+            %div{class: (index == 0 ? 'item active': "item")}
+              - array_room.each do |room_type|
+                = render 'rooms/room', room_type: room_type, night: 1, quantity: 1

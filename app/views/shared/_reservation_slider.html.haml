@@ -2,7 +2,6 @@
   .bannercontainer
     .banner
       %ul
-        / Slide 1
         = LandingImage.find_each do |landing_image|
           %li{"data-masterspeed" => "1500", "data-slotamount" => "1", "data-transition" => "fade", 'data-delay': 4500}
             / Main Image
