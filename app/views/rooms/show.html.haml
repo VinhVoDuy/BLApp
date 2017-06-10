@@ -6,15 +6,13 @@
       / Page title
       .container
         .row
-          .col-sm-12
+          .col-sm-12.grad
             %ol.breadcrumb
               %li
                 = link_to 'Home', root_path
               %li
                 = link_to 'Accomodations', rooms_path
               %li.active= @room.name
-            %h1.white-color= @room.name
-  %br
   %br
   .row
     / Slider
