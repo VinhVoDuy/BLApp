@@ -296,6 +296,15 @@ ol li.carousel-dot{
   font-size: 18px;
 }
 
+.mt50 .black-color {
+  font-size: 20;
+  font-weight: normal;
+}
+
+.box-icon p{
+  padding: 10px 0px;
+}
+
 @media (max-width: 767px) {
 
   .grad-grey .nav li a {
@@ -354,6 +363,10 @@ ol li.carousel-dot{
 }
 @media (max-width: 1200px){
   .yamm .container{
+    width: 100%;
+  }
+
+  .container.overlay{
     width: 100%;
   }
 }

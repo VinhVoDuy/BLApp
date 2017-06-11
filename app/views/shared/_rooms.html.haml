@@ -19,7 +19,6 @@
         - RoomType.favourite.first(3).each do |room_type|
           = render 'rooms/room', room_type: room_type, night: 1, quantity: 1
       .clearfix
-      .col-sm-12.hidden-md.hidden-lg
-        %a{href: rooms_path}
-          .text-center.black.white-color.button VIEW ALL ROOMS
+      %a{href: rooms_path}
+        .text-center.black-color VIEW ALL
 
