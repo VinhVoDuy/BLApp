@@ -20,3 +20,4 @@
 //= require owl.carousel
 //= require bootstrap-datepicker
 //= require swipebox
+//= require booking-btn

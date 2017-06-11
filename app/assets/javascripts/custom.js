@@ -225,7 +225,7 @@ jQuery(document).on('ready', function () {
 	
     //niceScroll
     if (jQuery().niceScroll) {
-         $(".parallax-effect").niceScroll();
+         jQuery(".parallax-effect").niceScroll();
 		 };
 		 
 

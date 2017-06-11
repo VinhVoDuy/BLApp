@@ -5,8 +5,24 @@
   -# = render 'shared/top_header'
   / Header
   = render 'shared/header'
-  .container.overlay.grad.text-center
-    .h5.white-color TO BE OR NOT TO BE
+  .container.overlay.grad#book-overlay
+    .col-sm-9.visible-md.visible-lg
+      .h5.white-color{style: "font-family: 'Kaushan Script'"} Welcome to the Blue River Hotel
+    .col-sm-12.visible-xs.visible-sm
+      .h5.white-color{style: "font-family: 'Kaushan Script'"} Welcome to the Blue River Hotel
+    .col-sm-3.pull-right#book-now-btn.text-center.hidden-xs.hidden-sm.bookable
+      .h4{style: 'padding-left: 50px;'}
+        .fa.fa-calendar.white-color
+        .white-color.reserve-btn RESERVATION
+  .col-xs-12#book-now-btn-mobile
+    .col-xs-6.text-center.black.hidden-md.hidden-lg#menu
+      .h4
+        .fa.fa-calendar.white-color
+        .white-color.reserve-btn MENU
+    .col-xs-6.text-center.black.hidden-md.hidden-lg#book-now-btn.bookable
+      .h4
+        .fa.fa-bars.white-color
+        .white-color.reserve-btn RESERVATION
   / Revolution Slider
   = render 'shared/reservation_slider'
   = render 'shared/amenities'
@@ -23,3 +39,24 @@
   / Go-top Button
   #go-top
     %i.fa.fa-angle-up.fa-2x
+
+:css
+  @import url(//d2uyahi4tkntqv.cloudfront.net/assets/widgets.booknow.v2.css?v=1.0.0);
+:javascript
+  jQuery(document).ready(function(){
+    var topOfOthDiv = jQuery("#book-overlay").offset().top;
+    jQuery(window).scroll(function() {
+      if (jQuery(this).scrollTop() > topOfOthDiv)
+      {
+        jQuery('#book-overlay').css({ position: 'fixed', top: '0', 'z-index': 9999 });
+      }
+      else
+      {
+        jQuery('#book-overlay').css({ position: 'static'});
+      }
+    });
+    jQuery('.bookable').on('click', function(){
+      HotelRunnerWidget.show(null);
+    });
+
+  })

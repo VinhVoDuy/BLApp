@@ -111,19 +111,6 @@ strong.social-login {
   font-size: 17px;
   color: orangered;
 }
-.booking-btn{
-  background-color: #20b2aa;
-  color: #ffffff;
-  padding: 0 5px;
-  text-align: center;
-  right: 20%;
-  top: 0;
-  position: fixed;
-  z-index: 9999999999999;
-  cursor: pointer;
-  border-radius: 0 0 10px 10px;
-  border: 0px;
-}
 
 .booking-btn p{
   padding: 10px 20px 0px 20px;
@@ -296,6 +283,16 @@ ol li.carousel-dot{
   font-size: 18px;
 }
 
+#menu{
+  background: #353232;
+}
+
+#book-now-btn-mobile{
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+}
+
 .mt50 .black-color {
   font-size: 20;
   font-weight: normal;
@@ -303,6 +300,19 @@ ol li.carousel-dot{
 
 .box-icon p{
   padding: 10px 0px;
+}
+
+.book-form {
+  z-index: 999;
+}
+
+.reserve-btn {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+#booknow-hr-TopRight{
+  display: none;
 }
 
 @media (max-width: 767px) {
