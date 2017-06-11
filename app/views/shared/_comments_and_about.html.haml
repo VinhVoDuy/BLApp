@@ -2,25 +2,34 @@
   .row
     / Testimonials
     %section.testimonials.mt100
-      .col-md-6
-        %h2.lined-heading.fadeIn.appear{"data-start" => "0"}
-          %span What Other Visitors Experienced
-        #owl-reviews.owl-carousel
-          - ReviewImage.all.each_slice(2) do |review_arr|
-            .item
-              - review_arr.each do |review|
-                .row
-                  .col-lg-3.col-md-4.col-sm-2.col-xs-12
-                    %img.img-circle{:alt => "Review 1", :src =>review.image.url(:thumb), width: 100, height: 100}
-                  .col-lg-9.col-md-8.col-sm-10.col-xs-12
-                    .text-balloon
-                      = review.content
-                      %span= review.name
+      .col-md-12
+        %h2.lined-heading
+          %span Reviews from our Guests
+        .col-md-6
+          .c100.p80.big.black.center
+            %span 80%
+            .slice
+              .bar
+              .fill
+        .col-md-6
+          #owl-reviews.owl-carousel
+            - ReviewImage.all.each_slice(2) do |review_arr|
+              .item
+                - review_arr.each do |review|
+                  .row
+                    .col-lg-3.col-md-4.col-sm-2.col-xs-12
+                      %img.img-circle{:alt => "Review 1", :src =>review.image.url(:thumb), width: 100, height: 100}
+                    .col-lg-9.col-md-8.col-sm-10.col-xs-12
+                      .text-balloon
+                        = review.content
+                        %span= review.name
     / About
+.container
+  .row
     %section.about.mt100
-      .col-md-6
+      .col-md-12
         %h2.lined-heading.fadeIn.appear{"data-start" => "800"}
-          %span Hotel Tabs
+          %span Our Hotels
         / Nav tabs
         %ul.nav.nav-tabs
           %li.active
