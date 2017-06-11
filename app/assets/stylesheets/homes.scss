@@ -315,6 +315,10 @@ ol li.carousel-dot{
     display: inline;
   }
 
+  .navbar-header {
+    padding: 0 10px;
+  }
+
   .yamm .container {
     padding: 12px;
   }
@@ -346,5 +350,10 @@ ol li.carousel-dot{
   }
   .box-icon .circle .fa{
     padding: 4px 2px;
+  }
+}
+@media (max-width: 1200px){
+  .yamm .container{
+    width: 100%;
   }
 }
