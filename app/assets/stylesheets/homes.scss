@@ -318,6 +318,10 @@ ol li.carousel-dot{
   .yamm .container {
     padding: 12px;
   }
+
+  .box-icon .circle{
+    padding: 15px;
+  }
 }
 @media (min-width: 767px) and (max-width: 990px) {
   .contact-number{
@@ -330,5 +334,14 @@ ol li.carousel-dot{
 @media (min-width: 990px){
   .contact-btn{
     display: none;
+  }
+}
+
+@media (max-width: 468px){
+  .fa-2x{
+    font-size: 20px;
+  }
+  .box-icon .circle{
+    padding: 5px;
   }
 }
