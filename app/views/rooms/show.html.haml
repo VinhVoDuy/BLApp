@@ -64,6 +64,10 @@
                         %i.fa.fa-check-circle
                         = feature
 / Other Rooms
-= render 'shared/rooms', rooms: RoomType.where.not(id: @room.id), title: 'Other Rooms'
+.visible-md.visible-lg
+  = render 'shared/rooms', rooms: RoomType.where.not(id: @room.id), title: 'Other Rooms'
+.mt30.col-sm-12.visible-xs.visible-sm
+  %a{href: rooms_path}
+    .col-sm-offset-3.col-sm-6.text-center.black.white-color.button VIEW OTHER ROOMS
 
 = render 'shared/footer'

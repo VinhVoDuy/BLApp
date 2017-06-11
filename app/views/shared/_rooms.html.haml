@@ -5,7 +5,7 @@
         %h2.lined-heading
           %span #{title}
       / Room
-      #room-carousel.carousel.slide{'data-ride' => :carousel}
+      #room-carousel.carousel.slide.visible-md.visible-lg{'data-ride' => :carousel}
         %ol.carousel-indicators
           %li.carousel-dot{'data-target' => 'room-carousel', 'data-slide-to' => 0, class: :active, onClick: '$("#room-carousel").carousel(0);'}
           %li.carousel-dot{'data-target' => 'room-carousel', 'data-slide-to' => 1, onClick: '$("#room-carousel").carousel(1);'}
@@ -15,3 +15,11 @@
             %div{class: (index == 0 ? 'item active': "item")}
               - array_room.each do |room_type|
                 = render 'rooms/room', room_type: room_type, night: 1, quantity: 1
+      .hidden-md.hidden-lg
+        - RoomType.favourite.first(3).each do |room_type|
+          = render 'rooms/room', room_type: room_type, night: 1, quantity: 1
+      .clearfix
+      .col-sm-12.hidden-md.hidden-lg
+        %a{href: rooms_path}
+          .text-center.black.white-color.button VIEW ALL ROOMS
+
