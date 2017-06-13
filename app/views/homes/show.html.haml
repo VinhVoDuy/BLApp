@@ -14,9 +14,10 @@
           .white-color.reserve-btn RESERVATION
   .col-xs-12#book-now-btn-mobile.grad
     .col-xs-6.hidden-md.hidden-lg#menu
-      .h4.pull-left
-        .fa.fa-bars.white-color
-        .white-color.reserve-btn MENU
+      %a{href: '#', id: 'menu'}
+        .h4.pull-left
+          .fa.fa-bars.white-color
+          .white-color.reserve-btn MENU
     .col-xs-6.hidden-md.hidden-lg#book-now-btn.bookable
       %a{href: 'http://blue-river-hotel-3.hotelrunner.com/bv2/search'}
         .h4.pull-right
