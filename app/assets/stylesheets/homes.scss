@@ -249,6 +249,8 @@ a.white:hover{
   border: solid 1px;
   padding: 4px 9px;
   margin: 3px;
+  box-sizing: border-box;
+  width: 40px;
 }
 
 .button {
