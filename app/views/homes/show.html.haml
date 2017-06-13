@@ -12,14 +12,15 @@
         .fa.fa-calendar.white-color
         .white-color.reserve-btn RESERVATION
   .col-xs-12#book-now-btn-mobile
-    .col-xs-6.text-center.black.hidden-md.hidden-lg#menu
-      .h4
-        .fa.fa-calendar.white-color
-        .white-color.reserve-btn MENU
-    .col-xs-6.text-center.black.hidden-md.hidden-lg#book-now-btn.bookable
+    .col-xs-6.text-center.hidden-md.hidden-lg#menu
       .h4
         .fa.fa-bars.white-color
-        .white-color.reserve-btn RESERVATION
+        .white-color.reserve-btn MENU
+    .col-xs-6.text-center.hidden-md.hidden-lg#book-now-btn.bookable
+      %a{href: 'http://blue-river-hotel-3.hotelrunner.com/bv2/search'}
+        .h4
+          .fa.fa-calendar.white-color
+          .white-color.reserve-btn RESERVATION
   / Revolution Slider
   = render 'shared/reservation_slider'
   = render 'shared/amenities'
@@ -37,8 +38,6 @@
   #go-top
     %i.fa.fa-angle-up.fa-2x
 
-:css
-  @import url(//d2uyahi4tkntqv.cloudfront.net/assets/widgets.booknow.v2.css?v=1.0.0);
 :javascript
   jQuery(document).ready(function(){
     var topOfOthDiv = jQuery("#book-overlay").offset().top;

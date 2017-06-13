@@ -284,13 +284,14 @@ ol li.carousel-dot{
 }
 
 #menu{
-  background: #353232;
+  background: transparent;
 }
 
 #book-now-btn-mobile{
   position: fixed;
   bottom: 0;
   z-index: 9999;
+  border-top: 1px solid white;
 }
 
 .mt50 .black-color {
@@ -355,6 +356,9 @@ ol li.carousel-dot{
   }
   .navbar-header .h1{
     font-size: 30px
+  }
+  footer{
+    padding-bottom: 40px
   }
 }
 @media (min-width: 767px) and (max-width: 990px) {
