@@ -316,11 +316,11 @@ ol li.carousel-dot{
 }
 
 .box-icon .circle .fa{
-  color: #0a3298;
+  color: black;
 }
 
 .box-icon p {
-  color: #0a3298;
+  color: black;
 }
 
 @media (max-width: 767px) {
@@ -332,7 +332,7 @@ ol li.carousel-dot{
     background: white;
   }
   .hotel-name{
-    font-size: 30px;
+    font-size: 25px;
     padding: 0;
   }
   .grad-grey .nav li.dropdown.open a{
@@ -352,6 +352,9 @@ ol li.carousel-dot{
 
   .box-icon .circle{
     padding: 15px;
+  }
+  .navbar-header .h1{
+    font-size: 30px
   }
 }
 @media (min-width: 767px) and (max-width: 990px) {
