@@ -5,7 +5,7 @@ class ToursController < ApplicationController
   end
 
   def show
-    @tour = Tour.find params[:id]
+    @tour = Tour.friendly.find params[:id]
   end
 
 end
