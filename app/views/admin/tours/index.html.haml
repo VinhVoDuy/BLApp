@@ -11,7 +11,7 @@
     %h3.col-md-2.text-center
       Price
     %h3.col-md-3.text-center
-      
+
   - Tour.find_each do |tour|
     .row
       .col-md-3.text-center
@@ -28,4 +28,3 @@
   .text-center
     %br
     = link_to 'Add New Room Type', new_admin_tour_path, class: 'btn btn-success'
-:javascript

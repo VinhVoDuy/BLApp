@@ -1,4 +1,4 @@
-%footer.black
+%footer.grad
   .container
     .row
       .col-md-3.col-sm-3
@@ -31,12 +31,13 @@
           %abbr{:title => "Website"} Website:
           %a{:href => "https://blriverhotel.com"} https://blriverhotel.com
           %br/
-  .footer-bottom#footer-bottom-grad
-    .container
-      .row
-        .col-xs-6 © #{Time.now.year} BlueRiverHotel All Rights Reserved
-        .col-xs-6
-          %a{href: 'https://www.facebook.com/blueriverphamngulao/?notif_t=page_fan&notif_id=1496982273070191'}
-            .fa.fa-facebook.social-btn.pull-right
-          %a{href: 'https://www.tripadvisor.com/Hotel_Review-g293925-d676046-Reviews-Blue_River_Hotel-Ho_Chi_Minh_City.html'}
-            .fa.fa-tripadvisor.social-btn.pull-right
+          .pull-left
+            %a{href: 'https://www.tripadvisor.com/Hotel_Review-g293925-d676046-Reviews-Blue_River_Hotel-Ho_Chi_Minh_City.html'}
+              .fa.fa-tripadvisor.social-btn.white-color
+            %a{href: 'https://www.facebook.com/blueriverphamngulao/?notif_t=page_fan&notif_id=1496982273070191'}
+              .fa.fa-facebook.social-btn.white-color
+  -# .footer-bottom#footer-bottom-grad
+  -#   .container
+  -#     .row
+  -#       .col-xs-6 © #{Time.now.year} BlueRiverHotel All Rights Reserved
+  -#       .col-xs-6

@@ -133,18 +133,18 @@ strong.social-login {
 }
 
 .grad {
-  background: #918787; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, #918787 , #000); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, #918787, #000); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, #918787, #000); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #918787 , #000); /* Standard syntax */
+  background: #0a3298; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(right, #0a3298 , #000); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, #0a3298, #000); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, #0a3298, #000); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to left, #0a3298 , #000); /* Standard syntax */
 }
 
 .navbar-default .navbar-nav > li > a {
   color: white;
 }
 .black {
-  background: black
+  background: #0a3298;
 }
 
 .hotel-banner{
@@ -215,7 +215,7 @@ a.white:hover{
   font-weight: bold;
   border: 1px solid white;
   padding: 5px 10px;
-  margin: 0 5px;
+  margin: 5px 5px 0 0;
   font-size: 30px;
 }
 
@@ -313,6 +313,14 @@ ol li.carousel-dot{
 
 #booknow-hr-TopRight{
   display: none;
+}
+
+.box-icon .circle .fa{
+  color: #0a3298;
+}
+
+.box-icon p {
+  color: #0a3298;
 }
 
 @media (max-width: 767px) {

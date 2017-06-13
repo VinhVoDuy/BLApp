@@ -22,11 +22,15 @@ a {
 }
 /* UI border color */ 
 header, .navbar-nav .dropdown-menu, .blog-author img, .comment .avatar img, aside h3, blockquote, .ui-widget-header, .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight, .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, #owl-gallery, #owl-reviews img, .parallax-effect, .revolution-slider, .testimonials .owl-theme .owl-controls .owl-buttons div, .standard-slider .owl-theme .owl-controls .owl-buttons div, #go-top, .box-icon .circle, .testimonials .owl-theme .owl-controls .owl-buttons div, .standard-slider .owl-theme .owl-controls .owl-buttons div, #map {
-  border-color: #000 !important;
+  border-color: #0a3298 !important;
 }
 /* UI background color */
 #top-header .th-text .th-item .btn-group ul.dropdown-menu > li > a:hover, article .meta-date, .comment .reply-button, aside .widget .tags a, aside .widget ul a:hover .badge, #call-to-action, .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus, .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus, #go-top:hover, .testimonials .owl-theme .owl-controls .owl-buttons div:hover, .standard-slider .owl-theme .owl-controls .owl-buttons div:hover, .box-icon .circle:hover, .gallery a i, .gallery-slider a i {
-  background: #000;
+  background: #0a3298; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(right, #0a3298 , #000); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, #0a3298, #000); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, #0a3298, #000); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to left, #0a3298 , #000); /* Standard syntax */
 }
 /* RGB background color */
 .room-thumb .main .price, .comment, .table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th, .panel-default > .panel-heading {

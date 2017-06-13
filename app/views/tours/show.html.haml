@@ -1,19 +1,15 @@
 .boxed
   = render 'shared/header'
 .container
-  .row.overlay
+  .row.overlay.grad
     .color-overlay
       / Page title
-      .container
-        .row
-          .col-sm-12
-            %ol.breadcrumb
-              %li
-                = link_to 'Home', root_path
-              %li
-                = link_to 'Tours', tours_path
-              %li.active= @tour.name
-            %h1.white-color= @tour.name
+      %ol.breadcrumb
+        %li
+          = link_to 'Home', root_path
+        %li
+          = link_to 'Tours', rooms_path
+        %li.active= @tour.name
   %br
   %br
   .row
