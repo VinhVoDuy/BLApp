@@ -1,4 +1,5 @@
 class Tour < ApplicationRecord
+  extend FriendlyId
   has_many :tour_images
   friendly_id :name, use: :slugged
   accepts_nested_attributes_for :tour_images, allow_destroy: true, reject_if: :all_blank
