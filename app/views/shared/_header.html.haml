@@ -28,7 +28,10 @@
             %a.dropdown-toggle.js-activated{"data-toggle" => "dropdown", :href => "#"}
               Tours
               %b.caret
-            .dropdown-menu
+            %ul.dropdown-menu
+              - Tour.find_each do |tour|
+                %li
+                  = link_to tour.name, tour_path(tour)
         .pull-right.white-color.contact-number
           .fa.fa-phone
           %a.white.hotel-tel{href: "tel:+84838376483"}
