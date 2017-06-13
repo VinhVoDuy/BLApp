@@ -26,11 +26,7 @@ header, .navbar-nav .dropdown-menu, .blog-author img, .comment .avatar img, asid
 }
 /* UI background color */
 #top-header .th-text .th-item .btn-group ul.dropdown-menu > li > a:hover, article .meta-date, .comment .reply-button, aside .widget .tags a, aside .widget ul a:hover .badge, #call-to-action, .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus, .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus, #go-top:hover, .testimonials .owl-theme .owl-controls .owl-buttons div:hover, .standard-slider .owl-theme .owl-controls .owl-buttons div:hover, .box-icon .circle:hover, .gallery a i, .gallery-slider a i {
-  background: #0a3298; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(right, #0a3298 , #000); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(left, #0a3298, #000); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(left, #0a3298, #000); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to left, #0a3298 , #000); /* Standard syntax */
+  background: #000; /* For browsers that do not support gradients */
 }
 /* RGB background color */
 .room-thumb .main .price, .comment, .table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th, .panel-default > .panel-heading {
