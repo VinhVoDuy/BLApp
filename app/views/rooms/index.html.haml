@@ -2,17 +2,13 @@
   = render 'shared/header'
   .row
     .container
-      .row.overlay
+      .row.overlay.grad
         .color-overlay
-          / Page title
-          .container
-            .row
-              .col-sm-12
-                %ol.breadcrumb
-                  %li
-                    = link_to 'Home', root_path
-                  %li.active Accomodations
-                %h1.white-color All Rooms
+          %ol.breadcrumb
+            %li
+              = link_to 'Home', root_path
+            %li.active 
+              %strong Accomodations
   %section.rooms.mt50
     .container
       = RoomType.all.each_slice(3).each do |room_type_list|
