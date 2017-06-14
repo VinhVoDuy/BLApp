@@ -3,7 +3,7 @@
     = image_tag tour.tour_images.primary.image.url, class: 'img-responsive' if tour.tour_images.present?
     .mask
       .main
-        %h5= tour.name
+        %h5.col-sm-9= tour.name
         .price
           $ #{price_formatter(tour.price)}
           %span per person

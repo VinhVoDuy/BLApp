@@ -1,15 +1,14 @@
 .boxed
   = render 'shared/header'
-  .row
-    .container
-      .row.overlay.grad
-        .color-overlay
-          / Page title
-          %ol.breadcrumb
-            %li
-              = link_to 'Home', root_path
-            %li.active
-              %strong Tours
+.container.overlay
+  .row.overlay.grad
+    .color-overlay
+      / Page title
+      %ol.breadcrumb
+        %li
+          = link_to 'Home', root_path
+        %li.active
+          %strong Tours
   %section.rooms.mt50
     .container
       = Tour.all.each_slice(3).each do |tour_list|
