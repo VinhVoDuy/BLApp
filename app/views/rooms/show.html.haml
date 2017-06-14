@@ -39,7 +39,7 @@
             %h4 Price
             \$ #{price_formatter(@room.price)}
             %span= @room.dormitory? ? 'per person' : 'per night'
-          .text-center.black.white-color.button.bookable BOOK NOW
+          .text-center.black.white-color.button.bookable{'data-room-id' => @room.id} BOOK NOW
     / Room Content
     %section
       .container
@@ -59,6 +59,13 @@
                       %td
                         %i.fa.fa-check-circle
                         = feature
+  .col-xs-9.col-sm-3.pull-right.toast
+    .alert.alert-success.alert-dismissable
+      %a.close{href: '#', 'data-dismiss' => :alert, 'aria-label' => 'close'} &times;
+      %strong There are #{(2..5).to_a.sample} people are looking at this room right now.
+    .alert.alert-success.alert-dismissable
+      %a.close{href: '#', 'data-dismiss' => :alert, 'aria-label' => 'close'} &times;
+      %strong Most recent booking for this room was #{time_ago_in_words(@room.last_book_time.to_i > 12.hours.ago.to_i ? @room.last_book_time : 12.hours.ago)} ago
 / Other Rooms
 .visible-md.visible-lg
   = render 'shared/rooms', rooms: RoomType.where.not(id: @room.id), title: 'Other Rooms'

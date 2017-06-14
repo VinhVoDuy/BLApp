@@ -7,7 +7,7 @@
       .h5.white-color{style: "font-family: 'Kaushan Script'"} Welcome to the Blue River Hotel
     .col-sm-12.visible-xs.visible-sm
       .h5.white-color{style: "font-family: 'Kaushan Script'"} Welcome to the Blue River Hotel
-    .col-sm-3.pull-right#book-now-btn.text-center.hidden-xs.hidden-sm.bookable
+    .col-sm-3.pull-right#book-now-btn.text-center.hidden-xs.hidden-sm.bookable{'data-room-id' => ''}
       .h4{style: 'padding-left: 50px;'}
         .fa.fa-calendar.white-color
         .white-color.reserve-btn RESERVATION
@@ -17,7 +17,7 @@
         .h4.pull-left
           .fa.fa-bars.white-color
           .white-color.reserve-btn MENU
-    .col-xs-6.hidden-md.hidden-lg#book-now-btn.bookable
+    .col-xs-6.hidden-md.hidden-lg#book-now-btn.bookable{'data-room-id' => ''}
       .h4.pull-right
         .fa.fa-calendar.white-color
         .white-color.reserve-btn RESERVATION
@@ -40,7 +40,7 @@
   .col-xs-9.col-sm-3.pull-right.toast
     .alert.alert-success.alert-dismissable
       %a.close{href: '#', 'data-dismiss' => :alert, 'aria-label' => 'close'} &times;
-      %strong There are #{(3..10).to_a.sample} people looking at this page right now.
+      %strong There are #{(5..20).to_a.sample} people are looking at this page right now.
     .alert.alert-success.alert-dismissable
       %a.close{href: '#', 'data-dismiss' => :alert, 'aria-label' => 'close'} &times;
       %strong Most recent booking for our Hotel was #{time_ago_in_words(@last_book_time)} ago

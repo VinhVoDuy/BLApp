@@ -7,6 +7,6 @@ class Setting < ApplicationRecord
   def self.last_book_time
     last_book_time = Setting.find_or_create_by(name: 'last_book_time')
     last_book_time.update_attributes(value: Time.now.to_i) unless last_book_time.value.to_i > 0
-    Time.at(last_book_time.value.to_i)
+    Time.at(last_book_time.value.to_i) > 12.hours.ago ? Time.at(last_book_time.value.to_i) : 12.hours.ago
   end
 end

@@ -7,7 +7,13 @@ class HomesController < ApplicationController
   end
 
   def set_time
-    Setting.last_book_time = Time.now
+    if params[:room_id].present?
+      room = RoomType.find(params[:room_id])
+      room.update_attributes(last_book_time: Time.now)
+    else
+      Setting.last_book_time = Time.now
+    end
+    render nothing: true
   end
 
   def show2
