@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   root to: 'homes#show'
+  post 'set_time', to: 'homes#set_time'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :admin do
     get 'login', to: 'sessions#new'

@@ -39,8 +39,7 @@
             %h4 Price
             \$ #{price_formatter(@room.price)}
             %span= @room.dormitory? ? 'per person' : 'per night'
-          %a{href: 'https://blue-river-hotel-3.hotelrunner.com/bv2/search'}
-            .text-center.black.white-color.button BOOK NOW
+          .text-center.black.white-color.button.bookable BOOK NOW
     / Room Content
     %section
       .container

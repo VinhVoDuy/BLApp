@@ -1,0 +1,10 @@
+.toast {
+  border-color: #7cad22;
+  right: 0;
+  z-index: 2;
+  opacity: 0.9;
+  bottom: 100px;
+  transition: right .8s linear;
+  margin: 1rem;
+  position: fixed;
+}

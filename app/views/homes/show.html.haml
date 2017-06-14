@@ -8,10 +8,9 @@
     .col-sm-12.visible-xs.visible-sm
       .h5.white-color{style: "font-family: 'Kaushan Script'"} Welcome to the Blue River Hotel
     .col-sm-3.pull-right#book-now-btn.text-center.hidden-xs.hidden-sm.bookable
-      %a{href: 'http://blue-river-hotel-3.hotelrunner.com/bv2/search'}
-        .h4{style: 'padding-left: 50px;'}
-          .fa.fa-calendar.white-color
-          .white-color.reserve-btn RESERVATION
+      .h4{style: 'padding-left: 50px;'}
+        .fa.fa-calendar.white-color
+        .white-color.reserve-btn RESERVATION
   .col-xs-12#book-now-btn-mobile.grad
     .col-xs-6.hidden-md.hidden-lg#menu
       %a{href: '#', id: 'menu'}
@@ -19,10 +18,9 @@
           .fa.fa-bars.white-color
           .white-color.reserve-btn MENU
     .col-xs-6.hidden-md.hidden-lg#book-now-btn.bookable
-      %a{href: 'http://blue-river-hotel-3.hotelrunner.com/bv2/search'}
-        .h4.pull-right
-          .fa.fa-calendar.white-color
-          .white-color.reserve-btn RESERVATION
+      .h4.pull-right
+        .fa.fa-calendar.white-color
+        .white-color.reserve-btn RESERVATION
   / Revolution Slider
   = render 'shared/reservation_slider'
   = render 'shared/amenities'
@@ -39,7 +37,13 @@
   / Go-top Button
   #go-top
     %i.fa.fa-angle-up.fa-2x
-
+  .col-xs-9.col-sm-3.pull-right.toast
+    .alert.alert-success.alert-dismissable
+      %a.close{href: '#', 'data-dismiss' => :alert, 'aria-label' => 'close'} &times;
+      %strong There are #{(3..10).to_a.sample} people looking at this page right now.
+    .alert.alert-success.alert-dismissable
+      %a.close{href: '#', 'data-dismiss' => :alert, 'aria-label' => 'close'} &times;
+      %strong Most recent booking for our Hotel was #{time_ago_in_words(@last_book_time)} ago
 :javascript
   jQuery(document).ready(function(){
     var topOfOthDiv = jQuery("#book-overlay").offset().top;
@@ -53,8 +57,4 @@
         jQuery('#book-overlay').css({ position: 'static'});
       }
     });
-    jQuery('.bookable').on('click', function(){
-      HotelRunnerWidget.show(null);
-    });
-
   })
