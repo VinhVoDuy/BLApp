@@ -17,11 +17,11 @@ class Admin::ToursController < AdminController
   end
 
   def edit
-    @tour = Tour.find params[:id]
+    @tour = Tour.friendly.find params[:id]
   end
 
   def update
-    @tour = Tour.find params[:id]
+    @tour = Tour.friendly.find params[:id]
     if @tour.update_attributes(tour_params)
       redirect_to action: :index
     else
