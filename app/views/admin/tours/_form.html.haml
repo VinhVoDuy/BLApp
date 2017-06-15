@@ -38,6 +38,10 @@
         .col-md-2
           = f.text_field :private_tour_pricing, class: 'form-control', name: 'tour[private_tour_pricing][]', value: @tour.private_tour_pricing.at(i).to_f > 0 ? @tour.private_tour_pricing.at(i) : nil
   .form-group
+    = f.label 'Tags', class: "col-md-2 control-label"
+    .col-md-10
+      = f.text_area :tag_list, class: 'form-control'
+  .form-group
     = f.label 'Images & Descriptions', class: "col-md-2 control-label"
     %h3.small (should be 356x228)
     .col-md-10.col-md-offset-2

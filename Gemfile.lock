@@ -38,6 +38,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (4.0.0)
+      activerecord (>= 4.0)
     airbrussh (1.2.0)
       sshkit (>= 1.6.1, != 1.7.0)
     arel (7.1.4)
@@ -130,6 +132,9 @@ GEM
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.8.4)
+    isotope-rails (2.2.2)
+      jquery-rails
+      rails (>= 4.0)
     jbuilder (2.6.4)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2)
@@ -204,11 +209,6 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
     pg (0.20.0)
-    prettyphoto-rails (0.2.1)
-      jquery-rails
-      rails (>= 3.1)
-      sass-rails
-      uglifier
     puma (3.9.1)
     rack (2.0.3)
     rack-test (0.6.3)
@@ -320,6 +320,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on (~> 4.0)
   aws-sdk (~> 2.9.18)
   bootstrap-datepicker-rails
   bootstrap-sass
@@ -340,6 +341,7 @@ DEPENDENCIES
   font-awesome-rails
   friendly_id
   haml
+  isotope-rails
   jbuilder (~> 2.5)
   jquery-rails
   jquery-turbolinks
@@ -351,7 +353,6 @@ DEPENDENCIES
   owlcarousel-rails
   paperclip (~> 5.1.0)
   pg (~> 0.18)
-  prettyphoto-rails
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
   rest-client (~> 2.0.0)

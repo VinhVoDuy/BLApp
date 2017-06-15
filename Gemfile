@@ -24,11 +24,12 @@ gem 'jquery-rails'
 gem 'jquery-turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-gem 'prettyphoto-rails'
 gem 'paperclip', '~> 5.1.0'
 gem 'aws-sdk', '~> 2.9.18'
 gem 'cocoon'
 gem 'swipebox'
+gem 'acts-as-taggable-on', '~> 4.0'
+gem 'isotope-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

@@ -11,8 +11,16 @@
           %strong Tours
   %section.rooms.mt50
     .container
-      = Tour.all.each_slice(3).each do |tour_list|
-        .row.rooms-row
+      .row
+        .nav.nav-pills#filters
+          %li
+            %a{href: '#', 'data-filter' => '*'} All
+          - ActsAsTaggableOn::Tag.pluck(:name).each do |tag_name|
+            %li
+              %a{href: '#', 'data-filter' => ".#{tag_name.downcase.gsub(' ', '_')}"}= tag_name
+      .mt20
+      = @tours.each_slice(3).each do |tour_list|
+        .row.rooms-row.isotope
           - tour_list.each do |tour|
             = render 'tour', tour: tour
 = render 'shared/footer'

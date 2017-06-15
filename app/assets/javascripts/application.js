@@ -15,8 +15,8 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require bootstrap-sprockets
-//= require prettyphoto-rails
 //= require_tree .
 //= require owl.carousel
 //= require bootstrap-datepicker
 //= require swipebox
+//= require isotope
