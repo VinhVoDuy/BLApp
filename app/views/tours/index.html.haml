@@ -13,7 +13,7 @@
     .container
       .row
         .nav.nav-pills#filters
-          %li
+          %li.active
             %a{href: '#', 'data-filter' => '*'} All
           - ActsAsTaggableOn::Tag.pluck(:name).each do |tag_name|
             %li
@@ -23,4 +23,5 @@
         = @tours.each_slice(3).each do |tour_list|
           - tour_list.each do |tour|
             = render 'tour', tour: tour
+= render 'shared/mobile_menu'
 = render 'shared/footer'

@@ -14,4 +14,5 @@
         .row.rooms-row
           - room_type_list.each do |room_type|
             = render 'rooms/room', room_type: room_type, quantity: 1
+= render 'shared/mobile_menu'
 = render 'shared/footer'

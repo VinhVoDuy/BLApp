@@ -1,0 +1,15 @@
+.col-xs-12#book-now-btn-mobile.grad
+  .col-xs-6.hidden-md.hidden-lg#menu.dropup
+    %a{href: '#', id: 'menu', 'data-toggle' => 'dropdown'}
+      .h4.pull-left
+        .fa.fa-bars.white-color
+        .white-color.reserve-btn MENU
+    %ul.dropdown-menu
+      %li.dropdown-submenu
+        %a{href: rooms_path} Accomodations
+      %li
+        %a{href: tours_path} Tours
+  .col-xs-6.hidden-md.hidden-lg#book-now-btn.bookable{'data-room-id' => ''}
+    .h4.pull-right
+      .fa.fa-calendar.white-color
+      .white-color.reserve-btn RESERVATION

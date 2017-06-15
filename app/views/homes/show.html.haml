@@ -11,16 +11,7 @@
       .h4{style: 'padding-left: 50px;'}
         .fa.fa-calendar.white-color
         .white-color.reserve-btn RESERVATION
-  .col-xs-12#book-now-btn-mobile.grad
-    .col-xs-6.hidden-md.hidden-lg#menu
-      %a{href: '#', id: 'menu'}
-        .h4.pull-left
-          .fa.fa-bars.white-color
-          .white-color.reserve-btn MENU
-    .col-xs-6.hidden-md.hidden-lg#book-now-btn.bookable{'data-room-id' => ''}
-      .h4.pull-right
-        .fa.fa-calendar.white-color
-        .white-color.reserve-btn RESERVATION
+  = render 'shared/mobile_menu'
   / Revolution Slider
   = render 'shared/reservation_slider'
   = render 'shared/amenities'
