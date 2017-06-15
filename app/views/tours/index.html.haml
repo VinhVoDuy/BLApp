@@ -19,8 +19,8 @@
             %li
               %a{href: '#', 'data-filter' => ".#{tag_name.downcase.gsub(' ', '_')}"}= tag_name
       .mt20
-      = @tours.each_slice(3).each do |tour_list|
-        .row.rooms-row.isotope
+      .all-rooms.isotope
+        = @tours.each_slice(3).each do |tour_list|
           - tour_list.each do |tour|
             = render 'tour', tour: tour
 = render 'shared/footer'

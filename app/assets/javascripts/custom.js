@@ -233,7 +233,7 @@ jQuery(document).on('ready', function () {
  window.onload = function () {	
     if (jQuery().isotope) {
         // cache container
-        var jQuerycontainer1 = jQuery('.rooms-row');
+        var jQuerycontainer1 = jQuery('.all-rooms');
         // initialize isotope
         jQuerycontainer1.isotope({
             filter: '*',
