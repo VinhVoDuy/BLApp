@@ -1,4 +1,4 @@
-%div{class: "col-sm-4 isotope-item #{tour.tag_list.map(&:downcase).map{|e| e.gsub(' ', '_')}.join(' ')}"}
+%div{class: "col-sm-4 isotope-item #{tour.class_tag_list}"}
   .room-thumb
     = image_tag tour.tour_images.primary.image.url, class: 'img-responsive' if tour.tour_images.present?
     .mask
