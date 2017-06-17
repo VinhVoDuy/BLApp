@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170617043121) do
+ActiveRecord::Schema.define(version: 20170617093701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -161,6 +161,7 @@ ActiveRecord::Schema.define(version: 20170617043121) do
     t.integer  "size"
     t.boolean  "favourite",         default: false
     t.datetime "last_book_time"
+    t.integer  "position"
     t.index ["slug"], name: "index_room_types_on_slug", unique: true, using: :btree
   end
 
