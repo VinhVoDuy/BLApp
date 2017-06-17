@@ -38,7 +38,7 @@ class Admin::ToursController < AdminController
 
   private
   def tour_params
-    params.require(:tour).permit(:group, :tag_list, :name, :start_time, :end_time, :price, :included, :short_description, private_tour_pricing: [], tour_images_attributes: [:id, :image, :description, :primary, :_destroy])
+    params.require(:tour).permit(:group, :title, :tag_list, :name, :start_time, :end_time, :price, :included, :short_description, private_tour_pricing: [], tour_images_attributes: [:id, :image, :description, :primary, :_destroy])
   end
 
 end

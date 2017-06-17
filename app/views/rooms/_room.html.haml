@@ -3,8 +3,8 @@
     = image_tag room_type.room_images.primary.image.url(:medium), class: 'img-responsive' if room_type.room_images.present?
     .mask
       .main
-        %h5.col-sm-9 #{room_type.name} #{"x #{ quantity }" if quantity > 1}
-        .price
+        %h5.col-xs-9 #{room_type.name} #{"x #{ quantity }" if quantity > 1}
+        .price.col-xs-3
           - if room_type.init_price.to_f > 0 && room_type.init_price !=  room_type.price
             %span{style: 'color: orangered; font-size: 15px'}
               %s $ #{price_formatter(room_type.init_price)}

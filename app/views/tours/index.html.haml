@@ -15,7 +15,7 @@
         .nav.nav-pills#filters
           %li.active
             %a{href: '#', 'data-filter' => '*'} All
-          - ActsAsTaggableOn::Tag.pluck(:name).each do |tag_name|
+          - ActsAsTaggableOn::Tag.where('taggings_count > 0').pluck(:name).each do |tag_name|
             %li
               %a{href: '#', 'data-filter' => ".#{tag_name.downcase.gsub(' ', '_')}"}= tag_name
       .mt20

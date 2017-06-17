@@ -4,6 +4,10 @@
     .col-md-10
       = f.text_field :name, class: 'form-control'
   .form-group
+    = f.label 'Short Title', class: "col-md-2 control-label"
+    .col-md-10
+      = f.text_field :title, class: 'form-control'
+  .form-group
     = f.label :group, class: "col-md-2 control-label"
     .col-md-10
       = f.text_field :group, class: 'form-control'
