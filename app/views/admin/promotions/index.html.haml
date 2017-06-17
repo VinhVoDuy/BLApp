@@ -1,0 +1,38 @@
+%h1.text-center
+  Admin Promotions
+.container-fluid
+  .row
+    %h3.col-md-2.text-center
+      Name
+    %h3.col-md-1.text-center
+      #{"% Off"}
+    %h3.col-md-1.text-center
+      Amount Off
+    %h3.col-md-2.text-center
+      Code
+    %h3.col-md-2.text-center
+      Start
+    %h3.col-md-2.text-center
+      End
+    %h3.col-md-2.text-center
+      Actions
+  - Promotion.find_each do |promotion|
+    .row.promotion
+      .col-md-2.text-center
+        = promotion.name
+      .col-md-1.text-center
+        = promotion.percentage_off
+      .col-md-1.text-center
+        = promotion.amount_off
+      .col-md-2.text-center
+        = promotion.code
+      .col-md-2.text-center
+        = promotion.start_time
+      .col-md-2.text-center
+        = promotion.end_time
+      .col-md-2.text-center
+        = link_to 'Delete', admin_promotion_path(promotion), method: :delete, data: {confirm: 'Are you sure ?'}
+        = link_to 'Edit', edit_admin_promotion_path(promotion)
+  .text-center
+    %br
+    = link_to 'Add New Image', new_admin_promotion_path, class: 'btn btn-success'

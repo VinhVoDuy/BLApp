@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     resources :review_images
     resource :main
     resource :amenities
+    resources :promotions
   end
   resource :home, only: :show do
     get :show2, on: :member
@@ -31,5 +32,6 @@ Rails.application.routes.draw do
   resources :amenities, only: :index
   resources :availables, only: :create
   resources :tours, only: [:index, :show]
+  resources :promotions, only: :show
 
 end

@@ -1,0 +1,43 @@
+.boxed
+  = render 'shared/header'
+.container.overlay
+  .row.overlay.grad
+    .color-overlay
+      / Page title
+      %ol.breadcrumb
+        %li
+          = link_to 'Home', root_path
+        %li
+          = link_to 'Promotions', root_path
+        %li.active= @promotion.name
+  %br
+  .row
+    / Slider
+    / Reservation form
+    %section#reservation-form.mt50.clearfix.row
+      .col-md-12.mt100
+        #reservationform.reservation-vertical.clearfix
+          %h2.lined-heading
+            %span Promotion Detail
+          .price
+            %h4 Status
+            - if (@promotion.start_time <= Time.now && Time.now <= @promotion.end_time)
+              %span.label.label-success{style: 'color: white'} Active
+            - else
+              %span.label.label-danger{style: 'color: white'} Inactive
+          .price
+            %h4 Start Date
+            %span= @promotion.start_time.to_date.strftime('%d-%b-%Y')
+          .price
+            %h4 End Date
+            %span= @promotion.end_time.to_date.strftime('%d-%b-%Y')
+          .price
+            %h4 Code:
+            = @promotion.code
+          .price
+            %h4 Discount:
+            = @promotion.percentage_off.present? ? "#{ @promotion.percentage_off } %" : "$ #{@promotion.amount_off}"
+          %h4= @promotion.description.html_safe
+    / Room Content
+= render 'shared/mobile_menu'
+= render 'shared/footer'

@@ -7,6 +7,10 @@
     %ul.dropdown-menu
       %li.dropdown-submenu
         %a{href: rooms_path} Accomodations
+      - promotion = Promotion.published.last
+      - if promotion
+        %li
+          %a{href: promotion_path(promotion)} #{promotion.name}
       %li
         %a{href: tours_path} Tours
   .col-xs-6.hidden-md.hidden-lg#book-now-btn.bookable{'data-room-id' => ''}

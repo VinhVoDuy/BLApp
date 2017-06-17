@@ -23,6 +23,10 @@
             %a.dropdown-toggle.js-activated{"data-toggle" => "dropdown", :href => "#"}
               Promotions
               %b.caret
+            %ul.dropdown-menu
+              - Promotion.published.find_each do |promotion|
+                %li
+                  = link_to promotion.name, promotion_path(promotion)
             .dropdown-menu
           %li.dropdown
             %a.dropdown-toggle.js-activated{"data-toggle" => "dropdown", :href => "#"}
