@@ -1,11 +1,3 @@
-GIT
-  remote: git://github.com/seuros/capistrano-sidekiq.git
-  revision: 339c42e24f42d8d72173daae832b23504930f941
-  specs:
-    capistrano-sidekiq (0.10.0)
-      capistrano
-      sidekiq (>= 3.4)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -90,6 +82,9 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
+    capistrano-sidekiq (0.10.0)
+      capistrano
+      sidekiq (>= 3.4)
     capistrano3-puma (3.1.0)
       capistrano (~> 3.7)
       capistrano-bundler
@@ -355,7 +350,7 @@ DEPENDENCIES
   capistrano-rails
   capistrano-rails-console
   capistrano-rvm
-  capistrano-sidekiq!
+  capistrano-sidekiq
   capistrano3-puma
   cocoon
   coffee-rails (~> 4.2)
