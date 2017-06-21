@@ -11,7 +11,6 @@ require 'capistrano/rails/migrations' # for running migrations
 require 'capistrano/puma'
 require 'capistrano/rails/console'
 require 'capistrano/sidekiq'
-require 'capistrano/sidekiq/monit'
 require 'capistrano/figaro_yml'
 install_plugin Capistrano::Puma
 
