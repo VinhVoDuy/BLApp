@@ -64,3 +64,24 @@ set :ssh_options, {
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
+namespace :sidekiq do
+  namespace :monit do
+    desc "Monitor sidekiq"
+    task :monitor do
+      on roles(:app) do
+        execute "sudo /usr/bin/monit monitor #{fetch(:sidekiq_service_name)}"
+      end
+    end
+
+    desc "Unmonitor sidekiq"
+    task :unmonitor do
+      on roles(:app) do
+        execute "sudo /usr/bin/monit unmonitor #{fetch(:sidekiq_service_name)}"
+      end
+    end
+  end
+end
+namespace :deploy do
+  after 'deploy:check',      'sidekiq:monit:unmonitor'
+  after 'deploy:publishing', 'sidekiq:monit:monitor'
+end
