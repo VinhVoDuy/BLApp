@@ -30,6 +30,7 @@ gem 'cocoon'
 gem 'swipebox'
 gem 'acts-as-taggable-on', '~> 4.0'
 gem 'isotope-rails'
+gem 'sidekiq'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -50,6 +51,7 @@ gem "omniauth-google-oauth2"
 gem 'omniauth-twitter'
 gem 'bootstrap-datepicker-rails'
 gem 'friendly_id'
+gem 'roo'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -74,6 +76,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'capistrano-sidekiq', github: 'seuros/capistrano-sidekiq'
+  gem 'capistrano-figaro-yml'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

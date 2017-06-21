@@ -1,0 +1,4 @@
+.h1.text-center #{Contact.count} Contacts
+= form_tag '/admin/contacts/upload', multipart: true do
+  = file_field_tag :file
+  = submit_tag 'Upload'
