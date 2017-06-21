@@ -94,6 +94,15 @@ Rails.application.configure do
     :secret_access_key => ENV['AWS_S3_SECRET_ACCESS_KEY']
     }
   }
+  ActionMailer::Base.smtp_settings = {
+      :address        => 'smtp.sendgrid.net',
+      :port           => '587',
+      :authentication => :plain,
+      :user_name      => ENV['SENDGRID_USERNAME'],
+      :password       => ENV['SENDGRID_PASSWORD'],
+      :domain         => 'heroku.com',
+    }
+  ActionMailer::Base.delivery_method = :smtp
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
