@@ -3,7 +3,8 @@ class MarkettingJob < ApplicationJob
 
   def perform(*args)
     Contact.find_each do |contact|
-      MarkettingMailer.launch_web(contact).deliver_now
+      sleep 300
+      MarkettingMailer.launch_web(contact).deliver_later
     end
   end
 end
