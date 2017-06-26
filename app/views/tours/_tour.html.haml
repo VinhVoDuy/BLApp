@@ -10,5 +10,5 @@
       .content
         %p
           %span #{tour.title || tour.name}
-          = tour.short_description
+          = tour.short_description.html_safe
         %a.btn.btn-primary.btn-block{:href => tour_path(tour)} Read More

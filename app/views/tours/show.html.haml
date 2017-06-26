@@ -78,7 +78,7 @@
               - if tour_image.image?
                 - idx += 1
                 = image_tag tour_image.image.url, class: "#{idx % 2 == 0 ? 'tour-image pull-right' : 'tour-image pull-left'}"
-              %p= tour_image.description
+              %p= tour_image.description.html_safe
 / Other Rooms
 -# = render 'shared/rooms', rooms: RoomType.where.not(id: @room.id), title: 'Other Rooms'
 
