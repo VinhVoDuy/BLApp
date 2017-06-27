@@ -27,3 +27,9 @@
 .room-price-form {
   padding: 5px 0;
 }
+
+iframe {
+  &.wysihtml5-sandbox {
+    resize: vertical;
+  }
+}
