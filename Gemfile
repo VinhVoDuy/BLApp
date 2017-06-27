@@ -51,7 +51,7 @@ gem "omniauth-google-oauth2"
 gem 'omniauth-twitter'
 gem 'bootstrap-datepicker-rails'
 gem 'friendly_id'
-gem 'bootstrap-wysihtml5-rails'
+gem 'bootstrap-wysihtml5-rails', github: 'nerian/bootstrap-wysihtml5-rails'
 gem 'roo'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
