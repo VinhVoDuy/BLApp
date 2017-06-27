@@ -22,7 +22,7 @@
   .form-group
     = f.label :short_description, class: "col-md-2 control-label"
     .col-md-10
-      = f.text_area :short_description, class: 'form-control'
+      = f.text_area :short_description, class: 'form-control text-editor'
   .form-group
     = f.label 'Price', class: "col-md-2 control-label"
     .col-md-10
@@ -56,3 +56,18 @@
   %br
   .actions.col-md-2.col-md-offset-2
     = f.submit class: 'btn btn-success'
+:javascript
+  $(document).on('ready', function(){
+    $('.text-editor').wysihtml5({
+    toolbar:{
+      "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
+      "emphasis": true, //Italics, bold, etc. Default true
+      "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
+      "blockquote": false,
+      "html": true, //Button which allows you to edit the generated HTML. Default false
+      "link": true, //Button to insert a link. Default true
+      "image": false, //Button to insert an image. Default true,
+      "color": true //Button to change color of font  
+      }
+    });
+  });

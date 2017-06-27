@@ -16,3 +16,4 @@
 //= require bootstrap-sprockets
 //= require cocoon
 //= require bootstrap-datepicker
+//= require bootstrap-wysihtml5
