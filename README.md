@@ -11,6 +11,7 @@
     * If `country` is "other" then `nationality` and `countryOfResidence` are
       required
     * The OTPcode is returned on the API is just used for testing now. Will be
+    * `dob` format is: YYYY-MM-DD
       removed on production
   * Params:
     ```
@@ -21,6 +22,7 @@
       "email": "vinh.vo@2359media.com",
       "country": "singapore",
       "phoneNumber": "0938383838",
+      "dob": "1990-12-01",
       "notifyPost": true,
       "notifySMS": true,
       "call": true,
@@ -36,6 +38,7 @@
       "email": "vinh.vo@2359media.com",
       "country": "other",
       "nationality": "Vietnamese",
+      "dob": "1990-12-01",
       "countryOfResidence": "Malaysia",
       "phoneNumber": "0938383838",
       "notifyPost": true,
