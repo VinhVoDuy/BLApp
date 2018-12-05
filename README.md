@@ -23,6 +23,7 @@
       "country": "singapore",
       "phoneNumber": "0938383838",
       "dob": "1990-12-01",
+      "postalCode": "408600",
       "notifyPost": true,
       "notifySMS": true,
       "call": true,
