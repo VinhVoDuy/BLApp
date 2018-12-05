@@ -51,8 +51,9 @@
   * Response:
     ```
       {
-        "message":"OTP has been sent to your phone",
-        "OTPcode":"567736"
+        "memberId": "vo7nqi822144",
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZW1iZXJJZCI6InZvN25xaTgyMjE0NCIsImlkIjo1LCJwaG9uZU51bWJlciI6IjA5MzgzODM4MzgiLCJpYXQiOjE1NDMzMTI4NzcsImV4cCI6MTU0MzM5OTI3N30.PVqzNMYRuancmt8hvkanYEDEwsDjVS6gZ2EphL0Fzxw",
+        "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZW1iZXJJZCI6InZvN25xaTgyMjE0NCIsImlkIjo1LCJwaG9uZU51bWJlciI6IjA5MzgzODM4MzgiLCJyZWZyZXNoVG9rZW4iOnRydWUsImlhdCI6MTU0MzMxMjg3NywiZXhwIjoxNTQzMzk5Mjc3fQ.oWpMGYn-x0kjJZBmSWHlv4AwyKhZC4zUAyumBMz6aOI"
       }
     ```
 
@@ -415,5 +416,15 @@
     ```
       {
         "message": "The passcode is invalid"
+      }
+    ```
+14. **Request OTP**
+  * URL: `/users/requestOTP`
+  * Method: `POST`
+  * Params:
+    ```
+      {
+          "message": "OTP has been sent to your phone",
+          "OTPcode": "598170"
       }
     ```
