@@ -592,6 +592,53 @@
           "title": "DEAL 9 in English",
           "subtitle": "subtitle DEAL 9 in English"
         }
+      ],
+      "ionSkyDeals": [
+        {
+          "id": 16,
+          "memberOnly": false,
+          "startDate": "2018-12-10T21:31:21.000Z",
+          "endDate": "2018-12-27T21:31:21.000Z",
+          "bannerImageUrl": "http://lorempixel.com/640/480/",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/",
+          "Brand": {
+            "id": 244,
+            "name": "Bernhard - Graham"
+          },
+          "title": "title of Ion Sky Deal 0 in English",
+          "description": "description of Ion Sky Deal 0 in English",
+          "tnc": "term and condition of Ion Sky Deal 0 in English"
+        },
+        {
+          "id": 17,
+          "memberOnly": true,
+          "startDate": "2018-12-10T21:31:21.000Z",
+          "endDate": "2018-12-27T21:31:21.000Z",
+          "bannerImageUrl": "http://lorempixel.com/640/480/",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/",
+          "Brand": {
+            "id": 252,
+            "name": "Streich - Hudson"
+          },
+          "title": "title of Ion Sky Deal 1 in English",
+          "description": "description of Ion Sky Deal 1 in English",
+          "tnc": "term and condition of Ion Sky Deal 1 in English"
+        },
+        {
+          "id": 18,
+          "memberOnly": false,
+          "startDate": "2018-12-10T21:31:21.000Z",
+          "endDate": "2018-12-27T21:31:21.000Z",
+          "bannerImageUrl": "http://lorempixel.com/640/480/",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/",
+          "Brand": {
+            "id": 242,
+            "name": "Wisozk - Considine"
+          },
+          "title": "title of Ion Sky Deal 2 in English",
+          "description": "description of Ion Sky Deal 2 in English",
+          "tnc": "term and condition of Ion Sky Deal 2 in English"
+        }
       ]
     }
     ```
@@ -745,53 +792,6 @@
               "operatingHours": "07:30 AM - 08:30PM"
             },
           ]
-        }
-      ],
-      "ionSkyDeals": [
-        {
-          "id": 16,
-          "memberOnly": false,
-          "startDate": "2018-12-10T21:31:21.000Z",
-          "endDate": "2018-12-27T21:31:21.000Z",
-          "bannerImageUrl": "http://lorempixel.com/640/480/",
-          "thumbnailImageUrl": "http://lorempixel.com/640/480/",
-          "Brand": {
-            "id": 244,
-            "name": "Bernhard - Graham"
-          },
-          "title": "title of Ion Sky Deal 0 in English",
-          "description": "description of Ion Sky Deal 0 in English",
-          "tnc": "term and condition of Ion Sky Deal 0 in English"
-        },
-        {
-          "id": 17,
-          "memberOnly": true,
-          "startDate": "2018-12-10T21:31:21.000Z",
-          "endDate": "2018-12-27T21:31:21.000Z",
-          "bannerImageUrl": "http://lorempixel.com/640/480/",
-          "thumbnailImageUrl": "http://lorempixel.com/640/480/",
-          "Brand": {
-            "id": 252,
-            "name": "Streich - Hudson"
-          },
-          "title": "title of Ion Sky Deal 1 in English",
-          "description": "description of Ion Sky Deal 1 in English",
-          "tnc": "term and condition of Ion Sky Deal 1 in English"
-        },
-        {
-          "id": 18,
-          "memberOnly": false,
-          "startDate": "2018-12-10T21:31:21.000Z",
-          "endDate": "2018-12-27T21:31:21.000Z",
-          "bannerImageUrl": "http://lorempixel.com/640/480/",
-          "thumbnailImageUrl": "http://lorempixel.com/640/480/",
-          "Brand": {
-            "id": 242,
-            "name": "Wisozk - Considine"
-          },
-          "title": "title of Ion Sky Deal 2 in English",
-          "description": "description of Ion Sky Deal 2 in English",
-          "tnc": "term and condition of Ion Sky Deal 2 in English"
         }
       ]
     }
