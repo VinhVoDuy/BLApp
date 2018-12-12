@@ -645,7 +645,6 @@
 16. **Get Campaign**
   * URL: `/campaigns/:id`
   * Method: `GET`
-  * Params:
   * Response:
     ```
     {
@@ -794,5 +793,35 @@
           ]
         }
       ]
+    }
+    ```
+17. **Get Event**
+  * URL: `/events/:id`
+  * Method: `GET`
+  * Response:
+    ```
+    {
+      "id": 245,
+      "startDate": "2018-12-10T21:31:21.000Z",
+      "endDate": "2018-12-27T21:31:21.000Z",
+      "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+      "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+      "location": "#1 - 94",
+      "title": "EVENT 4 in English",
+      "description": "Event 4 Description in English",
+      "Brand": {
+        "id": 245,
+        "name": "Zemlak LLC",
+        "level": "B3",
+        "unit": "5",
+        "phone": "041.285.5223 x600",
+        "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+        "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+        "openingDate": null,
+        "comingStatus": "opening",
+        "CategoryId": 233,
+        "operatingDays": "Monday - Friday",
+        "operatingHours": "07:30 AM - 08:30PM"
+      }
     }
     ```
