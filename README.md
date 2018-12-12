@@ -428,3 +428,324 @@
           "OTPcode": "598170"
       }
     ```
+15. **Landing API**
+  * URL: `/landing/`
+  * Method: `GET`
+  * Params: required `accessToken`
+  * Response
+    ```
+    {
+      "campaigns": [
+        {
+          "id": 7,
+          "name": "Campaign 0",
+          "startDate": "2018-12-10T08:22:15.000Z",
+          "endDate": "2018-12-27T08:22:15.000Z",
+          "bannerImageUrl": "http://lorempixel.com/640/480/",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/",
+          "description": "Campaign 0 in English"
+        },
+        {
+          "id": 8,
+          "name": "Campaign 1",
+          "startDate": "2018-12-10T08:22:15.000Z",
+          "endDate": "2018-12-27T08:22:15.000Z",
+          "bannerImageUrl": "http://lorempixel.com/640/480/",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/",
+          "description": "Campaign 1 in English"
+        },
+        {
+          "id": 9,
+          "name": "Campaign 2",
+          "startDate": "2018-12-10T08:22:15.000Z",
+          "endDate": "2018-12-27T08:22:15.000Z",
+          "bannerImageUrl": "http://lorempixel.com/640/480/",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/",
+          "description": "Campaign 2 in English"
+        }
+      ],
+      "followings": [
+        {
+          "dataType": "Deal",
+          "id": 181,
+          "name": "DEAL 1",
+          "startDate": "2018-12-10T08:22:14.000Z",
+          "endDate": "2018-12-27T08:22:14.000Z",
+          "dealType": "shop",
+          "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "title": "DEAL 1 in English",
+          "subtitle": "subtitle DEAL 1 in English"
+        },
+        {
+          "dataType": "Deal",
+          "id": 182,
+          "name": "DEAL 2",
+          "startDate": "2018-12-10T08:22:14.000Z",
+          "endDate": "2018-12-27T08:22:14.000Z",
+          "dealType": "shop",
+          "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "title": "DEAL 2 in English",
+          "subtitle": "subtitle DEAL 2 in English"
+        }
+      ],
+      "shops": [
+        {
+          "id": 182,
+          "name": "DEAL 2",
+          "startDate": "2018-12-10T08:22:14.000Z",
+          "endDate": "2018-12-27T08:22:14.000Z",
+          "dealType": "shop",
+          "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "title": "DEAL 2 in English",
+          "subtitle": "subtitle DEAL 2 in English"
+        },
+        {
+          "id": 184,
+          "name": "DEAL 4",
+          "startDate": "2018-12-10T08:22:14.000Z",
+          "endDate": "2018-12-27T08:22:14.000Z",
+          "dealType": "shop",
+          "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "title": "DEAL 4 in English",
+          "subtitle": "subtitle DEAL 4 in English"
+        },
+        {
+          "id": 186,
+          "name": "DEAL 5",
+          "startDate": "2018-12-10T08:22:14.000Z",
+          "endDate": "2018-12-27T08:22:14.000Z",
+          "dealType": "shop",
+          "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "title": "DEAL 5 in English",
+          "subtitle": "subtitle DEAL 5 in English"
+        },
+        {
+          "id": 183,
+          "name": "DEAL 3",
+          "startDate": "2018-12-10T08:22:14.000Z",
+          "endDate": "2018-12-27T08:22:14.000Z",
+          "dealType": "shop",
+          "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "title": "DEAL 3 in English",
+          "subtitle": "subtitle DEAL 3 in English"
+        },
+        {
+          "id": 185,
+          "name": "DEAL 0",
+          "startDate": "2018-12-10T08:22:14.000Z",
+          "endDate": "2018-12-27T08:22:14.000Z",
+          "dealType": "shop",
+          "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "title": "DEAL 0 in English",
+          "subtitle": "subtitle DEAL 0 in English"
+        }
+      ],
+      "dines": [
+        {
+          "id": 191,
+          "name": "DEAL 10",
+          "startDate": "2018-12-10T08:22:14.000Z",
+          "endDate": "2018-12-27T08:22:14.000Z",
+          "dealType": "dine",
+          "bannerImageUrl": "http://lorempixel.com/640/480/food",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/food",
+          "title": "DEAL 10 in English",
+          "subtitle": "subtitle DEAL 10 in English"
+        },
+        {
+          "id": 189,
+          "name": "DEAL 8",
+          "startDate": "2018-12-10T08:22:14.000Z",
+          "endDate": "2018-12-27T08:22:14.000Z",
+          "dealType": "dine",
+          "bannerImageUrl": "http://lorempixel.com/640/480/food",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/food",
+          "title": "DEAL 8 in English",
+          "subtitle": "subtitle DEAL 8 in English"
+        },
+        {
+          "id": 192,
+          "name": "DEAL 11",
+          "startDate": "2018-12-10T08:22:14.000Z",
+          "endDate": "2018-12-27T08:22:14.000Z",
+          "dealType": "dine",
+          "bannerImageUrl": "http://lorempixel.com/640/480/food",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/food",
+          "title": "DEAL 11 in English",
+          "subtitle": "subtitle DEAL 11 in English"
+        },
+        {
+          "id": 190,
+          "name": "DEAL 9",
+          "startDate": "2018-12-10T08:22:14.000Z",
+          "endDate": "2018-12-27T08:22:14.000Z",
+          "dealType": "dine",
+          "bannerImageUrl": "http://lorempixel.com/640/480/food",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/food",
+          "title": "DEAL 9 in English",
+          "subtitle": "subtitle DEAL 9 in English"
+        }
+      ]
+    }
+    ```
+16. **Get Campaign**
+  * URL: `/campaigns/:id`
+  * Method: `GET`
+  * Params:
+  * Response:
+    ```
+    {
+      "id": 7,
+      "name": "Campaign 0",
+      "startDate": "2018-12-10T08:22:15.000Z",
+      "endDate": "2018-12-27T08:22:15.000Z",
+      "bannerImageUrl": "http://lorempixel.com/640/480/",
+      "thumbnailImageUrl": "http://lorempixel.com/640/480/",
+      "description": "Campaign 0 in English",
+      "Events": [
+        {
+          "id": 178,
+          "startDate": "2018-12-10T08:22:14.000Z",
+          "endDate": "2018-12-27T08:22:14.000Z",
+          "bannerImageUrl": "http://lorempixel.com/640/480/food",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/food",
+          "location": "#19 - 3",
+          "title": "EVENT 9 in English",
+          "description": "Event 9 Description in English",
+          "Brand": {
+            "id": 190,
+            "name": "Kuhlman LLC",
+            "level": "L1",
+            "unit": "0",
+            "phone": "109-075-8161 x295",
+            "bannerImageUrl": "http://lorempixel.com/640/480/food",
+            "thumbnailImageUrl": "http://lorempixel.com/640/480/food",
+            "openingDate": null,
+            "comingStatus": "opening",
+            "CategoryId": 190,
+            "operatingDays": "Monday - Friday",
+            "operatingHours": "07:30 AM - 08:30PM"
+          }
+        },
+        {
+          "id": 176,
+          "startDate": "2018-12-10T08:22:14.000Z",
+          "endDate": "2018-12-27T08:22:14.000Z",
+          "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "location": "#10 - 83",
+          "title": "EVENT 7 in English",
+          "description": "Event 7 Description in English",
+          "Brand": {
+            "id": 188,
+            "name": "Little - Satterfield",
+            "level": "L5",
+            "unit": "27",
+            "phone": "(625) 195-6614",
+            "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+            "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+            "openingDate": null,
+            "comingStatus": "none",
+            "CategoryId": 188,
+            "operatingDays": "Monday - Friday",
+            "operatingHours": "07:30 AM - 08:30PM"
+          }
+        },
+        {
+          "id": 173,
+          "startDate": "2018-12-10T08:22:14.000Z",
+          "endDate": "2018-12-27T08:22:14.000Z",
+          "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "location": "#2 - 16",
+          "title": "EVENT 4 in English",
+          "description": "Event 4 Description in English",
+          "Brand": {
+            "id": 185,
+            "name": "Smith - Altenwerth",
+            "level": "L5",
+            "unit": "56",
+            "phone": "835.541.3922 x861",
+            "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+            "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+            "openingDate": null,
+            "comingStatus": "none",
+            "CategoryId": 186,
+            "operatingDays": "Monday - Friday",
+            "operatingHours": "07:30 AM - 08:30PM"
+          }
+        }
+      ],
+      "Deals": [
+        {
+          "id": 188,
+          "startDate": "2018-12-10T08:22:14.000Z",
+          "endDate": "2018-12-27T08:22:14.000Z",
+          "dealType": "shop",
+          "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "name": "DEAL 7",
+          "publishDate": null,
+          "quantity": 0,
+          "createdAt": "2018-12-12T08:22:14.000Z",
+          "updatedAt": "2018-12-12T08:22:14.000Z",
+          "title": "DEAL 7 in English",
+          "subtitle": "subtitle DEAL 7 in English",
+          "Brands": [
+            {
+              "id": 187,
+              "name": "Lehner, Oberbrunner and Kassulke",
+              "level": "L1",
+              "unit": "47",
+              "phone": "141-859-6738 x90837",
+              "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+              "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+              "openingDate": null,
+              "comingStatus": "reOpening",
+              "CategoryId": 187,
+              "operatingDays": "Monday - Friday",
+              "operatingHours": "07:30 AM - 08:30PM"
+            },
+          ]
+        },
+        {
+          "id": 191,
+          "startDate": "2018-12-10T08:22:14.000Z",
+          "endDate": "2018-12-27T08:22:14.000Z",
+          "dealType": "dine",
+          "bannerImageUrl": "http://lorempixel.com/640/480/food",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/food",
+          "name": "DEAL 10",
+          "publishDate": null,
+          "quantity": null,
+          "createdAt": "2018-12-12T08:22:14.000Z",
+          "updatedAt": "2018-12-12T08:22:14.000Z",
+          "title": "DEAL 10 in English",
+          "subtitle": "subtitle DEAL 10 in English",
+          "Brands": [
+            {
+              "id": 183,
+              "name": "Hammes LLC",
+              "level": "L55",
+              "unit": "68",
+              "phone": "800-535-6788",
+              "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+              "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+              "openingDate": null,
+              "comingStatus": "opening",
+              "CategoryId": 183,
+              "operatingDays": "Monday - Friday",
+              "operatingHours": "07:30 AM - 08:30PM"
+            },
+          ]
+        }
+      ]
+    }
+    ```
