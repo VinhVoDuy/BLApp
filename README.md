@@ -842,7 +842,7 @@
       message: 'INVALID MEMBER'
     }
     ```
-18. **Get Categories & Brands Names**
+19. **Get Categories & Brands Names**
   * URL: `/categories/nameOnly`
   * Method: `GET`
   * Response: (status 200)
@@ -870,7 +870,7 @@
         }
       ]
     ```
-19. **Forgot Password**
+20. **Forgot Password**
   * URL: `/users/forgotPassword`
   * Method: `POST`
   * Params:
