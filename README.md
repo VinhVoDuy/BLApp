@@ -478,16 +478,16 @@
           "subtitle": "subtitle DEAL 1 in English"
         },
         {
-          "dataType": "Deal",
-          "id": 182,
-          "name": "DEAL 2",
+          "dataType": "Event",
+          "id": 12,
+          "name": "Event 2",
           "startDate": "2018-12-10T08:22:14.000Z",
           "endDate": "2018-12-27T08:22:14.000Z",
-          "dealType": "shop",
+          "location": "#19 - 3",
           "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
           "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
-          "title": "DEAL 2 in English",
-          "subtitle": "subtitle DEAL 2 in English"
+          "title": "Event 2 in English",
+          "subtitle": "subtitle Event 2 in English"
         }
       ],
       "shops": [
@@ -809,7 +809,7 @@
       "location": "#1 - 94",
       "title": "EVENT 4 in English",
       "description": "Event 4 Description in English",
-      "Brand": {
+      "Brands": [{
         "id": 245,
         "name": "Zemlak LLC",
         "level": "B3",
@@ -820,8 +820,25 @@
         "openingDate": null,
         "comingStatus": "opening",
         "CategoryId": 233,
-        "operatingDays": "Monday - Friday",
-        "operatingHours": "07:30 AM - 08:30PM"
-      }
+        "operatingDays": ["Monday - Friday", "Saturday, Sunday and holiday"],
+        "operatingHours": ["07:30 AM - 08:30PM", "10:00 AM - 10:00 PM"]
+      }]
+    }
+    ```
+18. **Get Car Park Points**
+  * URL: `/carParks`
+  * Method: `GET`
+  * Params: `accessToken` is required
+  * Success Response: (status 200)
+    ```
+    {
+      expiryDate: '2019-03-31T00:00:00.000',
+      balance: '373.6'
+    }
+    ```
+  * Failed Response: (Status 400)
+    ```
+    {
+      message: 'INVALID MEMBER'
     }
     ```
