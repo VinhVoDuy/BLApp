@@ -842,3 +842,54 @@
       message: 'INVALID MEMBER'
     }
     ```
+18. **Get Categories & Brands Names**
+  * URL: `/categories/nameOnly`
+  * Method: `GET`
+  * Response: (status 200)
+    ```
+      [
+        {
+          "dataType": "Category",
+            "id": 265,
+            "name": "LuxuryFashionAndFashionAccessories"
+        },
+        {
+          "dataType": "Category",
+          "id": 266,
+          "name": "Fashion"
+        },
+        {
+          "dataType": "Brand",
+          "id": 266,
+          "name": "Beahan LLC"
+        },
+        {
+          "dataType": "Brand",
+          "id": 267,
+          "name": "Jaskolski LLC"
+        }
+      ]
+    ```
+19. **Forgot Password**
+  * URL: `/users/forgotPassword`
+  * Method: `POST`
+  * Params:
+    ```
+      {
+        "phoneNumber": "01239393939",
+        "code": "102282",
+        "password": "newPassword",
+      }
+    ```
+  * Success Response: (status 200)
+    ```
+      {
+        "message": "SUCCESS"
+      }
+    ```
+  * Failed Response: (status 400)
+    ```
+      {
+        "message": "Your OTP or phone number is not correct"
+      }
+    ```
