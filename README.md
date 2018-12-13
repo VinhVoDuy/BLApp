@@ -893,3 +893,290 @@
         "message": "Your OTP or phone number is not correct"
       }
     ```
+21. **Get Brand Detail**
+  * URL: `/brands/:id`
+  * Method: `GET`
+  * Params: `accessToken` is required
+  * Success Response: (status 200)
+    ```
+      {
+        "id": 265,
+          "name": "Jacobson - Bins",
+          "unit": "2",
+          "level": "L1",
+          "phone": "1-828-122-8884",
+          "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+          "comingStatus": "reOpening",
+          "operatingHours": [
+            "07:30 AM - 08:30PM",
+          "9:00 AM - 10:00 PM"
+          ],
+          "operatingDays": [
+            "Monday - Friday",
+          "Saturday - Sunday, Public Holidays"
+          ],
+          "followed": true,
+          "Deals": [
+          {
+            "id": 277,
+            "startDate": "2018-12-11T04:14:37.000Z",
+            "endDate": "2018-12-28T04:14:37.000Z",
+            "dealType": "shop",
+            "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+            "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+            "name": "DEAL 0",
+            "publishDate": null,
+            "quantity": null,
+            "createdAt": "2018-12-13T04:14:37.000Z",
+            "updatedAt": "2018-12-13T04:14:37.000Z",
+            "title": "DEAL 0 in English",
+            "subtitle": "subtitle DEAL 0 in English",
+            "Brands": [
+            {
+              "id": 270,
+              "name": "Gleichner LLC"
+            },
+            {
+              "id": 273,
+              "name": "Greenfelder, Lindgren and Greenholt"
+            },
+            {
+              "id": 275,
+              "name": "Hessel, Hermann and Gerhold"
+            },
+            {
+              "id": 265,
+              "name": "Jacobson - Bins"
+            }
+            ]
+          },
+          ],
+          "Events": [
+          {
+            "id": 265,
+            "startDate": "2018-12-11T04:14:37.000Z",
+            "endDate": "2018-12-28T04:14:37.000Z",
+            "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+            "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+            "location": "#1 - 12",
+            "title": "EVENT 0 in English",
+            "description": "Event 0 Description in English",
+            "Brands": [
+            {
+              "id": 265,
+              "name": "Jacobson - Bins"
+            }
+            ]
+          }
+          ]
+      }
+        ```
+      * Failed Response: (status 400)
+        ```
+          {
+            "message": "Brand not found"
+          }
+        ```
+22. **Get Category Detail**
+  * URL: `/categories/:id`
+  * Method: `GET`
+  * Params: `accessToken` is required
+  * Success Response: (status 200)
+    ```
+      {
+        "id": 267,
+        "name": "JewelleryandWatches",
+        "followed": true,
+        "Brands": [
+          {
+            "id": 266,
+            "name": "Beahan LLC"
+          }
+        ],
+        "Deals": [
+          {
+            "id": 281,
+            "startDate": "2018-12-11T04:14:37.000Z",
+            "endDate": "2018-12-28T04:14:37.000Z",
+            "dealType": "shop",
+            "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+            "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+            "name": "DEAL 4",
+            "publishDate": null,
+            "quantity": 20,
+            "createdAt": "2018-12-13T04:14:37.000Z",
+            "updatedAt": "2018-12-13T04:14:37.000Z",
+            "title": "DEAL 4 in English",
+            "subtitle": "subtitle DEAL 4 in English",
+            "Brands": [
+              {
+                "id": 275,
+                "name": "Hessel, Hermann and Gerhold"
+              },
+              {
+                "id": 276,
+                "name": "McLaughlin and Sons"
+              },
+              {
+                "id": 266,
+                "name": "Beahan LLC"
+              },
+              {
+                "id": 269,
+                "name": "Moen, Rogahn and Borer"
+              }
+            ]
+          },
+          {
+            "id": 280,
+            "startDate": "2018-12-11T04:14:37.000Z",
+            "endDate": "2018-12-28T04:14:37.000Z",
+            "dealType": "shop",
+            "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+            "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+            "name": "DEAL 3",
+            "publishDate": null,
+            "quantity": 5,
+            "createdAt": "2018-12-13T04:14:37.000Z",
+            "updatedAt": "2018-12-13T04:14:37.000Z",
+            "title": "DEAL 3 in English",
+            "subtitle": "subtitle DEAL 3 in English",
+            "Brands": [
+              {
+                "id": 266,
+                "name": "Beahan LLC"
+              },
+              {
+                "id": 274,
+                "name": "Huel, Mayer and Walsh"
+              },
+              {
+                "id": 273,
+                "name": "Greenfelder, Lindgren and Greenholt"
+              },
+              {
+                "id": 268,
+                "name": "Ryan, Lemke and Botsford"
+              }
+            ]
+          },
+          {
+            "id": 278,
+            "startDate": "2018-12-11T04:14:37.000Z",
+            "endDate": "2018-12-28T04:14:37.000Z",
+            "dealType": "shop",
+            "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+            "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+            "name": "DEAL 1",
+            "publishDate": null,
+            "quantity": 5,
+            "createdAt": "2018-12-13T04:14:37.000Z",
+            "updatedAt": "2018-12-13T04:14:37.000Z",
+            "title": "DEAL 1 in English",
+            "subtitle": "subtitle DEAL 1 in English",
+            "Brands": [
+              {
+                "id": 272,
+                "name": "Kshlerin, Bergnaum and Christiansen"
+              },
+              {
+                "id": 269,
+                "name": "Moen, Rogahn and Borer"
+              },
+              {
+                "id": 273,
+                "name": "Greenfelder, Lindgren and Greenholt"
+              },
+              {
+                "id": 266,
+                "name": "Beahan LLC"
+              }
+            ]
+          },
+          {
+            "id": 284,
+            "startDate": "2018-12-11T04:14:37.000Z",
+            "endDate": "2018-12-28T04:14:37.000Z",
+            "dealType": "shop",
+            "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+            "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+            "name": "DEAL 7",
+            "publishDate": null,
+            "quantity": null,
+            "createdAt": "2018-12-13T04:14:37.000Z",
+            "updatedAt": "2018-12-13T04:14:37.000Z",
+            "title": "DEAL 7 in English",
+            "subtitle": "subtitle DEAL 7 in English",
+            "Brands": [
+              {
+                "id": 269,
+                "name": "Moen, Rogahn and Borer"
+              },
+              {
+                "id": 266,
+                "name": "Beahan LLC"
+              },
+              {
+                "id": 272,
+                "name": "Kshlerin, Bergnaum and Christiansen"
+              }
+            ]
+          }
+        ],
+        "Events": [
+          {
+            "id": 266,
+            "startDate": "2018-12-11T04:14:37.000Z",
+            "endDate": "2018-12-28T04:14:37.000Z",
+            "bannerImageUrl": "http://lorempixel.com/640/480/fashion/",
+            "thumbnailImageUrl": "http://lorempixel.com/640/480/fashion/",
+            "location": "#2 - 68",
+            "title": "EVENT 1 in English",
+            "description": "Event 1 Description in English",
+            "Brands": [
+              {
+                "id": 266,
+                "name": "Beahan LLC"
+              }
+            ]
+          }
+        ]
+      }
+    ```
+23. **Follow Brands**
+  * URL: `/brands/follow`
+  * Method: `POST`
+  * Params:
+    ```
+      {
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZW1iZXJJZCI6Ing5NXB5czgyMjE1MiIsImlkIjo4LCJwaG9uZU51bWJlciI6IjAyMDAwMDAwMCIsImNhcmRObyI6IjgwMDAwMTIyMyIsImlhdCI6MTU0NDY5NjYxNiwiZXhwIjoxNTQ0NzgzMDE2fQ.60lrFs3L9Qd0L06MmZqJmBE0HBvHQQpxq-qfYnmt5lI",
+        "categoryIds": [267, 268]
+      }
+    ```
+  * Success Response: (status 200)
+    ```
+      {
+        "message": "follows brands successfully"
+      }
+    ```
+24. **Unfollow Brands**
+  * URL: `/brands/unfollow`
+  * Method: `POST`
+  * Params: `accessToken`, `brandIds`
+  * Success Response: (status 200)
+    ```
+      {
+        "message": "unfollows brands successfully"
+      }
+    ```
+24. **Unfollow Categories**
+  * URL: `/categories/unfollow`
+  * Method: `POST`
+  * Params: `accessToken`, `categoryIds`
+  * Success Response: (status 200)
+    ```
+      {
+        "message": "unfollows categories successfully"
+      }
+    ```
