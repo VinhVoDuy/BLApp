@@ -1170,7 +1170,7 @@
         "message": "unfollows brands successfully"
       }
     ```
-24. **Unfollow Categories**
+25. **Unfollow Categories**
   * URL: `/categories/unfollow`
   * Method: `POST`
   * Params: `accessToken`, `categoryIds`
@@ -1178,5 +1178,15 @@
     ```
       {
         "message": "unfollows categories successfully"
+      }
+    ```
+26. **Event RSVP Register**
+  * URL: `/events/:id/rsvp`
+  * Method: `POST`
+  * Params: `accessToken`, `paxNo`
+  * Success Response: (status 200)
+    ```
+      {
+        "message": "Registered rsvp successfully !"
       }
     ```
