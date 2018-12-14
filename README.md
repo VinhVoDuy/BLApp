@@ -1180,7 +1180,26 @@
         "message": "unfollows categories successfully"
       }
     ```
-26. **Event RSVP Register**
+26. **Get Following Brands and Categories**
+  * URL: `/followings`
+  * Method: `GET`
+  * Params: `accessToken`
+  * Success Response: (status 200)
+    ```
+    [
+      {
+        "id": 26,
+        "name": "Fashion in English",
+        "dataType": "Category",
+      },
+      {
+        "id": 27,
+        "name": "JewelleryandWatches in English",
+        "dataType": "Brand",
+      }
+    ]
+    ```
+27. **Event RSVP Register**
   * URL: `/events/:id/rsvp`
   * Method: `POST`
   * Params: `accessToken`, `paxNo`
