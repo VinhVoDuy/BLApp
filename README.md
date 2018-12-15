@@ -382,22 +382,6 @@
         ]
       }
     ```
-12. **Redeem a Deal**
-  * URL: `/deals/:id/redeem`
-  * Method: `POST`
-  * NOTE: `accessToken` is required
-  * Success Response: (status 200)
-    ```
-      {
-        "message": "Redeem the deal successfully"
-      }
-    ```
-  * Failed Response: (status 400)
-    ```
-      {
-        "message": "The deal is out of stock"
-      }
-    ```
 13. **Check Merchant Code**
   * URL: `/deals/:id/checkMerchantCode`
   * Method: `POST`
