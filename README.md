@@ -1219,9 +1219,9 @@
     ```
 
 31. **Verify Redemption**
-  * URL: `/wallets/verifyRedemption`
+  * URL: `/deals/:id/verify`
   * Method: `POST`
-  * Params: `accessToken`, `dealId`, `pinCode`
+  * Params: `accessToken`, `pinCode`
   * Success Response: (status 200)
     ```
       {
@@ -1236,9 +1236,9 @@
     ```
 
 32. **Redeem Deal**
-  * URL: `/wallets/redeemDeal`
+  * URL: `/deals/:id/redeem`
   * Method: `POST`
-  * Params: `accessToken`, `dealId`
+  * Params: `accessToken`
   * Success Response: (status 200)
     ```
       {
@@ -1248,7 +1248,7 @@
     ```
 
 33. **Get all Saved Deals**
-  * URL: `/wallets/savedDeals`
+  * URL: `/deals/:id/save`
   * Method: `GET`
   * Params: `accessToken`
   * Success Response: (status 200)
