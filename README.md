@@ -1208,7 +1208,7 @@
   * Params: `base64Image`, `outletCode`, `receiptDate` (YYYY-MM-DD)
 
 30. **Save Deal**
-  * URL: `/wallets/saveDeal`
+  * URL: `/deals/:id/save`
   * Method: `POST`
   * Params: `accessToken`, `dealId`
   * Success Response: (status 200)
@@ -1248,7 +1248,7 @@
     ```
 
 33. **Get all Saved Deals**
-  * URL: `/deals/:id/save`
+  * URL: `/wallets/savedDeals`
   * Method: `GET`
   * Params: `accessToken`
   * Success Response: (status 200)
