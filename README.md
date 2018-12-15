@@ -126,18 +126,22 @@
     [
       {
         "name": "LuxuryFashionAndFashionAccessories in English",
+          "followed": true,
           "id": 25
       },
       {
         "name": "Fashion in English",
+        "followed": true,
         "id": 26
       },
       {
         "name": "JewelleryandWatches in English",
+        "followed": false,
         "id": 27
       },
       {
         "name": "HandbagsShoesandAccessories in English",
+        "followed": false,
         "id": 28
       },
     ]
@@ -842,7 +846,7 @@
       message: 'INVALID MEMBER'
     }
     ```
-19. **Get Categories & Brands Names**
+19. **Get Categories & Brands Names (Use in Smart Search)**
   * URL: `/categories/nameOnly`
   * Method: `GET`
   * Response: (status 200)
@@ -1208,4 +1212,77 @@
       {
         "message": "Registered rsvp successfully !"
       }
+    ```
+
+28. **Get Outlets for Receipt**
+  * URL: `/receipts/outlets`
+  * Method: `GET`
+
+29. **Submit Receipt**
+  * URL: `/receipts/submit`
+  * Method: `POST`
+  * Params: `base64Image`, `outletCode`, `receiptDate` (YYYY-MM-DD)
+
+30. **Save Deal**
+  * URL: `/wallets/saveDeal`
+  * Method: `POST`
+  * Params: `accessToken`, `dealId`
+  * Success Response: (status 200)
+    ```
+      {
+        "message": "The deal is savedsuccessfully",
+      }
+    ```
+
+31. **Verify Redemption**
+  * URL: `/wallets/verifyRedemption`
+  * Method: `POST`
+  * Params: `accessToken`, `dealId`, `pinCode`
+  * Success Response: (status 200)
+    ```
+      {
+        "message": "this redeemption has been verified successfully",
+      }
+    ```
+  * Failed Response: (status 400)
+    ```
+      {
+        "message": "the merchant pin code is not correct",
+      }
+    ```
+
+32. **Redeem Deal**
+  * URL: `/wallets/redeemDeal`
+  * Method: `POST`
+  * Params: `accessToken`, `dealId`
+  * Success Response: (status 200)
+    ```
+      {
+        "message": "Registered rsvp successfully !",
+        "merchantReferrence": "MERCHANT-234-1-102389483993"
+      }
+    ```
+
+33. **Get all Saved Deals**
+  * URL: `/wallets/savedDeals`
+  * Method: `GET`
+  * Params: `accessToken`
+  * Success Response: (status 200)
+    ```
+      [
+        {
+          "id": 50,
+          "startDate": "2018-12-13T05:50:14.000Z",
+          "endDate": "2018-12-30T05:50:14.000Z",
+          .....
+          "redeemed": true
+        }
+        {
+          "id": 55,
+          "startDate": "2018-12-13T05:50:14.000Z",
+          "endDate": "2018-12-30T05:50:14.000Z",
+          .....
+          "redeemed": false
+        }
+      ]
     ```
