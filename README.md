@@ -813,23 +813,6 @@
       }]
     }
     ```
-18. **Get Car Park Points**
-  * URL: `/carParks`
-  * Method: `GET`
-  * Params: `accessToken` is required
-  * Success Response: (status 200)
-    ```
-    {
-      expiryDate: '2019-03-31T00:00:00.000',
-      balance: '373.6'
-    }
-    ```
-  * Failed Response: (Status 400)
-    ```
-    {
-      message: 'INVALID MEMBER'
-    }
-    ```
 19. **Get Categories & Brands Names (Use in Smart Search)**
   * URL: `/categories/nameOnly`
   * Method: `GET`
@@ -1269,4 +1252,80 @@
           "redeemed": false
         }
       ]
+    ```
+34. **Get Car Park Points**
+  * URL: `/carParks`
+  * Method: `GET`
+  * Params: `accessToken` is required
+  * Success Response: (status 200)
+    ```
+    {
+      carParkPoints: 383.5,
+      expiryDate: '2019-03-31T00:00:00.000',
+      points: 2939
+    }
+    ```
+  * Failed Response: (Status 400)
+    ```
+    {
+      message: 'INVALID MEMBER'
+    }
+    ```
+35. **Convert Car Park Points**
+  * URL: `/carParks/convert`
+  * Method: `POST`
+  * Params: `accessToken`, `points` (<= 20)
+  * Success Response: (status 200)
+    ```
+    {
+      carParkPoints: 387.5,
+      expiryDate: '2019-03-31T00:00:00.000',
+      points: 2929
+    }
+    ```
+  * Failed Response: (Status 400)
+    ```
+    {
+      message: 'INVALID MEMBER'
+    }
+    ```
+36. **Submit Receipt**
+  * URL: `/receipts/submit`
+  * Method: `POST`
+  * Params: `accessToken`, `receipt`, `receiptDate` (YYYY-MM-DD)
+  * Success Response: (status 200)
+    ```
+    {
+      message: "success",
+    }
+    ```
+37. **Get Receipts**
+  * URL: `/receipts`
+  * Method: `GET`
+  * Params: `accessToken`
+  * Success Response: (status 200)
+    ```
+    [
+      {
+        "amount": 0,
+        "receipt": "https://uatweb.ascentis.com.sg/IONReceiptService/img/getimage.ashx?ID=f406bdb2-04b7-44c0-827b-57811690a92a",
+        "status": "PENDING"
+      },
+      {
+        "amount": 0,
+        "receipt": "https://uatweb.ascentis.com.sg/IONReceiptService/img/getimage.ashx?ID=f21e7666-ab65-45db-932f-0d8c8076cc6a",
+        "status": "PENDING"
+      },
+      {
+        "amount": 0,
+        "receipt": "https://uatweb.ascentis.com.sg/IONReceiptService/img/getimage.ashx?ID=da0b3eb9-95ed-456e-9529-eda81ecb1203",
+        "status": "PENDING"
+      },
+      {
+        "amount": 0,
+        "receipt": "https://uatweb.ascentis.com.sg/IONReceiptService/img/getimage.ashx?ID=1f6a559a-352e-409d-8ae2-77b1366d52fa",
+        "status": "PENDING"
+      }
+    ]
+
     ```
