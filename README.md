@@ -1308,24 +1308,24 @@
     [
       {
         "amount": 0,
-        "receipt": "https://uatweb.ascentis.com.sg/IONReceiptService/img/getimage.ashx?ID=f406bdb2-04b7-44c0-827b-57811690a92a",
-        "status": "PENDING"
+        "receipt": "https://uatweb.ascentis.com.sg/IONReceiptService/img/getimage.ashx?ID=cafd8e7d-61b9-4c6f-b9f0-44481afc4ff4",
+        "submittedAt": "17 Dec 2018",
+        "status": "success",
+        "outlet": "01-HQ"
       },
       {
         "amount": 0,
-        "receipt": "https://uatweb.ascentis.com.sg/IONReceiptService/img/getimage.ashx?ID=f21e7666-ab65-45db-932f-0d8c8076cc6a",
-        "status": "PENDING"
+        "receipt": "https://uatweb.ascentis.com.sg/IONReceiptService/img/getimage.ashx?ID=fcf10f01-adce-4968-99cc-831a61d04557",
+        "submittedAt": "17 Dec 2018",
+        "status": "pending",
+        "outlet": "CHOMEL"
       },
       {
         "amount": 0,
-        "receipt": "https://uatweb.ascentis.com.sg/IONReceiptService/img/getimage.ashx?ID=da0b3eb9-95ed-456e-9529-eda81ecb1203",
-        "status": "PENDING"
+        "receipt": "https://uatweb.ascentis.com.sg/IONReceiptService/img/getimage.ashx?ID=8e9a6dc4-3915-4f2b-a8b3-7318b0fdc7b7",
+        "submittedAt": "17 Dec 2018",
+        "status": "pending",
+        "outlet": ""
       },
-      {
-        "amount": 0,
-        "receipt": "https://uatweb.ascentis.com.sg/IONReceiptService/img/getimage.ashx?ID=1f6a559a-352e-409d-8ae2-77b1366d52fa",
-        "status": "PENDING"
-      }
     ]
-
     ```
