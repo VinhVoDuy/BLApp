@@ -126,22 +126,26 @@
     [
       {
         "name": "LuxuryFashionAndFashionAccessories in English",
-          "followed": true,
-          "id": 25
+        "followed": true,
+        "type": "shop",
+        "id": 25
       },
       {
         "name": "Fashion in English",
         "followed": true,
+        "type": "shop",
         "id": 26
       },
       {
         "name": "JewelleryandWatches in English",
         "followed": false,
+        "type": "shop",
         "id": 27
       },
       {
-        "name": "HandbagsShoesandAccessories in English",
+        "name": "SushiBar in English",
         "followed": false,
+        "type": "dine",
         "id": 28
       },
     ]
@@ -229,7 +233,8 @@
         "type": "shop",
         "level": ["B4", "L1", "L2"],
         "categoryIds": [25, 26],
-        "paymentMethodsIds": [27, 28]
+        "paymentMethodsIds": [27, 28],
+        "halalCertified": true
       }
     ```
       * `type` could be `shop` or `dine`
@@ -1188,7 +1193,7 @@
 29. **Submit Receipt**
   * URL: `/receipts/submit`
   * Method: `POST`
-  * Params: `base64Image`, `outletCode`, `receiptDate` (YYYY-MM-DD)
+  * Params: `receipt`, `outletCode`, `receiptDate` (YYYY-MM-DD)
 
 30. **Save Deal**
   * URL: `/deals/:id/save`
