@@ -1193,7 +1193,7 @@
 29. **Submit Receipt**
   * URL: `/receipts/submit`
   * Method: `POST`
-  * Params: `receipt`, `outletCode`, `receiptDate` (YYYY-MM-DD)
+  * Params: `accessToken`, `receipt`, `outletCode`, `receiptDate` (YYYY-MM-DD)
 
 30. **Save Deal**
   * URL: `/deals/:id/save`
