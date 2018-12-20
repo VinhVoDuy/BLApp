@@ -586,7 +586,7 @@
           "subtitle": "subtitle DEAL 9 in English"
         }
       ],
-      "ionSkyDeals": [
+      "ionExperiences": [
         {
           "id": 16,
           "memberOnly": false,
@@ -1333,4 +1333,38 @@
         "outlet": ""
       },
     ]
+    ```
+38. **Get Profile**
+  * URL: `/users/getProfile`
+  * Method: `GET`
+  * Params: `accessToken`
+  * Success Response: (status 200)
+    ```
+      {
+        "familyName": "Vo",
+        "givenName": "Vinh",
+        "gender": "male",
+        "email": "vinh.vo@2359media.com",
+        "dob": "1990-12-18T00:00:00",
+        "nationality": "Singaporean",
+        "country": "Singapore",
+        "isTourist": true
+      }
+    ```
+38. **Update Profile**
+  * URL: `/users/updateProfile`
+  * Method: `POST`
+  * Params: `accessToken`, others are the same as SignUp
+
+39. **Refresh Token**
+  * URL: `/refreshToken`
+  * Method: `POST`
+  * Params: `refreshToken`
+  * Response:
+    ```
+      {
+          "memberId": "x95pys822152",
+          "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZW1iZXJJZCI6Ing5NXB5czgyMjE1MiIsImlkIjo4LCJwaG9uZU51bWJlciI6IjAyMDAwMDAwMCIsImNhcmRObyI6IjgwMDAwMTIyMyIsImlhdCI6MTU0NTI5ODY3NiwiZXhwIjoxNTQ1Mzg1MDc2fQ.zohOzOGxEPyySfxw14W3VBjLM8jUUGDP4L8cTPl403s",
+          "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZW1iZXJJZCI6Ing5NXB5czgyMjE1MiIsImlkIjo4LCJwaG9uZU51bWJlciI6IjAyMDAwMDAwMCIsImNhcmRObyI6IjgwMDAwMTIyMyIsInJlZnJlc2hUb2tlbiI6dHJ1ZSwiaWF0IjoxNTQ1Mjk4Njc2LCJleHAiOjE1NDUzODUwNzZ9.W6jhBlPa0lgwAyh0ssleb4iFYfui0BLKVc-KQgv98Rc"
+      }
     ```
