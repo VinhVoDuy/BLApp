@@ -1368,3 +1368,30 @@
           "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZW1iZXJJZCI6Ing5NXB5czgyMjE1MiIsImlkIjo4LCJwaG9uZU51bWJlciI6IjAyMDAwMDAwMCIsImNhcmRObyI6IjgwMDAwMTIyMyIsInJlZnJlc2hUb2tlbiI6dHJ1ZSwiaWF0IjoxNTQ1Mjk4Njc2LCJleHAiOjE1NDUzODUwNzZ9.W6jhBlPa0lgwAyh0ssleb4iFYfui0BLKVc-KQgv98Rc"
       }
     ```
+40. **Get Trackers**
+  * URL: `/users/getTrackers`
+  * Method: `GET`
+  * Params: `accessToken`
+  * NOTE:
+    * There are 3 trackers from left to right: `pointsTracker`, `spentTracker` and `suiteTracker`
+    * If a specific tracker is hidden, it will be `null`. The `spentTracker` and `suiteTracker` can be null.
+    * Each tracker has top, center and bottom.
+    * The first tracker has `currentPoints` and `nextPoints` for drawing the progress.
+  * Response:
+    ```
+      {
+        "pointsTracker": {
+          "top": "Accumulate to",
+          "center": "25 points",
+          "bottom": "by 30-Sep-2019 to get S$10 voucher",
+          "nextPoints": 25,
+          "currentPoints": 0
+        },
+        "spentTracker": {
+          "top": "Spent",
+          "center": "S$25000",
+          "bottom": "by 03-Dec-2019 to unlock ION Privilege benefits"
+        },
+        "suiteTracker": null,
+      }
+    ```
