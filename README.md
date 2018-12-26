@@ -1397,3 +1397,53 @@
         "suiteTracker": null
       }
     ```
+
+41. ** GET IUs**
+  * URL: `/users/getIUs`
+  * Method: `GET`
+  * Params: `accessToken`
+  * Response:
+    ```
+      [
+        {
+          "IU": "1111111111",
+          "active": "false"
+        },
+        {
+          "IU": "8888888888",
+          "active": "false"
+        },
+        {
+          "IU": "9999999999",
+          "active": "true"
+        }
+      ]
+    ```
+
+42. ** Update IUs**
+  * URL: `/users/updateIUs`
+  * Method: `POST`
+  * Params:
+    ```
+      {
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+        "listIUs": [
+          { "IU": "9999999999", "active": true },
+          { "IU": "8888888888", "active": false }
+        ]
+      }
+    ```
+  * Response:
+    ```
+      [
+        {
+          "IU": "8888888888",
+          "active": "false"
+        },
+        {
+          "IU": "9999999999",
+          "active": "true"
+        }
+      ]
+    ```
+
