@@ -1382,16 +1382,18 @@
       {
         "pointsTracker": {
           "top": "Accumulate to",
-          "center": "25 points",
-          "bottom": "by 30-Sep-2019 to get S$10 voucher",
-          "nextPoints": 25,
-          "currentPoints": 0
+          "center": "150 points",
+          "bottom": "by 30-Sep-2019 to get S$60 voucher",
+          "currentPoints": 123,
+          "nextPoints": 150
         },
         "spentTracker": {
-          "top": "Spent",
-          "center": "S$25000",
-          "bottom": "by 03-Dec-2019 to unlock ION Privilege benefits"
+          "top": "Congratulations you have spent more than S$25000. Your membership upgrade to",
+          "center": "ION Privilege",
+          "bottom": "is being processed.",
+          "currentPoints": 25000,
+          "nextPoints": 25000
         },
-        "suiteTracker": null,
+        "suiteTracker": null
       }
     ```
