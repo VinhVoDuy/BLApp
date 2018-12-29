@@ -1447,3 +1447,21 @@
       ]
     ```
 
+42. **Check Password**
+  * URL: `/users/checkPassword`
+  * Method: `POST`
+  * Params:
+    ```
+      {
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+        "password": "thisispassword"
+      }
+    ```
+  * Response:
+    ```
+      { message: 'correct password' }
+    ```
+  * Failed Response: (Status 400)
+    ```
+      { message: 'wrong password' }
+    ```
