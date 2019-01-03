@@ -1479,6 +1479,7 @@
     ```
       {
         "totalPoints": 0,
+        "convertable": true,
         "pointsMapping": [
           {
             "ionPoints": 25,
