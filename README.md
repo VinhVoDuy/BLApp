@@ -1465,3 +1465,67 @@
     ```
       { message: 'wrong password' }
     ```
+
+43. **Capitastars Get Points**
+  * URL: `/capitastars`
+  * Method: `GET`
+  * Params:
+    ```
+      {
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+      }
+    ```
+  * Response:
+    ```
+      {
+        "totalPoints": 0,
+        "pointsMapping": [
+          {
+            "ionPoints": 25,
+            "starsPoints": 10000
+          },
+          {
+            "ionPoints": 50,
+            "starsPoints": 20000
+          },
+          {
+            "ionPoints": 75,
+            "starsPoints": 30000
+          },
+          {
+            "ionPoints": 100,
+            "starsPoints": 40000
+          },
+          {
+            "ionPoints": 125,
+            "starsPoints": 50000
+          }
+        ]
+      }
+    ```
+
+44. **Capitastars Convert Points**
+  * URL: `/capitastars/convert`
+  * Method: `POST`
+  * Params:
+    ```
+      {
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+        "points": 25,
+        "phoneNumber": 6597827002,
+      }
+    ```
+  * Response: 
+    ```
+      {
+        "success": true,
+        "message": "25 ION+ Points converted to 10000 Star$. An admin charge of 10 ION+ Points has been deducted. Your current Star$ balance is 20000. Balance number of conversion(s) allowed for this year: 1"
+      }
+    ```
+  * Failed Response: (status 400)
+    ```
+      {
+        "success": false,
+        "message": "Can not deduct ION points: NOT ENOUGH POINTS TO REDEEM"
+      }
+    ```
