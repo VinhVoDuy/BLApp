@@ -1530,3 +1530,51 @@
         "message": "Can not deduct ION points: NOT ENOUGH POINTS TO REDEEM"
       }
     ```
+
+45. **Get Channels**
+  * URL: `/channels`
+  * Method: `GET`
+  * Response: 
+    ```
+      [
+        {
+          "name": "pushNotification",
+            "actvie": true
+        },
+        {
+          "name": "notifyPost",
+          "actvie": false
+        },
+        {
+          "name": "notifySMS",
+          "actvie": true
+        },
+        {
+          "name": "call",
+          "actvie": true
+        }
+      ]
+    ```
+46. **Get App Information**
+  * URL: `/appInfo`
+  * Method: `GET`
+  * Response: 
+    ```
+      {
+        "appVersions": {
+          "ios": "2.1.3",
+          "android": "10.9.4"
+        },
+        "appAdvertisements": [
+          "http://lorempixel.com/600/600",
+          "http://lorempixel.com/600/600",
+          "http://lorempixel.com/600/600"
+        ],
+        "seasonalBackground": {
+          "days": 2,
+          "text": "here is background",
+          "launchDate": "2018-01-01",
+          "backgroundImage": "http://lorempixel.com/600/600"
+        }
+      }
+    ```
