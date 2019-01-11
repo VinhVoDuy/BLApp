@@ -1558,7 +1558,7 @@
 46. **Get App Information**
   * URL: `/appInfo`
   * Method: `GET`
-  * Response: 
+  * Response: Can be one of the following format
     ```
       {
         "appVersions": {
@@ -1570,11 +1570,111 @@
           "http://lorempixel.com/600/600",
           "http://lorempixel.com/600/600"
         ],
-        "seasonalBackground": {
-          "days": 2,
-          "text": "here is background",
-          "launchDate": "2018-01-01",
-          "backgroundImage": "http://lorempixel.com/600/600"
-        }
+        "seasonalBackground": "http://lorempixel.com/600/600"
+      }
+    ```
+    OR
+    ```
+      {
+        "appVersions": {
+          "ios": "2.1.3",
+          "android": "10.9.4"
+        },
+        "appAdvertisements": [
+          "http://lorempixel.com/600/600",
+          "http://lorempixel.com/600/600",
+          "http://lorempixel.com/600/600"
+        ],
+        "seasonalBackground": null
+      }
+    ```
+    OR
+    ```
+      { }
+    ```
+47. **Get Ion Sky Tickets**
+  * URL: `ionSky/ticket`
+  * Method: `GET`
+  * Params: `accessToken` is required
+  * Response: 
+    ```
+      {
+        "success": true,
+        "allocated": [
+          {
+            "date": "2019-02-10",
+            "number": 5
+          }
+        ],
+        "code": "ION-21555fd5febe43b0867dfdf6141cf207",
+        "eventGroups": [
+          {
+            "eventDate": "2019-01-11",
+            "eventGroupId": "77895e5b4a374adc9edb50043cf2a58b",
+            "lines": [
+              {
+                "eventDatetime": "4:15 PM",
+                "capacity": 40,
+                "eventLineId": "e53e7236878b44038b9e46867ac15c1b"
+              },
+              {
+                "eventDatetime": "5:00 PM",
+                "capacity": 40,
+                "eventLineId": "48697bcaafc44ef3bfe22afe93b3f618"
+              },
+              {
+                "eventDatetime": "7:00 PM",
+                "capacity": 40,
+                "eventLineId": "6b4118323e6b49f48cd521955bf58c1d"
+              },
+              {
+                "eventDatetime": "7:45 PM",
+                "capacity": 40,
+                "eventLineId": "70406cc637a94ff49bc683abbd77dbb6"
+              }
+            ]
+          },
+          {
+            "eventDate": "2019-01-12",
+            "eventGroupId": "68921411cf724247a33f37442087152d",
+            "lines": [
+              {
+                "eventDatetime": "2:00 PM",
+                "capacity": 40,
+                "eventLineId": "1431c06d5df9455986d82098f584b3f5"
+              },
+              {
+                "eventDatetime": "2:45 PM",
+                "capacity": 40,
+                "eventLineId": "67c30971cdb745f38c3788c2ea6165af"
+              },
+              {
+                "eventDatetime": "3:30 PM",
+                "capacity": 40,
+                "eventLineId": "d23caea95d1547fb9433e96f5ba190c0"
+              },
+              {
+                "eventDatetime": "4:15 PM",
+                "capacity": 40,
+                "eventLineId": "e83c771b20274eeea279bd74c16fb034"
+              },
+              {
+                "eventDatetime": "5:00 PM",
+                "capacity": 40,
+                "eventLineId": "79248642d5e74c57b1d4abd283cb1772"
+              },
+              {
+                "eventDatetime": "7:00 PM",
+                "capacity": 40,
+                "eventLineId": "6b095cdef0a94e15a18b22dc5b6d7ca2"
+              },
+              {
+                "eventDatetime": "7:45 PM",
+                "capacity": 40,
+                "eventLineId": "dbdd8d5cc1aa4c6db8d391051fb647ef"
+              }
+            ]
+          }
+        ]
       }
     ```
