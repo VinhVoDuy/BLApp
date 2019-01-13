@@ -1678,3 +1678,80 @@
         ]
       }
     ```
+48. **Book Ion Sky Ticket**
+  * URL: `ionSky/bookTicket`
+  * Method: `POST`
+  * Params:
+  ```
+    {
+      "credits": 1,
+      "eventGroupId": "7177ee6256ba488bbe9baade6ceac196",
+      "eventLineId": "d0e3ba6f4783467faea941b5e90712c9",
+      "eventLineText": "2:00 PM",
+      "ticketCode": "ION-21555fd5febe43b0867dfdf6141cf207",
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZW1iZXJJZCI6InZnZnhrcDgyMjU5OCIsImlkIjoyMTksInBob25lTnVtYmVyIjoiKzE5OTk5OTkxIiwiY2FyZE5vIjoiODAwMDAxNzA3IiwiaWF0IjoxNTQ3NDAwMzU0LCJleHAiOjE1NDc0ODY3NTR9.2mmmegJtSIYJVxTwSFDCgUbFGhhKqzKoZaIjQzHuvIo"
+    }
+  ```
+
+  * Response: 
+    ```
+      {
+        "success": true,
+        "ticket": [
+           {
+            "qrImageUrl": "/api/pass/qr/get/image/97a13cb3ece644ac8cd78e8286ae4510/ION-21555fd5febe43b0867dfdf6141cf207/d623a0972bf54de5b613ed2b01470123.png",
+            "user": {
+              "userId": "800001707",
+              "memberId": null,
+              "companyName": null,
+              "name": null,
+              "nationality": null
+            },
+            "tikcetPassReference": "d623a0972bf54de5b613ed2b01470123",
+            "freeQty": 48,
+            "noOfCredits": 1,
+            "unlockInMin": 0,
+            "eventDate": "2019-01-14",
+            "eventDateSession": "2:00 PM to 2:45 PM",
+            "title": "Admission Ticket",
+            "status": "1",
+            "erroCode": "",
+            "errorTimestamp": ""
+          }
+        ]
+      }
+    ```
+
+49. **Get Ion Sky Tickets History**
+  * URL: `ionSky/ticket/history`
+  * Method: `GET`
+  * Params: `accessToken` is required
+  * Response: 
+    ```
+      {
+        "success": true,
+        "tickets": [
+          {
+            "qrImageUrl": "/api/pass/qr/get/image/3676bf57d3424c1f804df0499ec7c914/ION-21555fd5febe43b0867dfdf6141cf207/1163ed289c4745b5a98424f850113389.png",
+            "freeQty": 1,
+            "eventDate": "2019-01-18",
+            "eventDateSession": "2:00 PM to 2:45 PM",
+            "status": "valid"
+          },
+          {
+            "qrImageUrl": "/api/pass/qr/get/image/7c52d6fe185947ed88c6e082e196b0b2/ION-21555fd5febe43b0867dfdf6141cf207/d623a0972bf54de5b613ed2b01470123.png",
+            "freeQty": 1,
+            "eventDate": "2019-01-15",
+            "eventDateSession": "2:00 PM to 2:45 PM",
+            "status": "redeemed"
+          },
+          {
+            "qrImageUrl": "/api/pass/qr/get/image/a4c119349d2847ef9d1a7459baf5d985/ION-21555fd5febe43b0867dfdf6141cf207/1d02250a5f2d4781b68ccb6fd2191cad.png",
+            "freeQty": 1,
+            "eventDate": "2019-01-10",
+            "eventDateSession": "2:00 PM to 2:45 PM",
+            "status": "expired"
+          }
+        ]
+      }
+    ```
