@@ -1755,7 +1755,7 @@
         ]
       }
     ```
-49. **Remove deal from wallet**
+50. **Remove deal from wallet**
   * URL: `deals/:id/removeFromWallet`
   * Method: `POST`
   * Params: `accessToken` is required
@@ -1763,5 +1763,27 @@
     ```
       {
         message: 'The deal has been removed successfully'
+      }
+    ```
+
+51. **Add Device Token**
+  * URL: `users/addDeviceToken`
+  * Method: `POST`
+  * Params: `accessToken`, `deviceToken`
+  * Response: 
+    ```
+      {
+        message: 'Add device token successfully'
+      }
+    ```
+
+52. **Remove Device Token**
+  * URL: `users/removeDeviceToken`
+  * Method: `POST`
+  * Params: `accessToken`, `deviceToken`
+  * Response: 
+    ```
+      {
+        message: 'Remove device token successfully'
       }
     ```
