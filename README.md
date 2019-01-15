@@ -1755,3 +1755,13 @@
         ]
       }
     ```
+49. **Remove deal from wallet**
+  * URL: `deals/:id/removeFromWallet`
+  * Method: `POST`
+  * Params: `accessToken` is required
+  * Response: 
+    ```
+      {
+        message: 'The deal has been removed successfully'
+      }
+    ```
