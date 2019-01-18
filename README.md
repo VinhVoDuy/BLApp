@@ -1787,3 +1787,34 @@
         message: 'Remove device token successfully'
       }
     ```
+53. **Get Notifications**
+  * URL: `users/notifications`
+  * Method: `GET`
+  * Params: `accessToken`
+  * Response: 
+    ```
+      {
+        "ion": [
+        {
+          "id": 1,
+            "title": "Push Notification Brand",
+            "text": "Notification content for Brand",
+            "dataType": "Brand",
+            "dataId": 57,
+            "createdAt": "2019-01-17T23:34:11.000Z",
+            "read": false
+        },
+        {
+          "id": 2,
+          "title": "Push Notification Dinning Deal",
+          "text": "Notification content for Dinning Deal",
+          "dataType": "Dinning Deal",
+          "dataId": 60,
+          "createdAt": "2019-01-17T23:34:11.000Z",
+          "read": false
+        }],
+        "loyalty": [
+
+        ]
+      }
+    ```
