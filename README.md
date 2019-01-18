@@ -1818,3 +1818,19 @@
         ]
       }
     ```
+
+54. **Read Notification**
+  * URL: `users/notifications/read`
+  * Method: `POST`
+  * Params: `accessToken`
+    ```
+      {
+        "notificationIds": [1, 2, 5]
+      }
+    ```
+  * Response:
+    ```
+      {
+        "message": "Read notification successfully"
+      }
+    ```
