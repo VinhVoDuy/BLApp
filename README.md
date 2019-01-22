@@ -1348,7 +1348,12 @@
         "dob": "1990-12-18T00:00:00",
         "nationality": "Singaporean",
         "country": "Singapore",
-        "isTourist": true
+        "isTourist": true,
+        "countryOfResidence": 'Singapore',
+        "call": true,
+        "notifySMS": true,
+        "notifyPost": false,
+        "pushNotification": false,
       }
     ```
 38. **Update Profile**
