@@ -233,7 +233,7 @@
         "type": "shop",
         "level": ["B4", "L1", "L2"],
         "categoryIds": [25, 26],
-        "paymentMethodsIds": [27, 28],
+        "paymentMethodIds": [27, 28],
         "halalCertified": true
       }
     ```
